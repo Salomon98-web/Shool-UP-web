@@ -33,18 +33,22 @@ jobs:
           script_stop: true
           script: |
             set -eu
-            case "$BRANCH" in main|dev|staging) ;; *) echo "Branche non autorisée" >&2; exit 1 ;; esac
-            case "$FOLDER" in /*) ;; *) echo "FOLDER doit être un chemin absolu" >&2; exit 1 ;; esac
+            case "$BRANCH" in main|dev|staging) ;; *) echo "ERREUR: branche non autorisée"; exit 1 ;; esac
+            case "$FOLDER" in /*) ;; *) echo "ERREUR: FOLDER doit être un chemin absolu"; exit 1 ;; esac
+            echo "Dossier de base valide"
             TARGET="$FOLDER/$BRANCH"
-            mkdir -p "$FOLDER"
+            if ! mkdir -p "$FOLDER"; then echo "ERREUR: création de FOLDER refusée"; exit 1; fi
+            echo "Dossier de base accessible"
             if [ -d "$TARGET/.git" ]; then
+              echo "Dépôt Git existant détecté"
               git -C "$TARGET" remote set-url origin "$REPO"
               git -C "$TARGET" fetch --prune origin "$BRANCH"
               git -C "$TARGET" checkout -B "$BRANCH" "origin/$BRANCH"
               git -C "$TARGET" reset --hard "origin/$BRANCH"
             elif [ -e "$TARGET" ]; then
-              echo "Le dossier cible existe déjà et n'est pas un dépôt Git: $TARGET" >&2
+              echo "ERREUR: le dossier de branche existe, mais n'est pas un dépôt Git"
               exit 1
             else
+              echo "Clonage initial de la branche"
               git clone --single-branch --branch "$BRANCH" "$REPO" "$TARGET"
             fi
