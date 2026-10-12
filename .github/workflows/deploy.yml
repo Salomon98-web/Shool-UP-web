@@ -29,6 +29,7 @@ jobs:
           key: ${{ secrets.PRIVATE_KEY }}
           passphrase: ${{ secrets.PASSPHRASE }}
           envs: FOLDER,BRANCH,REPO
+          debug: true
           script_stop: true
           script: |
             set -eu
