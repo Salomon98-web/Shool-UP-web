@@ -39,6 +39,7 @@ jobs:
             TARGET="$FOLDER/$BRANCH"
             if ! mkdir -p "$FOLDER"; then echo "ERREUR: création de FOLDER refusée"; exit 1; fi
             echo "Dossier de base accessible"
+            echo "Vérification du dossier de branche"
             if [ -d "$TARGET/.git" ]; then
               echo "Dépôt Git existant détecté"
               git -C "$TARGET" remote set-url origin "$REPO"
@@ -52,3 +53,4 @@ jobs:
               echo "Clonage initial de la branche"
               git clone --single-branch --branch "$BRANCH" "$REPO" "$TARGET"
             fi
+            echo "Déploiement terminé"
