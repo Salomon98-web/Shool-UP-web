@@ -1,0 +1,41 @@
+name: Server Preflight
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  inspect-server:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check Docker and production ports
+        uses: appleboy/ssh-action@v1.2.0
+        with:
+          host: ${{ secrets.IP }}
+          username: ${{ secrets.USER }}
+          port: ${{ secrets.PORT }}
+          key: ${{ secrets.PRIVATE_KEY }}
+          passphrase: ${{ secrets.PASSPHRASE }}
+          script: |
+            echo "OS=$(uname -s)"
+            if command -v docker >/dev/null 2>&1; then
+              echo "DOCKER_CLI=present"
+              docker --version
+              if docker compose version >/dev/null 2>&1; then echo "COMPOSE=present"; else echo "COMPOSE=missing"; fi
+              if docker info >/dev/null 2>&1; then echo "DOCKER_DAEMON=accessible"; else echo "DOCKER_DAEMON=not-accessible"; fi
+            else
+              echo "DOCKER_CLI=missing"
+            fi
+            if command -v ss >/dev/null 2>&1; then
+              for port in 80 443 3000 8000 3306; do
+                if ss -lnt | awk -v p=":$port" '$4 ~ (p "$\") { found=1 } END { exit !found }'; then
+                  echo "PORT_${port}=listening"
+                else
+                  echo "PORT_${port}=free"
+                fi
+              done
+            else
+              echo "SS_COMMAND=missing"
+            fi
