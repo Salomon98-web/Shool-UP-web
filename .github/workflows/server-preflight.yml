@@ -20,6 +20,9 @@ jobs:
           passphrase: ${{ secrets.PASSPHRASE }}
           script: |
             echo "OS=$(uname -s)"
+            echo "SSH_GROUPS=$(id -nG)"
+            if [ -S /var/run/docker.sock ]; then stat -c 'DOCKER_SOCKET=%A %U:%G' /var/run/docker.sock; else echo "DOCKER_SOCKET=missing"; fi
+            if command -v systemctl >/dev/null 2>&1; then echo "DOCKER_SERVICE=$(systemctl is-active docker 2>/dev/null || echo unavailable)"; fi
             if command -v docker >/dev/null 2>&1; then
               echo "DOCKER_CLI=present"
               docker --version
@@ -30,6 +33,7 @@ jobs:
                 echo "DOCKER_DAEMON=sudo-accessible"
               else
                 echo "DOCKER_DAEMON=not-accessible"
+                docker info 2>&1 | head -n 1
                 sudo -n docker info 2>&1 | head -n 1
               fi
             else
