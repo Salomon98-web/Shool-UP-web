@@ -20,8 +20,13 @@ jobs:
           passphrase: ${{ secrets.PASSPHRASE }}
           script: |
             echo "OS=$(uname -s)"
-            echo "SSH_GROUPS=$(id -nG)"
+            echo "SSH_ID=$(id -u):$(id -g)"
+            echo "SSH_GROUP_IDS=$(id -G)"
+            if [ -n "${DOCKER_HOST:-}" ]; then echo "DOCKER_HOST_CONFIGURED=yes"; else echo "DOCKER_HOST_CONFIGURED=no"; fi
+            if [ -n "${DOCKER_CONTEXT:-}" ]; then echo "DOCKER_CONTEXT_CONFIGURED=yes"; else echo "DOCKER_CONTEXT_CONFIGURED=no"; fi
+            echo "DOCKER_CONTEXT_CURRENT=$(docker context show 2>/dev/null || echo unavailable)"
             if [ -S /var/run/docker.sock ]; then stat -c 'DOCKER_SOCKET=%A %U:%G' /var/run/docker.sock; else echo "DOCKER_SOCKET=missing"; fi
+            if [ -n "${XDG_RUNTIME_DIR:-}" ] && [ -S "$XDG_RUNTIME_DIR/docker.sock" ]; then stat -c 'ROOTLESS_DOCKER_SOCKET=%A %U:%G' "$XDG_RUNTIME_DIR/docker.sock"; else echo "ROOTLESS_DOCKER_SOCKET=missing"; fi
             if command -v systemctl >/dev/null 2>&1; then echo "DOCKER_SERVICE=$(systemctl is-active docker 2>/dev/null || echo unavailable)"; fi
             if command -v docker >/dev/null 2>&1; then
               echo "DOCKER_CLI=present"
@@ -29,12 +34,16 @@ jobs:
               if docker compose version >/dev/null 2>&1; then echo "COMPOSE=present"; else echo "COMPOSE=missing"; fi
               if docker info >/dev/null 2>&1; then
                 echo "DOCKER_DAEMON=accessible"
+                docker ps --format 'DOCKER_PS={{.Names}} {{.Status}}' | head -n 5
+              elif docker ps >/dev/null 2>&1; then
+                echo "DOCKER_PS_ACCESSIBLE=yes"
               elif sudo -n docker info >/dev/null 2>&1; then
                 echo "DOCKER_DAEMON=sudo-accessible"
+                sudo -n docker ps --format 'SUDO_DOCKER_PS={{.Names}} {{.Status}}' | head -n 5
               else
                 echo "DOCKER_DAEMON=not-accessible"
-                docker info 2>&1 | head -n 1
-                sudo -n docker info 2>&1 | head -n 1
+                docker info 2>&1 | tail -n 3
+                sudo -n docker info 2>&1 | tail -n 3
               fi
             else
               echo "DOCKER_CLI=missing"
