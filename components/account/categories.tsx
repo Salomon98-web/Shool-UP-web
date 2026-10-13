@@ -95,7 +95,7 @@ export default function Category({token, role}:Props){
                                 <div className=" flex justify-between gap-3">
                                     <div className="w-20 h-20 bg-gray-200 rounded-sm relative">
                                         <Image 
-                                            src={`http://localhost:8000/uploads/images/${item.image.name}`}
+                                            src={`${process.env.NEXT_PUBLIC_BASE_URL2}/uploads/images/${item.image.name}`}
                                             alt=""
                                             fill
                                             className=" object-cover rounded-sm "

@@ -76,7 +76,7 @@ export default function page({params}:Props){
                     ):(
                         <div className="flex flex-col justify-center  w-full h-full gap-2 bg-gray-300 p-4 relative bottom-24 ">
                             <Image 
-                                src={`http://localhost:8000/uploads/images/${dataCategory?.image.name}`}
+                                src={`${process.env.NEXT_PUBLIC_BASE_URL2}/uploads/images/${dataCategory?.image.name}`}
                                 alt=""
                                 fill
                                 className=" object-cover group-hover:shadow-gray-900 group-hover:shadow-lg duration-500"

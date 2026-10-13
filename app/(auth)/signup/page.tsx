@@ -43,8 +43,7 @@ export function CreatAccount() {
     const nouvelleErreus: string[] = [];
     const formData = new FormData(e.currentTarget);
     
-    const url = "http://localhost:8000/v1/account";
-    console.log(url)
+    const url = `${process.env.NEXT_PUBLIC_BASE_URL}/account`;
     try{
 
       const res = await fetch(url,{
@@ -67,7 +66,7 @@ export function CreatAccount() {
 
     }catch(error){
       toast.error("Une erreur est survenue")
-      console.error
+      console.error(error)
       setIsLoading(false);
     }
     

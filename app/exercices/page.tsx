@@ -88,7 +88,7 @@ export default function page(){
                                         <Link key={item.id} href={`/exercices/${item.id}`} className="w-full h-32 sm:h-40 md:w-72 md:h-72 group">
                                             <div className="h-full flex flex-col justify-end items-center border bg-gray-100 duration-500 hover:transform  w-full rounded-sm p-2 relative">
                                                     <Image 
-                                                        src={`http://localhost:8000/uploads/images/${item.image.name}`}
+                                                        src={`${process.env.NEXT_PUBLIC_BASE_URL2}/uploads/images/${item.image.name}`}
                                                         alt=""
                                                         fill
                                                         className=" object-cover rounded-sm group-hover:shadow-gray-900 group-hover:shadow-lg duration-500"

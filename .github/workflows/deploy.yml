@@ -22,13 +22,14 @@ jobs:
           FOLDER: ${{ secrets.FOLDER }}
           BRANCH: ${{ github.ref_name }}
           REPO: https://github.com/Salomon98-web/Shool-UP-web.git
+          API_BASE_URL: ${{ vars.API_BASE_URL }}
         with:
           host: ${{ secrets.IP }}
           username: ${{ secrets.USER }}
           port: ${{ secrets.PORT }}
           key: ${{ secrets.PRIVATE_KEY }}
           passphrase: ${{ secrets.PASSPHRASE }}
-          envs: FOLDER,BRANCH,REPO
+          envs: FOLDER,BRANCH,REPO,API_BASE_URL
           script: |
             set -u
             case "$BRANCH" in main|dev|staging) ;; *) echo "ERREUR: branche non autorisée"; exit 1 ;; esac
@@ -45,4 +46,15 @@ jobs:
               exit 1
             else
               git clone --single-branch --branch "$BRANCH" "$REPO" "$TARGET" || { echo "ERREUR: clonage Git impossible"; exit 1; }
+            fi
+            if [ "$BRANCH" = "main" ]; then
+              : "${API_BASE_URL:?Configure repository variable API_BASE_URL (for example https://api.schoolup.ga)}"
+              case "$API_BASE_URL" in https://*) ;; *) echo "ERREUR: API_BASE_URL doit utiliser HTTPS"; exit 1 ;; esac
+              docker info >/dev/null 2>&1 || { echo "ERREUR: Docker daemon non accessible"; exit 1; }
+              export NEXT_PUBLIC_BASE_URL="${API_BASE_URL%/}/v1"
+              export NEXT_PUBLIC_BASE_URL2="${API_BASE_URL%/}"
+              export NEXT_PUBLIC_BASE_URL3="${API_BASE_URL%/}/uploads/exercices"
+              export NEXT_PUBLIC_BASE_URL4="${API_BASE_URL%/}/uploads/corriges"
+              docker compose -f "$TARGET/compose.prod.yml" up -d --build --remove-orphans
+              docker compose -f "$TARGET/compose.prod.yml" ps
             fi

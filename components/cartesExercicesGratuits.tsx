@@ -101,7 +101,7 @@ export default function Cartes({id}:Props){
                             <File width="20" className="text-red-600" />
                             <span>Exercice & corrigé</span> 
                         </p>
-                        <Link href={`http://localhost:8000/v1/download/free/${item.id}`} className=" p-2">
+                        <Link href={`${process.env.NEXT_PUBLIC_BASE_URL}/download/free/${item.id}`} className=" p-2">
                             <Download width="20" className="text-sm text-blue-950" />
                         </Link>
                     </div>
@@ -123,7 +123,7 @@ export default function Cartes({id}:Props){
 
                 <div className="flex justify-between items-center">
                     <p className="text-xs">{} {}</p>
-                    <Link href={`http://localhost:8000/v1/download/free/`} className=" p-2 rounded-xs text-xs group-hover:bg-green-900 duration-500 group-hover:text-white">
+                    <Link href={`${process.env.NEXT_PUBLIC_BASE_URL}/download/free/`} className=" p-2 rounded-xs text-xs group-hover:bg-green-900 duration-500 group-hover:text-white">
                         Télécharger
                     </Link>
                 </div>
