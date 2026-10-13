@@ -25,6 +25,13 @@ jobs:
             if [ -n "${DOCKER_HOST:-}" ]; then echo "DOCKER_HOST_CONFIGURED=yes"; else echo "DOCKER_HOST_CONFIGURED=no"; fi
             if [ -n "${DOCKER_CONTEXT:-}" ]; then echo "DOCKER_CONTEXT_CONFIGURED=yes"; else echo "DOCKER_CONTEXT_CONFIGURED=no"; fi
             echo "DOCKER_CONTEXT_CURRENT=$(docker context show 2>/dev/null || echo unavailable)"
+            if bash -lc 'docker ps >/dev/null 2>&1'; then
+              echo "LOGIN_SHELL_DOCKER_ACCESSIBLE=yes"
+              echo "LOGIN_SHELL_DOCKER_CONTEXT=$(bash -lc 'docker context show 2>/dev/null || echo unavailable')"
+            else
+              echo "LOGIN_SHELL_DOCKER_ACCESSIBLE=no"
+              bash -lc 'docker ps 2>&1 | tail -n 2'
+            fi
             if [ -S /var/run/docker.sock ]; then stat -c 'DOCKER_SOCKET=%A %U:%G' /var/run/docker.sock; else echo "DOCKER_SOCKET=missing"; fi
             if [ -n "${XDG_RUNTIME_DIR:-}" ] && [ -S "$XDG_RUNTIME_DIR/docker.sock" ]; then stat -c 'ROOTLESS_DOCKER_SOCKET=%A %U:%G' "$XDG_RUNTIME_DIR/docker.sock"; else echo "ROOTLESS_DOCKER_SOCKET=missing"; fi
             if command -v systemctl >/dev/null 2>&1; then echo "DOCKER_SERVICE=$(systemctl is-active docker 2>/dev/null || echo unavailable)"; fi
