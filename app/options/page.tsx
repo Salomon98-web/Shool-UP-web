@@ -21,7 +21,7 @@ export default function Option() {
 
         <div className="flex flex-wrap justify-center items-center w-full px-4 lg:px-28 gap-4">
 
-            <Link  href={`/`}>
+            <Link  href={`/signup`}>
                 <div className="flex flex-col gap-2 justify-center relative overflow-hidden items-center group border bg-violet-100 duration-500 hover:shadow-mauve-300 shadow-xs 
                     hover:shadow-lg hover:transform hover:rotate-2 w-72 h-24 rounded-lg p-2">
                         <CreditCard
