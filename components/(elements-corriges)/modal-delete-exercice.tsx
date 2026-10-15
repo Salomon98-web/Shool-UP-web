@@ -14,8 +14,8 @@ import {
 } from "@/components/ui/dialog";
 import { AlertTriangle } from "lucide-react";
 import Loader from "@/components/loading";
-import ModalErrors from "@/components/modal-error";
-import ModalSuccess from "@/components/modal-succes";
+import { useToastCustom } from "@/components/ui/toast-custom";
+
 interface Props{
     token:string | undefined
     id:number
@@ -26,12 +26,10 @@ interface Props{
 }
 
 export default function ModalDeleteExercice({token, id, titre, open, onOpenOnChange, onSuccess}:Props){
-    
-    const [openModalErros, setOpenModalErros] = useState(false);
-    const [openModalSuccess, setOpenModaalSuccess] = useState(false)
-    const [message, setMessage] = useState<string>('')
+
     const [erreurs, setErreurs] = useState<string[]>([])
     const [loading, setLoading] = useState(false)
+    const toast = useToastCustom()
 
     const handleSubmit = async ()=>{
         setLoading(true)
@@ -47,8 +45,7 @@ export default function ModalDeleteExercice({token, id, titre, open, onOpenOnCha
         const statusCode = res.status;
          
         if(res.ok){
-            setMessage("Suprression réussie")
-            setOpenModaalSuccess(true)
+            toast.success("Suprression réussie")
             setLoading(false) 
             onSuccess()
             onOpenOnChange(false)
@@ -60,9 +57,9 @@ export default function ModalDeleteExercice({token, id, titre, open, onOpenOnCha
             if(nouvelleErreus.length > 0){
                 setErreurs(nouvelleErreus)
             }
-            setOpenModalErros(true)
+            toast.error(nouvelleErreus)
             setLoading(false)
-            console.log(result);
+            /* console.log(result); */
             
         }
     }
@@ -98,9 +95,6 @@ export default function ModalDeleteExercice({token, id, titre, open, onOpenOnCha
                 </div>
             </DialogContent>
         </Dialog>
-        
-        <ModalErrors open={openModalErros} onOpenChange={setOpenModalErros} errors={erreurs} />
-        <ModalSuccess open={openModalSuccess} onOpenChange={setOpenModaalSuccess} message={message} />
         </>
         
     )

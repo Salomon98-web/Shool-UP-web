@@ -1,17 +1,40 @@
 'use client'
 
 import { useEffect, useState } from "react"
-import { Eye, EyeOff, Timer, TimerOff } from "lucide-react"
+import { Eye, EyeOff, Timer, TimerOff, LucideDelete } from "lucide-react"
 import LoaderCarte from "../loading-carte"
+import ModalDeleteMonabonnement from "./modal-delete-mon-abonnement"
 
 interface Props{
     token:string | undefined
+    onSuccess:()=>void
     refreshKey:number
 }
 
-export function Carte({item, type, classe, status, codePIN, debut, fin, nom, tel}:any){
+interface PropsCarte{
+    onSuccess:()=>void
+    token:any
+    id:any
+    tel:any
+    item:any 
+    type:any 
+    classe:any 
+    status:any 
+    codePIN:any 
+    debut:any
+    fin:any 
+    nom:any
+}
+
+export function Carte({item, type, classe, status, codePIN, debut, fin, nom, tel, id, token, onSuccess}:any){
+
+    const [openModalDelete, setOpenModalDelete] = useState(false)
     const[code, setCode] = useState(false)
+    const [idAbonne, setIdAbonne] = useState<number>(0)
+    const [abonnementName, setAbonnementName] = useState<string>('')
+
     return(
+        <>
         <div 
             key={item}
             className={`flex flex-col h-auto shrink-0 min-w-78 to-blur group relative overflow-hidden rounded-md bg-linear-to-br  p-5 
@@ -124,16 +147,29 @@ export function Carte({item, type, classe, status, codePIN, debut, fin, nom, tel
                     </>
                     
                 ):(null)}
-                
+                <button
+                    onClick={()=>{
+                        setIdAbonne(id)
+                        setAbonnementName(nom)
+                        setOpenModalDelete(true)
+                        console.log(onSuccess)
+                        
+                    }}
+                    className="z-20 bg-red-600 max-w-max p-2 rounded-lg text-white flex justify-center items-center shadow-2xl"
+                >
+                    <LucideDelete />
+                </button>
             </div>
         </div>
-
+         <ModalDeleteMonabonnement token={token} id={idAbonne} abonnementName={abonnementName} open={openModalDelete} onOpenOnChange={setOpenModalDelete} onSuccess={onSuccess} />
+        </>
     )
 }
 
 export default function cartes({token, refreshKey}:Props){
     const [Loading, setLoading] = useState(true)
     const [data, setData] = useState([])
+    const [refreshKey2, setRefresh] = useState(0)
 
     useEffect(()=>{
         const abonnement = async ()=>{
@@ -162,7 +198,7 @@ export default function cartes({token, refreshKey}:Props){
             console.log(result)
         }
         abonnement()
-    },[refreshKey])
+    },[refreshKey, refreshKey2])
 
     if(Loading){
         return(
@@ -202,7 +238,7 @@ export default function cartes({token, refreshKey}:Props){
         <div className=" w-full flex flex-row items-center h-auto p-2 relative top-10 px-4 lg:px-14">
             <div className="flex overflow-x-auto pb-4 scrollbar-hide gap-2 ">
                 {data.map((item:any)=>(
-                    <Carte key={item.id} type={item.abonnement_type[0].type} classe={item.classe[0].name_class} status={item.status} codePIN={item.code} debut={item.start_date} fin={item.end_date} nom={item.name} tel={item.phone} />
+                    <Carte key={item.id} type={item.abonnement_type[0].type} classe={item.classe[0].name_class} status={item.status} codePIN={item.code} debut={item.start_date} fin={item.end_date} nom={item.name} tel={item.phone} id={item.id} token={token} onSuccess={()=>setRefresh(k=>k+1)} />
                 ))}
             </div>
         </div>
@@ -210,8 +246,7 @@ export default function cartes({token, refreshKey}:Props){
             <div className="flex overflow-x-auto pb-4 scrollbar-hide gap-2 ">
                 <Carte type={"annuel"} classe={"sixieme"} status={0} codePIN={1234} debut={`25-09-2026`} fin={`25-09-2026`} nom={`salomon`} tel={`0000`}/>
             </div>
-        </div> */}
-                
+        </div> */}  
         </>
     )
 }

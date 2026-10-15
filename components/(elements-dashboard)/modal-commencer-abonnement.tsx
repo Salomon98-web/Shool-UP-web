@@ -19,8 +19,6 @@ import {
     ComboboxEmpty,
     ComboboxList 
 } from "../ui/combobox";
-import ModalErrors from "@/components/modal-error";
-import ModalSuccess from "@/components/modal-succes";
 import Loader from "@/components/loading";
 import { Input } from "../ui/input"
 import { useToastCustom } from "@/components/ui/toast-custom";
@@ -85,7 +83,7 @@ export default function CommencerAbonnement({open, onOpenChange, type, id, price
             toast.error(`${data[0]?.message}`)
             setIsLoading(false)
         }else{
-            toast.error("Operation réussie ! Activer votre abonnement en payant le montant")
+            toast.success("Operation réussie ! Activer votre abonnement en payant le montant")
             setIsLoading(false)
             onSuccess() 
         }

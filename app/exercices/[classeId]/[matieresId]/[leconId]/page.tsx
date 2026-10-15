@@ -169,7 +169,7 @@ export default function page({params}:Props){
                                     <Link key={item.id} href={`/exercices/${param.classeId}/${param.matieresId}/${param.leconId}/${item.id}`}>
                                         <div className="flex justify-start items-center group bg-gray-100 duration-500 hover:shadow-lg 
                                                 hover:shadow-mauve-300 w-full h-auto rounded-sm p-4 ">
-                                            <p className="flex gap-3 text-start font-semibold font-mono text-[12px] text-wrap">
+                                            <p className="flex gap-3 text-start font-semibold font-mono text-[14px] text-wrap">
                                                 <span className="flex justify-center items-center relative -top-6 text-2xl text-white p-3 rounded-sm bg-blue-950">{index + 1}</span>{item.titre}
                                             </p>
                                         </div>

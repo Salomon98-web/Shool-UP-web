@@ -144,7 +144,7 @@ export default function MoadalUpdateExercice({
             method:"PUT",
             headers:{
                 "X-Api-Key": token as string,
-                "Content-Type":"application/x-www-form-urlencode"
+                
             },
             body:urlParams.toString(),
         })

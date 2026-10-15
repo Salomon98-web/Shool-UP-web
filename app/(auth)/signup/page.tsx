@@ -152,7 +152,7 @@ export function CreatAccount() {
 
               <div className="flex flex-col relative top-4 justify-center items-center gap-3">
                 <p className="text-[12px] font-mono ">Vous avez déjà un compte ? <Link className="  text-blue-950" href="/login">Connectez-vous</Link></p>
-                <Link className=" font-mono text-[15px] text-blue-950" href="/">Retour</Link>
+                <Link className=" font-mono text-[12px] text-blue-950" href="/">Retour</Link>
               </div>
 
             </div>

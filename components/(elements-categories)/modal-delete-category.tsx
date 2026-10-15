@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from "react";
-import Link from "next/link";
 import { 
   Dialog,
   DialogContent,
@@ -14,8 +13,6 @@ import {
 } from "@/components/ui/dialog";
 import { AlertTriangle } from "lucide-react";
 import Loader from "@/components/loading";
-import ModalErrors from "@/components/modal-error";
-import ModalSuccess from "@/components/modal-succes";
 import { useToastCustom } from "@/components/ui/toast-custom";
 
 interface Props{
@@ -28,10 +25,7 @@ interface Props{
 }
 
 export default function ModalDeleteCategory({token, id, categoryName, open, onOpenOnChange, onSuccess}:Props){
-    
-    const [openModalErros, setOpenModalErros] = useState(false);
-    const [openModalSuccess, setOpenModaalSuccess] = useState(false)
-    const [message, setMessage] = useState<string>('')
+
     const [erreurs, setErreurs] = useState<string[]>([])
     const [loading, setLoading] = useState(false)
     const toast = useToastCustom()
@@ -49,7 +43,7 @@ export default function ModalDeleteCategory({token, id, categoryName, open, onOp
 
         const statusCode = res.status;
         
-        if(!res.ok){
+        if(res.ok){
             toast.success("Suprression réussie")
             setLoading(false) 
             onSuccess()
@@ -107,9 +101,6 @@ export default function ModalDeleteCategory({token, id, categoryName, open, onOp
                 </div>
             </DialogContent>
         </Dialog>
-        
-        <ModalErrors open={openModalErros} onOpenChange={setOpenModalErros} errors={erreurs} />
-        <ModalSuccess open={openModalSuccess} onOpenChange={setOpenModaalSuccess} message={message} />
         </>
         
     )

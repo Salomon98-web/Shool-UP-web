@@ -58,7 +58,7 @@ export default function Category({token, role}:Props){
             <div className="flex-1 flex flex-col w-8/12 bg-gray-100">
 
                 {/** topbar */}
-                <Topbar />
+                <Topbar onSuccess={()=>{}} token={token} />
 
                 <div className=" relative top-7 p-2 font-mono text-sm px-4 lg:px-14">
                     <hr className="p-2" />

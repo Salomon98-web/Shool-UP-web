@@ -25,7 +25,7 @@ export default function Footer(){
                         <Link href='/exercices-gratuits' className="hover:transform hover:translate-x-2 duration-500 text-blue-950 text-[14px]">Exercices gratuits</Link>
                         <Link href='/a-propos' className="hover:transform hover:translate-x-2 duration-500 text-blue-950 text-[14px]">A propos de nous</Link>
                         <Link href='/contact' className="hover:transform hover:translate-x-2 duration-500 text-blue-950 text-[14px]">Contacts</Link>
-                        <Link href='/signup' className="hover:transform hover:translate-x-2 duration-500 text-blue-950 text-[14px]">Abonnez-vous</Link>
+                        <Link href='/options' className="hover:transform hover:translate-x-2 duration-500 text-blue-950 text-[14px]">Abonnez-vous</Link>
                     </div>
                 </div>
                 <div className=" flex flex-col gap-4">

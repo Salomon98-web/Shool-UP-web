@@ -42,13 +42,17 @@ export default function ModalUpdateClasse({token, open, classeValue, id, onOpenC
         setLoading(true)
         const nouvelleErreus: string[] = [];
         const formData = new FormData(e.currentTarget)
-        console.log(formData.get("file"))
-        const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/classe/update/${id}`,{
-            method:"POST",
+        const urlParams = new URLSearchParams()
+
+        urlParams.append("name_class", formData.get("name_class") as any)
+        
+        const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/classe/${id}`,{
+            method:"PUT",
             headers:{
                 "X-Api-Key": token as string,
+                "Content-Type":"application/x-www-form-urlencode"
             },
-            body:formData,
+            body:urlParams.toString(),
         })
 
         const statusCode = res.status;
@@ -88,7 +92,7 @@ export default function ModalUpdateClasse({token, open, classeValue, id, onOpenC
                         <div className="w-full flex flex-col gap-4  p-2 rounded-md">
                             
                             <Textarea 
-                                name="name" 
+                                name="name_class" 
                                 placeholder="Entrer le nouveau nom"
                                 onChange={(e)=> setValueInputTextName(e.target.value)} 
                                 value={valueInputTextName} 

@@ -2,10 +2,15 @@
 
 import { useState } from "react"
 import { Button } from "./ui/button"
-import Logout from "./modal-logout"
-import AlertSuccess from "./carousel"
+import { Settings } from "lucide-react"
+import MonCompte from "./(elements-mon-compte)/sheet-menu"
 
-export default function Topbar(){
+interface Props{
+    token:any
+    onSuccess:()=>void
+}
+
+export default function Topbar({token,onSuccess}:Props){
     const [openModalLogout, setModalLogout] = useState(false)
 
     return(
@@ -18,11 +23,12 @@ export default function Topbar(){
                     }}
                     className={`bg-blue-800  z-50 font-mono text-[11px] hover:bg-blue-700 duration-500`}
                 >
-                    Déconnexion
+                    <Settings/>
+                    Mon compte
                 </Button>
             </div>
         </div>
-        <Logout open={openModalLogout} onOpenChange={setModalLogout} />
+        <MonCompte onSuccess={onSuccess} open={openModalLogout} onOpenChange={setModalLogout} token={token} />
         <div className="my-7"></div>
         </>
         

@@ -1,10 +1,8 @@
 'use client'
 
 import { useState, useEffect, use } from "react";
-import Sidebar from "../sidebar";
-import Topbar from "../topbar";
+import { useRouter } from "next/navigation";
 import { Switch } from "../ui/switch";
-import { Download, Zap } from "lucide-react";
 import { InputOTP, InputOTPGroup, InputOTPSlot } from "../ui/input-otp";
 import { 
     Combobox,
@@ -16,12 +14,8 @@ import {
     ComboboxList 
 } from "../ui/combobox";
 
-interface Props{
-    token:string | undefined
-    role:string | undefined
-}
 
-export default function Reabonnement({token, role}:Props){
+export default function Reabonnement(){
     
     const [dataClasse, setDataClasse] = useState<any[]>([]);
     const [val, setvalue] = useState<string | null>('');
@@ -38,6 +32,8 @@ export default function Reabonnement({token, role}:Props){
     const [code, setCode] = useState('')
     {/**abonnement select */}
     const [selectedDefault, setSelectedDefault] = useState(0)
+
+    const router = useRouter()
 
     useEffect(()=>{
         const classes = async ()=>{
@@ -57,9 +53,7 @@ export default function Reabonnement({token, role}:Props){
         const abonnement = async ()=>{
             const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/abonnement`,{
                 method:"GET",
-                headers:{
-                    "X-Api-Key": token as string,
-                }
+                
             })
             const statusCode = res.status
             const result = await res.json()
@@ -85,17 +79,17 @@ export default function Reabonnement({token, role}:Props){
         <>
         <div className="flex flex-row justify-center">
             {/** sidebar */}
-            <div className="max-w-4/12">
+            {/* <div className="max-w-4/12">
                 <Sidebar role={role} />
-            </div>
+            </div> */}
 
-            <div className="flex-1 flex flex-col w-8/12 bg-gray-100">
+            <div className="flex-1 flex flex-col w-full h-screen bg-gray-100">
                 {/** topbar */}
-                <Topbar />
+                {/* <Topbar onSuccess={()=>{}} token={token} /> */}
 
                 <div className=" relative top-0 p-2 font-mono text-sm px-4 lg:px-14">
-                    <hr className="p-2" />
-                    <p className="text-chart-1">Réabonnez-vous !</p>
+                    {/* <hr className="p-2" /> */}
+                    {/* <p className="text-chart-1">Réabonnez-vous !</p> */}
                 </div>
                 <div className="w-full h-full flex justify-center items-center">
                     <div className="border rounded-lg h-auto w-84 bg-white shadow">
@@ -197,9 +191,19 @@ export default function Reabonnement({token, role}:Props){
                                 
                             </form>
                         </div>
+                        <div className=" flex justify-center">
+                            <button
+                                onClick={()=>{
+                                    router.back()
+                                }}
+                                className="p-2 font-mono text-[12px] text-blue-700"
+                            >
+                                Retour
+                            </button>
+                        </div>
                     </div>
                 </div>
-                <div className="my-32"></div>
+                
             </div>
         </div>  
         </>

@@ -12,6 +12,7 @@ import {
     DialogTitle,
     DialogFooter
 } from "@/components/ui/dialog"
+import { Textarea } from "../ui/textarea";
 
 interface Props{
     token:string | undefined
@@ -99,15 +100,14 @@ export default function MoadalAddMatiere({token, open, onOpenChange, onSuccess,}
                     <DialogTitle className={`font-mono font-bold text-blue-900 my-6 px-4`}>Nouvelle matière</DialogTitle>
                 </DialogHeader>
                 <div className="w-full">
-                    <form action="" className="flex flex-col justify-center items-center gap-7" encType="multipart/form-data" onSubmit={handleSubmit}>
+                    <form action="" className="flex flex-col justify-center items-center gap-7"  onSubmit={handleSubmit}>
 
                         <div className=" flex flex-col gap-4  p-2 rounded-md w-full">
-                            <Input 
-                                type="text" 
+                            <Textarea 
                                 name="nom_matiere" 
                                 placeholder="Entrer le nom" 
                                 required
-                            />
+                            ></Textarea>
                         </div>
                         
 

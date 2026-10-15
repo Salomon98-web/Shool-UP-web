@@ -13,7 +13,7 @@ import {
     SidebarMenuButton
 } from "@/components/ui/sidebar"
 import { usePathname } from "next/navigation";
-import logo from "@/public/SCHOOL UP_LOGO 1.png";
+import logo from "@/public/SCHOOL UP_LOGO COULEURS.png";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import { 
@@ -28,6 +28,8 @@ import {
     Settings,
     UserIcon
 } from "lucide-react";
+import { Button } from "./ui/button";
+import Logout from "./modal-logout"
 
 interface Props{
     role:string | undefined
@@ -36,6 +38,7 @@ interface Props{
 export default function sidebar({role}:Props){
     const [sideTigger, setSideTigger] = useState(false)
     const pathName =usePathname()
+    const [openModalLogout, setModalLogout] = useState(false)
     const links = [
 
         {href: '/dashboard', label: 'Tableau de bord', icon: Home},
@@ -58,7 +61,6 @@ export default function sidebar({role}:Props){
 
         role === "admin" ? {href: '/lecons', label: 'Leçon', icon: Pencil} : null,
 
-        {href: '/mon-compte', label: 'Mon compte', icon:Settings},
     ].filter((lien): lien is {href: string; label: string; icon:any} => lien !==null);
 
     useEffect(()=>{
@@ -69,12 +71,11 @@ export default function sidebar({role}:Props){
         <SidebarProvider>
             <Sidebar className="">
                 <SidebarHeader>
-                    <div className="p-2 font-mono font-bold text-white bg-blue-950 bg-linear-to-r from-blue-950 via-blue-800  to-blue-700
-                        rounded-lg text-2xl flex items-center justify-center relative top-6 h-40">
+                    <div className="p-2 font-mono font-bold text-white rounded-lg text-2xl flex items-center justify-center relative top-6 h-40">
                         <Image
                             src={logo}
                             alt=""
-                            width={130}
+                            width={200}
                         />
                     </div>
                 </SidebarHeader>
@@ -95,7 +96,19 @@ export default function sidebar({role}:Props){
                                 </SidebarMenuItem>
                             );
                         })}
-
+                        <div className="h-16 w-full">
+                            <div className="w-full h-full p-3">
+                                <Button 
+                                    onClick={()=>{
+                                        setModalLogout(true)
+                                    }}
+                                    className={`bg-blue-800  z-50 font-mono text-[11px] hover:bg-blue-700 duration-500`}
+                                >
+                                    Déconnexion
+                                </Button>
+                            </div>
+                        </div>
+                        <Logout open={openModalLogout} onOpenChange={setModalLogout} />
                     </SidebarMenu>
                 </SidebarContent>
                 <div className="my-6"></div>

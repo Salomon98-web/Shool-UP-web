@@ -2,15 +2,18 @@
 
 import { useEffect, useState } from "react"
 import ModalCommencerAbonnement from "./modal-commencer-abonnement"
+import ModalDeleteAbonnement from "./modal-delete-abonnement"
 import LoaderCarte from "../loading-carte"
-import { Crown, Download, Calendar, Zap } from "lucide-react"
+import { Crown, Download, Calendar, Zap, LucideDelete } from "lucide-react"
 
 interface Props{
     token:string | undefined
+    role:string | undefined
     onSuccess:()=>void
+    refreshKey:number
 }
 
-export default function Abonnement({token, onSuccess}:Props){
+export default function Abonnement({token, role, onSuccess, refreshKey}:Props){
 
     const[open, setOpen] = useState(false)
     const [data, setData] = useState([])
@@ -19,6 +22,8 @@ export default function Abonnement({token, onSuccess}:Props){
     const [id, setId] = useState<number>(0)
     const [price, setPrice] = useState<number>(0)
     const [nbrDownload, setNbrDownload] = useState<number>(0)
+    {/** */}
+    const [openModalDelete, setOpenModalDelete] = useState(false)
 
     useEffect(()=>{
         const abonnement = async ()=>{
@@ -45,7 +50,7 @@ export default function Abonnement({token, onSuccess}:Props){
             console.log(result)
         }
         abonnement()
-    },[])
+    },[refreshKey])
 
     if(Loading){
         return(
@@ -90,11 +95,25 @@ export default function Abonnement({token, onSuccess}:Props){
                         className={`relative overflow-hidden flex flex-col group duration-500  bg-linear-to-br rounded-sm h-78 shrink-0 min-w-64 p-4 gap-2 
                         ${abonnement.type == "annuel"?('from-blue-950 bg-blue-700 via-blue-800 to-blur to-blue-950'):('bg-blue-100 from-blue-50 via-blue-50 to-blur to-blue-100 border border-blue-200')}`}
                     >
+                        <div className="w-full flex justify-between">
+                            <div className={`w-12 h-12 ${abonnement.type == "annuel" ?('bg-blue-800 text-yellow-300'):('bg-blue-200')}  p-2 rounded-lg flex items-center justify-center`}>
+                                {abonnement.type == "annuel" ?(<Crown />):(<Calendar/>)}
+                            </div>
 
-                        <div className={`w-12 h-12 ${abonnement.type == "annuel" ?('bg-blue-800 text-yellow-300'):('bg-blue-200')}  p-2 rounded-lg flex items-center justify-center`}>
-                            {abonnement.type == "annuel" ?(<Crown />):(<Calendar/>)}
+                            {role === 'admin' ?(
+                                <button
+                                    onClick={()=>{
+                                        setType(abonnement.type)
+                                        setId(abonnement.id)
+                                        setOpenModalDelete(true)
+                                    }}      
+                                    className="z-30 w-12 h-12 rounded-lg bg-red-700 flex items-center justify-center text-white"
+                                >
+                                    <LucideDelete />
+                                </button>
+                            ):(null)}
                         </div>
-
+                        
                         <div  
                             className={`absolute -right-19 -top-32 h-48 w-48 rounded-full bg-violet-100 opacity-10 `}
                         />
@@ -133,7 +152,7 @@ export default function Abonnement({token, onSuccess}:Props){
                 ))}
             </div>
         </div>
-        
+        <ModalDeleteAbonnement token={token} id={id} abonnementName={type} open={openModalDelete} onOpenOnChange={setOpenModalDelete} onSuccess={onSuccess} />
         <ModalCommencerAbonnement onSuccess={onSuccess} open={open} onOpenChange={setOpen} type={type} id={id} price={price} download={`${nbrDownload} téléchargements / jour `}token={token} />
         </>
         
