@@ -118,17 +118,17 @@ export default function Abonnement({token, role, onSuccess, refreshKey}:Props){
                             className={`absolute -right-19 -top-32 h-48 w-48 rounded-full bg-violet-100 opacity-10 `}
                         />
 
-                        <p className={` font-mono text-md ${abonnement.type == "annuel"?('text-white'):('')}  font-extrabold uppercase`}>{abonnement.type}</p>
+                        <p className={`  text-md ${abonnement.type == "annuel"?('text-white'):('')}  font-extrabold uppercase`}>{abonnement.type}</p>
 
-                        <p className={`${abonnement.type == "annuel"?('text-white'):('')} text-wrap font-mono text-[10px]`}>
+                        <p className={`${abonnement.type == "annuel"?('text-white'):('')} text-wrap  text-[10px]`}>
                             {abonnement.type == "annuel"?(<span> d'avantages, plus <br/> d'économies</span>):(<span>Idéal pour commencer <br/> et profiter de nos services</span>)}
                         </p>
                         <p className="flex flex-row gap-2 ">
-                            <span className={`${abonnement.type == "annuel"?('text-white'):('')} font-mono font-extrabold text-4xl`}>{abonnement.montant}</span>
-                            <span className={`font-mono ${abonnement.type == "annuel"?('text-white'):('')} relative top-5`}>XAF</span>
+                            <span className={`${abonnement.type == "annuel"?('text-white'):('')}  font-extrabold text-4xl`}>{abonnement.montant}</span>
+                            <span className={` ${abonnement.type == "annuel"?('text-white'):('')} relative top-5`}>XAF</span>
                         </p>
 
-                        <p className={` ${abonnement.type == "annuel"?('text-white bg-blue-800'):('bg-blue-200')} font-mono text-[10px] w-full p-2  rounded-lg flex flex-row gap-2 items-center`}>
+                        <p className={` ${abonnement.type == "annuel"?('text-white bg-blue-800'):('bg-blue-200')}  text-[10px] w-full p-2  rounded-lg flex flex-row gap-2 items-center`}>
                             <span className={`text-xs w-9 h-9 rounded-full ${abonnement.type == "annuel" ?('bg-blue-600 '):('bg-blue-600 text-white')}  flex justify-center items-center`}>
                                 {abonnement.type == "annuel" ?(<Download width={20} />):(<Zap/>)}
                             </span>
@@ -142,12 +142,12 @@ export default function Abonnement({token, role, onSuccess, refreshKey}:Props){
                                 setPrice(abonnement.montant)
                                 setNbrDownload(abonnement.limit_techarge)
                             }}
-                            className={` p-2  ${abonnement.type == "annuel" ?('bg-yellow-400'):('bg-blue-700 text-white')} w-full  font-mono text-[10px] flex justify-center items-center 
+                            className={` p-2  ${abonnement.type == "annuel" ?('bg-yellow-400'):('bg-blue-700 text-white')} w-full   text-[10px] flex justify-center items-center 
                             rounded-md my-3`}
                         >
                             commencer
                         </button>
-                        {/* <span className="text-[10px] font-mono text-gray-400">19 exercices</span> */}
+                        {/* <span className="text-[10px]  text-gray-400">19 exercices</span> */}
                     </div>
                 ))}
             </div>

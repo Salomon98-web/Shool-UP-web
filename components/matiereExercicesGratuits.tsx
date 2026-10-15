@@ -49,13 +49,13 @@ export default function Matieres(){
 
                 <Link href="/exercices-gratuits">
                     <div className="flex items-center justify-center shadow-lg bg-blue-950 rounded-sm shrink-0 p-2">
-                        <p className="text-white text-xs whitespace-nowrap font-mono">Toutes les matières</p>
+                        <p className="text-white text-xs whitespace-nowrap ">Toutes les matières</p>
                     </div>
                 </Link>
                 {data.map((subject:any)=>(
                     <Link key={subject.id} href={`/exercices-gratuits/${subject.matiere.id}`}>
                         <div className="flex items-center justify-center shadow-lg bg-blue-950 rounded-sm shrink-0 p-2">
-                            <p className="text-white text-xs whitespace-nowrap font-mono">{subject.matiere.nom_matiere}</p>
+                            <p className="text-white text-xs whitespace-nowrap ">{subject.matiere.nom_matiere}</p>
                         </div>
                     </Link>
                 ))}
@@ -66,7 +66,7 @@ export default function Matieres(){
                         <Link key={subject.id} href={`/exercices-gratuits/${subject.matiere.id}`}>
                             <div className="flex justify-start items-center group bg-gray-100 duration-500 hover:shadow-lg 
                                 hover:shadow-mauve-300 w-full h-auto rounded-sm p-4 ">
-                                <p className="text-start font-bold font-mono text-[12px] text-wrap">{subject.matiere.nom_matiere}</p>
+                                <p className="text-start font-bold  text-lg text-wrap">{subject.matiere.nom_matiere}</p>
                             </div>
                         </Link>
                     ))}

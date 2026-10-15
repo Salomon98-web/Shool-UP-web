@@ -83,12 +83,12 @@ export default function cartes({token}:Props){
                     <div className="w-12 h-12 rounded-xl bg-blue-200 p-2 flex justify-center items-center">
                         <FileText className=" text-blue-600" />
                     </div>
-                    <p className="font-mono text-chart-2  text-xs">Total Exercice</p>
+                    <p className=" text-chart-2  text-xs">Total Exercice</p>
                 </div>
                 <div className="my-3">
-                    <p className="font-mono text-[12px] relative left-19 bottom-7"><span className="text-2xl font-extrabold "><ConvertNumber number={(data as any).totalExercice} /></span></p>
+                    <p className=" text-lg relative left-19 bottom-7"><span className="text-2xl font-extrabold "><ConvertNumber number={(data as any).totalExercice} /></span></p>
                 </div>
-                <p className="font-mono text-blue-800 text-[12px]"> exercices et corrigés</p>
+                <p className=" text-blue-800 text-lg"> exercices et corrigés</p>
             </div>
 
             <div className="w-full flex flex-col bg-blue-200 rounded-md p-5 shadow-md group relative overflow-hidden bg-linear-to-br from-white to-green-100 ">
@@ -96,13 +96,13 @@ export default function cartes({token}:Props){
                     <div className="w-12 h-12 rounded-xl bg-green-200 p-2 flex justify-center items-center">
                         <Gift className=" text-green-600" />
                     </div>
-                    <p className="font-mono text-chart-2  text-xs">Contenu Gratuit</p>
+                    <p className=" text-chart-2  text-xs">Contenu Gratuit</p>
                 </div>
                 <div className="my-3">
-                <p className="font-mono text-green-800 text-[12px] relative left-19 bottom-7"><span className="text-2xl font-extrabold text-shadow-sm "><ConvertNumber number={(data as any).totalExerciceGratuit} /></span></p>
+                <p className=" text-green-800 text-lg relative left-19 bottom-7"><span className="text-2xl font-extrabold text-shadow-sm "><ConvertNumber number={(data as any).totalExerciceGratuit} /></span></p>
                 
                 </div>
-                <p className="font-mono text-green-800 text-[12px]">exercices gratuits et corrigés</p>
+                <p className=" text-green-800 text-lg">exercices gratuits et corrigés</p>
             </div>
 
             <div className="w-full flex flex-col bg-blue-200 rounded-md p-5 shadow-md group relative overflow-hidden bg-linear-to-br from-white to-violet-100 ">
@@ -110,13 +110,13 @@ export default function cartes({token}:Props){
                     <div className="w-12 h-12 rounded-xl bg-violet-200 p-2 flex justify-center items-center">
                         <BookOpenText className=" text-violet-600" />
                     </div>
-                    <p className="font-mono text-chart-2  text-xs">Domaine</p>
+                    <p className=" text-chart-2  text-xs">Domaine</p>
                 </div>
                 <div className="my-3">
-                    <p className="font-mono text-violet-800 text-[12px] relative left-19 bottom-7"><span className="text-2xl font-extrabold "><ConvertNumber number={(data as any).totalCategorie} /></span></p>
+                    <p className=" text-violet-800 text-lg relative left-19 bottom-7"><span className="text-2xl font-extrabold "><ConvertNumber number={(data as any).totalCategorie} /></span></p>
 
                 </div>
-                <p className="font-mono text-violet-800 text-[12px]">catégories</p>
+                <p className=" text-violet-800 text-lg">catégories</p>
             </div>
 
             <div className="w-full flex flex-col bg-blue-200 rounded-md p-5 shadow-md group relative overflow-hidden bg-linear-to-br from-white to-orange-100 ">
@@ -124,12 +124,12 @@ export default function cartes({token}:Props){
                     <div className="w-12 h-12 rounded-xl bg-orange-200 p-2 flex justify-center items-center">
                         <Download className=" text-orange-600" />
                     </div>
-                    <p className="font-mono text-chart-2  text-xs">Activité de téléchargement</p>
+                    <p className=" text-chart-2  text-xs">Activité de téléchargement</p>
                 </div>
                 <div className="my-3">
-                    <p className="font-mono text-orange-800 text-[12px] relative left-19 bottom-7"><span className="text-2xl font-extrabold "><ConvertNumber number={(data as any).activiteTelechargement} /></span></p>
+                    <p className=" text-orange-800 text-lg relative left-19 bottom-7"><span className="text-2xl font-extrabold "><ConvertNumber number={(data as any).activiteTelechargement} /></span></p>
                 </div>
-                <p className="font-mono text-orange-800 text-[12px]">total téléchargements</p>
+                <p className=" text-orange-800 text-lg">total téléchargements</p>
             </div>
             
         </div>

@@ -21,11 +21,11 @@ export default function CGU(){
       </DialogTrigger>
 
       <DialogContent className="w-auto">
-        <DialogHeader className="font-mono font-bold text-[12px] text-blue-950 h-8">
+        <DialogHeader className=" font-bold text-lg text-blue-950 h-8">
           <DialogTitle className={`font-extrabold`}>Contrat d'utilisateur</DialogTitle>
         </DialogHeader>
         <hr />
-        <div className="flex flex-col gap-4 w-96 text-xs font-mono">
+        <div className="flex flex-col gap-4 w-96 text-xs ">
           <span className="text-black ">
             Les exercices avec corrigés présents sur cette plate-forme sont la propriété exclusive de <span className="font-bold"> School UP</span>.
           </span>

@@ -31,7 +31,7 @@ export default function Category(){
         return(
             <div className=" flex flex-col p-3 gap-2">
                 <div className="">
-                <p className=" text-sm  font-mono text-gray-400 text-center">Nos catégories</p>
+                <p className=" text-sm   text-gray-400 text-center">Nos catégories</p>
             </div>
                 <div className=" w-full flex flex-row justify-center items-center h-auto p-2">
                     <div className="flex overflow-x-auto pb-4 scrollbar-hide gap-2 ">
@@ -46,22 +46,22 @@ export default function Category(){
     if(data.length < 1){
         return(
            <div className="w-ull p-4 relative top-10 flex flex-col gap-5">
-                <p className="text-center text-chart-1 font-bold font-mono">Aucune catégorie</p>
+                <p className="text-center text-chart-1 font-bold ">Aucune catégorie</p>
            </div> 
         )
     }
     return (
         <div className=" flex flex-col p-3 gap-2">
             <div className="">
-                <p className=" text-sm  font-mono text-gray-400 text-center">Nos catégories</p>
+                <p className=" text-sm   text-gray-400 text-center">Nos catégories</p>
             </div>
             <div className=" w-full flex flex-row justify-center items-center h-auto p-2">
                 <div className="flex overflow-x-auto pb-4 scrollbar-hide gap-2 ">
                     {data.map((category:any)=>(
                         <div key={category.id} className=" flex flex-col items-center justify-center shadow-lg bg-gray-200 group duration-500 
                             rounded-sm h-20 md:h-60 shrink-0 min-w-60 p-2 gap-2 hover:shadow-mauve-300 hover:shadow-lg">
-                            <p className=" text-[10px] text-black font-semibold font-mono group-hover:transform group-hover:-translate-y-1 group-active:-translate-y-1 duration-500">{category.name}</p>
-                            {/* <span className="text-[10px] font-mono text-gray-400">19 exercices</span> */}
+                            <p className=" text-[10px] text-black font-semibold  group-hover:transform group-hover:-translate-y-1 group-active:-translate-y-1 duration-500">{category.name}</p>
+                            {/* <span className="text-[10px]  text-gray-400">19 exercices</span> */}
                         </div>
                     ))}
                 </div>

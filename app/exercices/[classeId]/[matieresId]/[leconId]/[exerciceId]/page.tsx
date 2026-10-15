@@ -133,7 +133,7 @@ export default function classeExercices({params}:Props){
                             />
                             <div className=" bg-black opacity-60 absolute inset-0"></div>
                             <div className=" flex flex-col justify-center items-center relative top-14 gap-2">
-                                <p className="text-white font-mono text-[12px] text-wrap"><span className=" font-bold font-mono text-xl">{dataCategory?.name}</span> </p>
+                                <p className="text-white  text-lg text-wrap"><span className=" font-bold  text-xl">{dataCategory?.name}</span> </p>
                             </div>
                         </div>
                     )}
@@ -143,15 +143,15 @@ export default function classeExercices({params}:Props){
             <div className="flex flex-1 flex-col my-10 gap-8">
                 <div className="flex justify-start items-center px-4 lg:px-28">
                     <div className="flex flex-col justify-center w-full">
-                        <p className="font-bold font-mono ">{dataClasse?.name_class}</p>
-                        <p className="text-[13px] font-bold text-blue-950 font-mono "> <span>{dataMatiere?.nom_matiere}</span></p>
-                        <p className="text-[12px] font-mono text-chart-2 text-wrap"> <span>{dataLecon?.titre}</span></p> 
-                        <p className=" text-[11px] text-chart-2 font-mono relative top-4">Téléchargez vos exercices</p> 
+                        <p className="font-bold  ">{dataClasse?.name_class}</p>
+                        <p className="text-[13px] font-bold text-blue-950  "> <span>{dataMatiere?.nom_matiere}</span></p>
+                        <p className="text-lg  text-chart-2 text-wrap"> <span>{dataLecon?.titre}</span></p> 
+                        <p className=" text-[11px] text-chart-2  relative top-4">Téléchargez vos exercices</p> 
                     </div>
                 </div>
                 <div className="px-4 lg:px-28 flex flex-row gap-2 items-center">
-                    <Link href={`/exercices/${param.classeId}/${param.matieresId}`} className="p-2 bg-blue-950 text-white rounded-sm font-mono text-[13px]">Retour</Link>
-                    <Link href={`/exercices/${param.classeId}/${param.matieresId}/${param.leconId}`} className="p-2 bg-blue-950 text-white rounded-sm text-[13px] font-mono">Toutes les leçons</Link>
+                    <Link href={`/exercices/${param.classeId}/${param.matieresId}`} className="p-2 bg-blue-950 text-white rounded-sm  text-[13px]">Retour</Link>
+                    <Link href={`/exercices/${param.classeId}/${param.matieresId}/${param.leconId}`} className="p-2 bg-blue-950 text-white rounded-sm text-[13px] ">Toutes les leçons</Link>
                 </div>
                 {loading ? (
                     <div className="w-full h-full relative top-14 ">

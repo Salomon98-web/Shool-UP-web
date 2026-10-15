@@ -61,13 +61,13 @@ export default function CartesLecons({token, refreshKey}:Props){
                     <div className="w-12 h-12 rounded-xl bg-purple-200 p-2 flex justify-center items-center">
                         <Pencil className=" text-purple-600" />
                     </div>
-                    <p className="font-mono text-chart-2  text-xs">Total leçon</p>
+                    <p className=" text-chart-2  text-xs">Total leçon</p>
                 </div>
                 <div className="my-3">
-                    <p className="font-mono text-purple-800 text-[12px] relative left-19 bottom-7"><span className="text-2xl font-extrabold "><ConvertNumber number={data.length} /></span></p>
+                    <p className=" text-purple-800 text-lg relative left-19 bottom-7"><span className="text-2xl font-extrabold "><ConvertNumber number={data.length} /></span></p>
 
                 </div>
-                <p className="font-mono text-gray-800 text-[12px]">leçon-s</p>
+                <p className=" text-gray-800 text-lg">leçon-s</p>
             </div>
         </div>
         </>

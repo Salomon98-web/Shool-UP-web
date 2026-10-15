@@ -61,13 +61,13 @@ export default function CartesClasses({token, refreshKey}:Props){
                     <div className="w-12 h-12 rounded-xl bg-blue-200 p-2 flex justify-center items-center">
                         <Presentation className=" text-blue-600" />
                     </div>
-                    <p className="font-mono text-chart-2  text-xs">Total classe</p>
+                    <p className=" text-chart-2  text-xs">Total classe</p>
                 </div>
                 <div className="my-3">
-                    <p className="font-mono text-blue-800 text-[12px] relative left-19 bottom-7"><span className="text-4xl font-extrabold "><ConvertNumber number={data.length} /></span></p>
+                    <p className=" text-blue-800 text-lg relative left-19 bottom-7"><span className="text-4xl font-extrabold "><ConvertNumber number={data.length} /></span></p>
 
                 </div>
-                <p className="font-mono text-gray-800 text-[12px]">classe-s</p>
+                <p className=" text-gray-800 text-lg">classe-s</p>
             </div>
         </div>
         </>

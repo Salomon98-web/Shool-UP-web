@@ -71,7 +71,7 @@ export default function Lecons({token, role}:Props){
                 {/** topbar */}
                 <Topbar onSuccess={()=>{}} token={token}/>
 
-                <div className=" relative top-7 p-2 font-mono text-sm px-4 lg:px-14">
+                <div className=" relative top-7 p-2  text-sm px-4 lg:px-14">
                     <hr className="p-2" />
                     <p className="text-chart-1">Leçons</p>
                 </div>
@@ -82,7 +82,7 @@ export default function Lecons({token, role}:Props){
                             onClick={()=>{
                                 setOpenModalAddClass(true)
                             }}
-                            className="  font-mono text-[11px] text-white bg-purple-800 max-w-96 p-2 rounded-sm"
+                            className="   text-[11px] text-white bg-purple-800 max-w-96 p-2 rounded-sm"
                         >
                         AJouter une leçon
                     </button>
@@ -106,16 +106,16 @@ export default function Lecons({token, role}:Props){
                             <div className="flex flex-col bg-white shadow-sm w-full rounded-lg">
                                 <div className="w-full flex flex-col bg-white p-2 rounded-lg">
                                     <div className=" flex flex-col  w-full h-auto"> 
-                                        <p className=" font-mono font-semibold text-[10px] md:text-xs p-2 uppercase">{item.titre}</p>
+                                        <p className="  font-semibold text-[10px] md:text-xs p-2 uppercase">{item.titre}</p>
                                     </div>
                                 </div>
                                 <div className="flex flex-col">
-                                    <p className=" font-mono font-bold text-[10px] p-2 px-3 text-chart-2">{item.classe.name_class}</p>
+                                    <p className="  font-bold text-[10px] p-2 px-3 text-chart-2">{item.classe.name_class}</p>
                                     
                                     <div className="w-full flex justify-between items-center">
-                                        <p className=" font-mono font-bold text-[8px] p-2 px-3 text-chart-2">{item.matiere.nom_matiere}</p>
+                                        <p className="  font-bold text-[8px] p-2 px-3 text-chart-2">{item.matiere.nom_matiere}</p>
 
-                                        <div className=" flex  gap-2 font-mono p-2">
+                                        <div className=" flex  gap-2  p-2">
                                             <button
                                                 onClick={()=>{
                                                     /* setIdCategory(item.id)

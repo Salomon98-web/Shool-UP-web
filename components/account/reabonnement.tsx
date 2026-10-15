@@ -87,7 +87,7 @@ export default function Reabonnement(){
                 {/** topbar */}
                 {/* <Topbar onSuccess={()=>{}} token={token} /> */}
 
-                <div className=" relative top-0 p-2 font-mono text-sm px-4 lg:px-14">
+                <div className=" relative top-0 p-2  text-sm px-4 lg:px-14">
                     {/* <hr className="p-2" /> */}
                     {/* <p className="text-chart-1">Réabonnez-vous !</p> */}
                 </div>
@@ -99,9 +99,9 @@ export default function Reabonnement(){
                                     <div  
                                         className={`absolute -right-19 -top-32 h-48 w-48 rounded-full bg-violet-100 opacity-10 `}
                                     />
-                                    <p className="font-mono text-[12px] text-white">Veillez entrer votre code <strong>PIN</strong></p>
+                                    <p className=" text-lg text-white">Veillez entrer votre code <strong>PIN</strong></p>
                                     {/* <input 
-                                        className="border-2 border-gray-300 bg-white rounded-lg w-full h-12 p-2 flex justify-center items-center font-mono"
+                                        className="border-2 border-gray-300 bg-white rounded-lg w-full h-12 p-2 flex justify-center items-center "
                                         type="password" 
                                         name=""
                                         required
@@ -120,7 +120,7 @@ export default function Reabonnement(){
                                     </InputOTP>
                                 </div>
                                 <div className="flex flex-row gap-2">
-                                    <p className="font-mono text-[10px]">Changer votre abonnement</p>
+                                    <p className=" text-[10px]">Changer votre abonnement</p>
                                     <Switch 
                                         onCheckedChange={()=>{
                                             change == true ? setChange(false) : setChange(true)
@@ -139,11 +139,11 @@ export default function Reabonnement(){
                                             /> 
                                             <p className="">Mensuel</p>
                                         </div>
-                                        <p className={` font-mono text-md font-extrabold uppercase`}>{(dataAbonnement as any).type}</p>
+                                        <p className={`  text-md font-extrabold uppercase`}>{(dataAbonnement as any).type}</p>
                                         <p className="flex flex-row gap-2 ">
-                                            <span className={`${(dataAbonnement as any).type == "annuel"?('text-yellow-600'):('')} font-mono font-extrabold text-4xl`}>{(dataAbonnement as any).montant}</span>
-                                            <span className={`font-mono ${(dataAbonnement as any).type == "annuel"?('text-yellow-600'):('')} relative top-5`}>XAF</span>
-                                            <span className="relative left-1 top-4 text-[12px] w-full my-2">{(dataAbonnement as any).limit_techarge} téléchargements / jour</span>
+                                            <span className={`${(dataAbonnement as any).type == "annuel"?('text-yellow-600'):('')}  font-extrabold text-4xl`}>{(dataAbonnement as any).montant}</span>
+                                            <span className={` ${(dataAbonnement as any).type == "annuel"?('text-yellow-600'):('')} relative top-5`}>XAF</span>
+                                            <span className="relative left-1 top-4 text-lg w-full my-2">{(dataAbonnement as any).limit_techarge} téléchargements / jour</span>
                                         </p>
                                         <input type="hidden" name="" required value={(dataAbonnement as any).id} />
                                         <input type="hidden" name="classe_id" value={classeId}/>
@@ -175,7 +175,7 @@ export default function Reabonnement(){
                                 {code.length === 4 ?(
                                     <button
                                         type="submit" 
-                                        className="p-2 bg-blue-700 rounded-lg font-mono text-white"
+                                        className="p-2 bg-blue-700 rounded-lg  text-white"
                                     >
                                         Réabonner
                                     </button>
@@ -183,7 +183,7 @@ export default function Reabonnement(){
                                     <button
                                         disabled
                                         type="submit" 
-                                        className="p-2 bg-gray-300 rounded-lg font-mono text-white"
+                                        className="p-2 bg-gray-300 rounded-lg  text-white"
                                     >
                                         Réabonner
                                     </button>
@@ -196,7 +196,7 @@ export default function Reabonnement(){
                                 onClick={()=>{
                                     router.back()
                                 }}
-                                className="p-2 font-mono text-[12px] text-blue-700"
+                                className="p-2  text-lg text-blue-700"
                             >
                                 Retour
                             </button>

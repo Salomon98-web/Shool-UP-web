@@ -32,8 +32,8 @@ export default function Option() {
                             opacity-10  group-hover:scale-125 duration-500 
                             `}  
                         />
-                    <p className="text-center font-bold font-mono group-h text-wrap uppercase text-[12px]">Premier abonnement</p>
-                    <p className="text-chart-2 font-mono text-[10px]">cliquer içi</p>
+                    <p className="text-center font-bold  group-h text-wrap uppercase text-lg">Premier abonnement</p>
+                    <p className="text-chart-2  text-[10px]">cliquer içi</p>
                 </div>
             </Link>
 
@@ -48,8 +48,8 @@ export default function Option() {
                             opacity-10  group-hover:scale-125 duration-500 
                             `}  
                         />
-                    <p className="text-center font-bold font-mono group-h text-wrap uppercase text-[12px]">connectez-vous</p>
-                    <p className="text-chart-2 font-mono text-[10px]">cliquer içi</p>
+                    <p className="text-center font-bold  group-h text-wrap uppercase text-lg">connectez-vous</p>
+                    <p className="text-chart-2  text-[10px]">cliquer içi</p>
                 </div>
             </Link>
 
@@ -64,8 +64,8 @@ export default function Option() {
                             opacity-10  group-hover:scale-125 duration-500 
                             `}  
                         />
-                    <p className="text-center font-bold font-mono group-h text-wrap uppercase text-[12px]">Réabonnez-vous</p>
-                    <p className="text-chart-2 font-mono text-[10px]">cliquer içi</p>
+                    <p className="text-center font-bold  group-h text-wrap uppercase text-lg">Réabonnez-vous</p>
+                    <p className="text-chart-2  text-[10px]">cliquer içi</p>
                 </div>
             </Link>
 

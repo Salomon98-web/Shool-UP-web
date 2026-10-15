@@ -22,7 +22,7 @@ export default function ExercicesGratuits(){
                         />
                         <div className=" bg-black opacity-60 absolute inset-0"></div>
                         <div className=" flex flex-col justify-center items-center relative top-14 gap-2">
-                            <p className="text-white font-mono text-[12px]"><span className=" font-bold font-mono text-xl uppercase">Exercices gratuits</span> </p>
+                            <p className="text-white  text-lg"><span className=" font-bold  text-xl uppercase">Exercices gratuits</span> </p>
                         </div>
                     </div>
                 </div>
@@ -31,7 +31,7 @@ export default function ExercicesGratuits(){
             <div className="flex flex-1 flex-col my-10 gap-8">
                 <div className="flex justify-start items-center px-4 lg:px-28">
                     <div className="flex flex-col justify-center items-center w-full">
-                        <p className="text-[14px] font-mono text-blue-900">Cliquer sur une classe</p>               
+                        <p className="text-[14px]  text-blue-900">Cliquer sur une classe</p>               
                     </div>
                 </div>{/* 
                 <MatieresExercicesGratuits /> 

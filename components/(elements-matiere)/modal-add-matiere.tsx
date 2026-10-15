@@ -97,7 +97,7 @@ export default function MoadalAddMatiere({token, open, onOpenChange, onSuccess,}
         <Dialog open={open} onOpenChange={onOpenChange}>
             <DialogContent className={`w-96 `}>
                 <DialogHeader>
-                    <DialogTitle className={`font-mono font-bold text-blue-900 my-6 px-4`}>Nouvelle matière</DialogTitle>
+                    <DialogTitle className={` font-bold text-blue-900 my-6 px-4`}>Nouvelle matière</DialogTitle>
                 </DialogHeader>
                 <div className="w-full">
                     <form action="" className="flex flex-col justify-center items-center gap-7"  onSubmit={handleSubmit}>
@@ -113,7 +113,7 @@ export default function MoadalAddMatiere({token, open, onOpenChange, onSuccess,}
 
                         <button 
                             type="submit"
-                            className="bg-blue-950 p-2 text-white font-mono text-[12px] rounded-sm w-32 h-8"
+                            className="bg-blue-950 p-2 text-white  text-lg rounded-sm w-32 h-8"
                         >
                             {loading ?(
                                 <Loader />

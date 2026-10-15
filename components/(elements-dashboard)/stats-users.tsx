@@ -78,11 +78,11 @@ export default function StatsUsers({token}:Props){
                 <div className="flex justify-between w-full gap-3 items-start">
                     <div className="flex flex-col gap-2">
 
-                        <p className="text-xl font-mono font-extrabold">
+                        <p className="text-xl  font-extrabold">
                             <ConvertNumber number={(data as any).totalAccount} />
                         </p>
 
-                        <p className="font-mono text-xs text-chart-2">Utilisateur-s</p>
+                        <p className=" text-xs text-chart-2">Utilisateur-s</p>
                     </div>
                     
                 </div>
@@ -100,9 +100,9 @@ export default function StatsUsers({token}:Props){
                 <div className="flex justify-between w-full gap-3">
                     <div className="flex flex-col gap-2 items-start">
 
-                       <p className="text-xl font-mono font-extrabold">100</p>
+                       <p className="text-xl  font-extrabold">100</p>
 
-                        <p className="font-mono text-xs text-chart-2">Compte-s actif-s</p>
+                        <p className=" text-xs text-chart-2">Compte-s actif-s</p>
                     </div>
                     
                 </div>
@@ -120,11 +120,11 @@ export default function StatsUsers({token}:Props){
                 <div className="flex justify-between w-full gap-3">
                     <div className="flex flex-col gap-2 items-start">
 
-                        <p className="text-xl font-mono font-extrabold">
+                        <p className="text-xl  font-extrabold">
                             <ConvertNumber number={(data as any).totalDesactive} />
                         </p>
 
-                        <p className="font-mono text-xs text-chart-2">Compte-s bloqué-s</p>
+                        <p className=" text-xs text-chart-2">Compte-s bloqué-s</p>
                     </div>
                 </div>
             </div>
@@ -141,11 +141,11 @@ export default function StatsUsers({token}:Props){
                 <div className="flex justify-between w-full gap-3">
                     <div className="flex flex-col gap-2 items-start">
 
-                       <p className="text-xl font-mono font-extrabold">
+                       <p className="text-xl  font-extrabold">
                             <ConvertNumber number={(data as any).totalSupprime} />
                         </p>
 
-                        <p className="font-mono text-xs text-chart-2">Compte-s supprimé-s</p>
+                        <p className=" text-xs text-chart-2">Compte-s supprimé-s</p>
                     </div>
                 </div>
             </div>

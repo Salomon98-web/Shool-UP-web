@@ -74,13 +74,13 @@ export default function ModalDeleteAbonnement({token, id, abonnementName, open, 
         <>
         <Dialog open={open} onOpenChange={onOpenOnChange}>
             <DialogContent className={`w-96 `}>
-                <DialogHeader className=" p-6 text-yellow-600 font-mono ">
+                <DialogHeader className=" p-6 text-yellow-600  ">
                     <DialogTitle className={`flex flex-row items-center gap-3 w-full font-bold`}>
                         <AlertTriangle width={45} height={45}/>
                         Avertissement 
                     </DialogTitle>
                 </DialogHeader>
-                <div className="p-2 flex flex-col gap-14 text-lg font-mono text-[12px]">
+                <div className="p-2 flex flex-col gap-14 text-lg  text-lg">
                     <p className="">
                         vous êtes sur le point de supprimer cette abonnement <strong>{abonnementName}</strong>, êtes-vous sur de vouloir continuer ?
                     </p>

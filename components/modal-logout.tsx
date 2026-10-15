@@ -56,7 +56,7 @@ export default function Logout({open, onOpenChange}:Props){
         <AlertDialog open={open} onOpenChange={onOpenChange}>
             <AlertDialogContent className={`w-92`}>
                 <AlertDialogHeader className="my-2">
-                    <AlertDialogTitle className={`text-md font-mono font-bold text-blue-800`}>
+                    <AlertDialogTitle className={`text-md  font-bold text-blue-800`}>
                         Déconnectez-vous
                     </AlertDialogTitle>
                     
@@ -65,13 +65,13 @@ export default function Logout({open, onOpenChange}:Props){
                 <div className="flex flex-row gap-4">
                     <Button
                         onClick={handlerLogout} 
-                        className={`w-20 font-mono text-xs`}
+                        className={`w-20  text-xs`}
                     >
                         {loading ? (<Loader />):(" OUI !")}
                         
                     </Button>
 
-                    <AlertDialogCancel className={`w-20 border-2 rounded-lg font-mono text-xs`}>Non !</AlertDialogCancel>
+                    <AlertDialogCancel className={`w-20 border-2 rounded-lg  text-xs`}>Non !</AlertDialogCancel>
                 </div>
             </AlertDialogContent>
         </AlertDialog>

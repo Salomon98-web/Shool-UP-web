@@ -61,7 +61,7 @@ function InputOTPSlot({
       )}
       {...props}
     >
-      {char && <div className="font-mono font-extrabold text-2xl">{masked ? ".":char}</div>}
+      {char && <div className=" font-extrabold text-2xl">{masked ? ".":char}</div>}
       {hasFakeCaret && (
         <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
           <div className="h-4 w-px animate-caret-blink bg-foreground duration-1000" />

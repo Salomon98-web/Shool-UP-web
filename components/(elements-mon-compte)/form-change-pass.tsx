@@ -45,18 +45,18 @@ export default  function ChangePassWord({token}:Props){
                 placeholder="Mot de passe actuel"
                 name="actual_password"
                 required
-                className=" font-mono p-2 text-[11px] border border-b border-t-0 border-l-0 border-r-0 focus:outline-none "
+                className="  p-2 text-[11px] border border-b border-t-0 border-l-0 border-r-0 focus:outline-none "
             />
             <input 
                 type="password"
                 placeholder="Nouveau mot de passe"
                 name="new_password"
                 required
-                className="font-mono p-2 text-[11px] border border-b border-t-0 border-l-0 border-r-0 focus:outline-none"
+                className=" p-2 text-[11px] border border-b border-t-0 border-l-0 border-r-0 focus:outline-none"
             />
             <Button 
                 type="submit"
-                className={`font-mono bg-blue-800 hover:bg-blue-700 text-xs`}
+                className={` bg-blue-800 hover:bg-blue-700 text-xs`}
             >
                 {loading === true ? (
                     <Loader />

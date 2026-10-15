@@ -17,7 +17,7 @@ export default function page(){
                             <div className="w-10 h-10 bg-blue-300 flex justify-center items-center rounded-lg">
                                 <Mail />
                             </div>
-                            <p className=" font-mono flex flex-col">
+                            <p className="  flex flex-col">
                                 <span className="text-[10px] text-chart-2">Email</span>
                                 <span>contact@schoolup.ga</span>
                             </p>
@@ -27,7 +27,7 @@ export default function page(){
                             <div className="w-10 h-10 bg-blue-300 flex justify-center items-center rounded-lg">
                                 <Phone />
                             </div>
-                            <p className=" font-mono flex flex-col">
+                            <p className="  flex flex-col">
                                 <span className="text-[10px] text-chart-2">Téléphone</span>
                                 <span>+241 065 45 01 34</span>
                             </p>
@@ -37,7 +37,7 @@ export default function page(){
                             <div className="w-10 h-10 bg-blue-300 flex justify-center items-center rounded-lg">
                                 <MapPin />
                             </div>
-                            <p className=" font-mono flex flex-col">
+                            <p className="  flex flex-col">
                                 <span className="text-[10px] text-chart-2">Localisation</span>
                                 <span>située à Libreville au Gabon</span>
                             </p>
@@ -48,20 +48,20 @@ export default function page(){
                     <form action="" className="flex flex-col justify-center items-center gap-4 w-[85vw] md:w-96 h-auto border border-gray-300 rounded-lg p-4 shadow-lg group duration-500">
 
                         <div className="p-4 my-5">
-                            <p className="text-black font-black font-mono text-2xl">Envoyez-nous un message</p>
+                            <p className="text-black font-black  text-2xl">Envoyez-nous un message</p>
                         </div>
 
                         <input 
                             type="text" 
                             name="" id="" 
-                            className="w-full h-10 p-2 bg-gray-200 border border-gray-300 rounded-sm hover:transform hover:translate-x-2 duration-500 font-mono text-[14px]" 
+                            className="w-full h-10 p-2 bg-gray-200 border border-gray-300 rounded-sm hover:transform hover:translate-x-2 duration-500  text-[14px]" 
                             placeholder="Entrer votre nom"
                         />
 
                         <input 
                             type="text" 
                             name="" id="" 
-                            className="w-full h-10 p-2 bg-gray-200 border border-gray-300 rounded-sm hover:transform hover:translate-x-2 duration-500 font-mono text-[14px]" 
+                            className="w-full h-10 p-2 bg-gray-200 border border-gray-300 rounded-sm hover:transform hover:translate-x-2 duration-500  text-[14px]" 
                             placeholder="Entrer votre adresse mail"
                         />
                         
@@ -69,18 +69,18 @@ export default function page(){
                         <input 
                             type="text" 
                             name="" id="" 
-                            className="w-full h-10 p-2 bg-gray-200 border border-gray-300 rounded-sm hover:transform hover:translate-x-2 duration-500 font-mono text-[14px]" 
+                            className="w-full h-10 p-2 bg-gray-200 border border-gray-300 rounded-sm hover:transform hover:translate-x-2 duration-500  text-[14px]" 
                             placeholder="Sujet"
                         />
                         <textarea 
                             name="" id=""
-                            className="w-full h-32 p-2 bg-gray-200 border border-gray-300 rounded-sm hover:transform hover:translate-x-2 duration-500 font-mono text-[14px]" 
+                            className="w-full h-32 p-2 bg-gray-200 border border-gray-300 rounded-sm hover:transform hover:translate-x-2 duration-500  text-[14px]" 
                             placeholder="Message"
                         ></textarea>
 
                         <button 
                             type="submit" 
-                            className="p-2 w-full h-10 bg-blue-800 font-mono text-white text-[18px] rounded-sm hover:bg-blue-700 duration-500 my-3"
+                            className="p-2 w-full h-10 bg-blue-800  text-white text-[18px] rounded-sm hover:bg-blue-700 duration-500 my-3"
                         >
                             Envoyer
                         </button>

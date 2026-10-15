@@ -55,7 +55,7 @@ export default function cartesExercices({id,matiereId}:Props){
     if(data.length < 1){
         return(
             <div className="w-full md:h-56 p-4 relative top-10 flex flex-col gap-5">
-                <p className="text-center text-chart-1 font-bold font-mono">Aucun exercices</p>
+                <p className="text-center text-chart-1 font-bold ">Aucun exercices</p>
             </div> 
         )
     }
@@ -94,11 +94,11 @@ export default function cartesExercices({id,matiereId}:Props){
                     </div>
 
                     <div className=" w-3xs text-chart-2 font-medium my-3 relative bottom-3">
-                        <p className=" line-clamp-2 text-[12px]">{item.description}</p>
+                        <p className=" line-clamp-2 text-lg">{item.description}</p>
                         <button onClick={()=>{
                             setDescription(item.description)
                             setOpenModalDescription(true)
-                        }} className="text-[12px] text-blue-700">
+                        }} className="text-lg text-blue-700">
                             Lire la description complet
                         </button>
                     </div>

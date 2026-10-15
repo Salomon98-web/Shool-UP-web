@@ -27,7 +27,7 @@ export default function modalErrors({open, onOpenChange, errors}: Props){
                 </DialogHeader>
                 <hr />
                 {errors.map((error, index)=>(
-                    <p key={index} className="font-mono text-[12px] font-semibold">
+                    <p key={index} className=" text-lg font-semibold">
                         {error}
                     </p>
                 ))}

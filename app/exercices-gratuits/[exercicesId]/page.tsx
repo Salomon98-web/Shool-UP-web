@@ -35,7 +35,7 @@ export default function exercices({params}:Props){
                         />
                         <div className=" bg-black opacity-60 absolute inset-0"></div>
                         <div className=" flex flex-col justify-center items-center relative top-14 gap-2">
-                            <p className="text-white font-mono text-[12px]"><span className=" font-bold font-mono text-xl uppercase">Exercices gratuits</span> </p>
+                            <p className="text-white  text-lg"><span className=" font-bold  text-xl uppercase">Exercices gratuits</span> </p>
                         </div>
                     </div>
                 </div>
@@ -44,7 +44,7 @@ export default function exercices({params}:Props){
             <div className="flex flex-1 flex-col my-10 gap-8">
                 <div className="flex justify-start items-center px-4 lg:px-28">
                     <div className="flex flex-col justify-start items-start w-full">
-                        <Link href="/exercices-gratuits" className="p-2 bg-blue-950 rounded-sm font-mono text-white text-[12px]" >Toutes les classes</Link>               
+                        <Link href="/exercices-gratuits" className="p-2 bg-blue-950 rounded-sm  text-white text-lg" >Toutes les classes</Link>               
                     </div>
                 </div>{/* 
                 <MatieresExercicesGratuits /> */}

@@ -71,7 +71,7 @@ export default function Classes({token, role}:Props){
                 {/** topbar */}
                 <Topbar onSuccess={()=>{}} token={token} />
 
-                <div className=" relative top-7 p-2 font-mono text-sm px-4 lg:px-14">
+                <div className=" relative top-7 p-2  text-sm px-4 lg:px-14">
                     <hr className="p-2" />
                     <p className="text-chart-1">Classes</p>
                 </div>
@@ -82,7 +82,7 @@ export default function Classes({token, role}:Props){
                             onClick={()=>{
                                 setOpenModalAddClass(true)
                             }}
-                            className="  font-mono text-[11px] text-white bg-blue-800 max-w-96 p-2 rounded-sm"
+                            className="   text-[11px] text-white bg-blue-800 max-w-96 p-2 rounded-sm"
                         >
                         AJouter une classe
                     </button>
@@ -105,12 +105,12 @@ export default function Classes({token, role}:Props){
                         
                             <div className="w-full flex flex-col bg-white shadow-sm p-2 rounded-lg">
                                 <div className=" flex flex-col "> 
-                                    <p className=" font-mono font-bold text-[10px] md:text-xs p-2 line-clamp-1 truncate w-[38vw] md:w-[30vw]">{item.name_class}</p>
+                                    <p className="  font-bold text-[10px] md:text-xs p-2 line-clamp-1 truncate w-[38vw] md:w-[30vw]">{item.name_class}</p>
     
                                     
                                     <div className="w-full flex justify-between">
-                                        <p className="text-chart-2 font-mono  text-[8px] w-[38vw] md:w-[30vw] p-2">{item.category?.name}</p>
-                                        <div className=" flex  gap-2 font-mono">
+                                        <p className="text-chart-2   text-[8px] w-[38vw] md:w-[30vw] p-2">{item.category?.name}</p>
+                                        <div className=" flex  gap-2 ">
                                             <button
                                                 onClick={()=>{
                                                     /* setIdCategory(item.id)

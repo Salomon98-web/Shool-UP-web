@@ -81,7 +81,7 @@ export default function page({params}:Props){
                             />
                             <div className=" bg-black opacity-60 absolute inset-0"></div>
                             <div className=" flex flex-col justify-center items-center relative top-14 gap-2">
-                                <p className="text-white font-mono text-[12px] text-wrap"><span className=" font-bold font-mono text-xl">{dataCategory?.name}</span> </p>
+                                <p className="text-white  text-lg text-wrap"><span className=" font-bold  text-xl">{dataCategory?.name}</span> </p>
                             </div>
                         </div>
                     )}
@@ -91,12 +91,12 @@ export default function page({params}:Props){
             <div className="flex flex-1 flex-col my-10 gap-8">
                 <div className="flex justify-start items-center px-4 lg:px-28">
                     <div className="flex flex-col justify-center w-full">
-                        <p className="text-[20px] text-blue-950 font-mono font-extrabold">Matière</p> 
-                        <p className=" text-[14px] md:text-sm font-mono text-chart-2">Cliquer sur une matière pour accéder a la/les leçon(s)</p>               
+                        <p className="text-2xl text-blue-950  font-extrabold">Matière</p> 
+                        <p className=" text-[14px] md:text-sm  text-chart-2">Cliquer sur une matière pour accéder a la/les leçon(s)</p>               
                     </div>
                 </div>
                 <div className="px-4 lg:px-28">
-                    <Link href={`/exercices/${param.classeId}`} className="p-2 bg-blue-950 text-white rounded-sm font-mono">Retour</Link>
+                    <Link href={`/exercices/${param.classeId}`} className="p-2 bg-blue-950 text-white rounded-sm ">Retour</Link>
                 </div>
                 {loading ? (
                     <div className="flex justify-start  px-4 lg:px-28">
@@ -112,7 +112,7 @@ export default function page({params}:Props){
                     <div className="">
                         
                         {data.length < 1 ? (
-                            <div className="text-center text-chart-1 font-mono">Aucune matière</div>
+                            <div className="text-center text-chart-1 ">Aucune matière</div>
                         ):(
                         
                             <div className="flex justify-start mx-auto px-4 lg:px-28">
@@ -121,7 +121,7 @@ export default function page({params}:Props){
                                         <Link key={item.id} href={`/exercices/${param.classeId}/${param.matieresId}/${item.matiere.id}`}>
                                             <div className="flex justify-start items-center group bg-gray-100 duration-500 hover:shadow-lg 
                                                 hover:shadow-mauve-300 w-full h-auto rounded-sm p-4 ">
-                                                <p className="text-start font-bold font-mono text-[16px] text-wrap">{item.matiere.nom_matiere}</p>
+                                                <p className="text-start font-bold  text-xl text-wrap">{item.matiere.nom_matiere}</p>
                                             </div>
                                         </Link>
                                     ))}

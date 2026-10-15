@@ -57,7 +57,7 @@ export default  function InfoAbonnement({token}:Props){
                     {loading ? (
                         <p className="text-lg animate-pulse text-chart-2">chargement...</p>
                     ):(
-                        <p className="font-mono text-2xl">
+                        <p className=" text-2xl">
                             <span className="font-extrabold text-rose-800">{data.length}</span> / <span className="font-extrabold text-rose-800">7</span>
                         </p> 
                     )}

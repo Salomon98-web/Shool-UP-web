@@ -66,24 +66,24 @@ export default  function AddAbonnement({token, onSuccess}:Props){
                 <p className="">Annuel</p>
             </div>
             <input type="hidden" name="type" value={type} />
-            <p className="font-mono uppercase text-violet-800 font-extrabold text-2xl">{type}</p>
+            <p className=" uppercase text-violet-800 font-extrabold text-2xl">{type}</p>
             <input 
                 type="number"
                 placeholder="Montant "
                 name="montant"
                 required
-                className=" font-mono p-2 text-[11px] border border-b border-t-0 border-l-0 border-r-0 focus:outline-none "
+                className="  p-2 text-[11px] border border-b border-t-0 border-l-0 border-r-0 focus:outline-none "
             />
             <input 
                 type="number"
                 placeholder="Nombre de téléchargement / jour"
                 name="limit_techarge"
                 required
-                className="font-mono p-2 text-[11px] border border-b border-t-0 border-l-0 border-r-0 focus:outline-none"
+                className=" p-2 text-[11px] border border-b border-t-0 border-l-0 border-r-0 focus:outline-none"
             />
             <Button 
                 type="submit"
-                className={`font-mono bg-blue-800 hover:bg-blue-700 text-xs`}
+                className={` bg-blue-800 hover:bg-blue-700 text-xs`}
             >
                 {loading === true ? (
                     <Loader />

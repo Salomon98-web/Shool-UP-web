@@ -77,7 +77,7 @@ export default function cartesExercices({classeId, matiereId, leconId}:Props){
     if(data.length < 1){
         return(
             <div className="w-full md:h-56 p-4 relative top-10 flex flex-col gap-5">
-                <p className="text-center text-chart-1 font-bold font-mono">Aucun exercice</p>
+                <p className="text-center text-chart-1 font-bold ">Aucun exercice</p>
             </div> 
         )
     }
@@ -98,7 +98,7 @@ export default function cartesExercices({classeId, matiereId, leconId}:Props){
                         />
                     </div>
                     <div className="flex flex-col justify-center items-start">
-                        <p className="text-[9px] font-mono">{ item.type == "GABONAIS" ? 'Système Gabonais' : 'Système Francais'}</p>
+                        <p className="text-[9px] ">{ item.type == "GABONAIS" ? 'Système Gabonais' : 'Système Francais'}</p>
                     </div>
                 </div>
 
@@ -111,11 +111,11 @@ export default function cartesExercices({classeId, matiereId, leconId}:Props){
                         opacity-10  group-hover:scale-125 duration-500 
                         `}  
                     />
-                    <p className=" text-[12px] lg:text-[12px] p-2 font-mono">{item.description}</p>
+                    <p className=" text-lg lg:text-lg p-2 ">{item.description}</p>
                 </div>
 
                 <div className="flex flex-row justify-between items-center p-2">
-                    <p className="font-mono text-[7px] flex flex-row justify-center items-center gap-1 w-full">
+                    <p className=" text-[7px] flex flex-row justify-center items-center gap-1 w-full">
                         <File width="20" className="text-red-600" />
                         <span>Exercice & corrigé</span> 
                     </p>

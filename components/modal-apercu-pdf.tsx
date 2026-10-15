@@ -41,7 +41,7 @@ export default function modalApercuPDF({open, onOpenChange, fileName}:Props){
         <Dialog open={open} onOpenChange={onOpenChange}>
             <DialogContent className="h-[65vw] md:h-[30vw] lg:h-[25vw] w-[75vh] flex flex-col p-2 overflow-hidden">
                 <DialogHeader className="h-12">
-                    <DialogTitle className="font-mono text-blue-950 text-[16px] p-2">Apercu</DialogTitle>
+                    <DialogTitle className=" text-blue-950 text-xl p-2">Apercu</DialogTitle>
                 </DialogHeader>
                 <hr />
                 <div className="h-[80vh] overflow-x-auto overflow-y-hidden relative top-2">

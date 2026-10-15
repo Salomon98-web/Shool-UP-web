@@ -79,7 +79,7 @@ export default function Corriges({token, role}:Props){
                 {/** topbar */}
                 <Topbar onSuccess={()=>{}} token={token} />
 
-                <div className=" relative top-7 p-2 font-mono text-sm px-4 lg:px-14">
+                <div className=" relative top-7 p-2  text-sm px-4 lg:px-14">
                     <hr className="p-2" />
                     <p className="text-chart-1">Corrigés</p>
                 </div>
@@ -109,7 +109,7 @@ export default function Corriges({token, role}:Props){
                                     `}  
                                 /> 
                                 <div className="w-full flex justify-between">
-                                    <p className=" font-mono font-bold text-[10px] md:text-xs p-2 line-clamp-1 truncate w-[38vw] md:w-[30vw]">{item.exercice_with_correction.description}</p>
+                                    <p className="  font-bold text-[10px] md:text-xs p-2 line-clamp-1 truncate w-[38vw] md:w-[30vw]">{item.exercice_with_correction.description}</p>
                                     <div className="w-6 h-6 rounded-xs group-hover:transform group-hover:-rotate-25 duration-500">
                                         <Image
                                             src={ item.exercice_with_correction?.type == "GABONAIS" ? drapeauGabon : drapeauFrance}
@@ -123,12 +123,12 @@ export default function Corriges({token, role}:Props){
                                     <div className=" flex flex-col "> 
                                         
         
-                                        <p className="text-chart-2 font-mono  text-[8px] w-[38vw] md:w-[30vw] p-2">{item.exercice_with_correction?.matiere?.nom_matiere}</p>
-                                        <p className="text-chart-2 font-mono  text-[8px] w-[38vw] md:w-[30vw] p-2 relative bottom-2">{item.exercice_with_correction?.lecon?.titre}</p>
+                                        <p className="text-chart-2   text-[8px] w-[38vw] md:w-[30vw] p-2">{item.exercice_with_correction?.matiere?.nom_matiere}</p>
+                                        <p className="text-chart-2   text-[8px] w-[38vw] md:w-[30vw] p-2 relative bottom-2">{item.exercice_with_correction?.lecon?.titre}</p>
                                         
                                         <div className="w-full flex justify-between">
-                                            <p className="text-chart-2 font-mono  text-[8px] w-[38vw] md:w-[30vw] p-2 relative ">{item.exercice_with_correction?.lecon?.classe?.name_class}</p>
-                                            <div className=" flex  gap-2 font-mono z-10">
+                                            <p className="text-chart-2   text-[8px] w-[38vw] md:w-[30vw] p-2 relative ">{item.exercice_with_correction?.lecon?.classe?.name_class}</p>
+                                            <div className=" flex  gap-2  z-10">
                                                 <button  
                                                      onClick={()=>{
                                                         setFileName(item.exercice_with_correction.corrige_file.name)

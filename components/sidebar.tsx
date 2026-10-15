@@ -71,7 +71,7 @@ export default function sidebar({role}:Props){
         <SidebarProvider>
             <Sidebar className="">
                 <SidebarHeader>
-                    <div className="p-2 font-mono font-bold text-white rounded-lg text-2xl flex items-center justify-center relative top-6 h-40">
+                    <div className="p-2  font-bold text-white rounded-lg text-2xl flex items-center justify-center relative top-6 h-40">
                         <Image
                             src={logo}
                             alt=""
@@ -88,7 +88,7 @@ export default function sidebar({role}:Props){
                                 <SidebarMenuItem key={link.href} className="p-2">
                                     <a href={link.href}>
                                         <SidebarMenuButton  
-                                            className={`p-4 font-mono text-[12px] ${isActive ? "bg-blue-950 bg-linear-to-r from-blue-950 via-blue-800  to-blue-700 text-white":""} group hover:bg-blue-800 hover:text-white duration-500`} 
+                                            className={`p-4  text-lg ${isActive ? "bg-blue-950 bg-linear-to-r from-blue-950 via-blue-800  to-blue-700 text-white":""} group hover:bg-blue-800 hover:text-white duration-500`} 
                                         >
                                             {link.label}
                                         </SidebarMenuButton>
@@ -102,7 +102,7 @@ export default function sidebar({role}:Props){
                                     onClick={()=>{
                                         setModalLogout(true)
                                     }}
-                                    className={`bg-blue-800  z-50 font-mono text-[11px] hover:bg-blue-700 duration-500`}
+                                    className={`bg-blue-800  z-50  text-[11px] hover:bg-blue-700 duration-500`}
                                 >
                                     Déconnexion
                                 </Button>
@@ -113,7 +113,7 @@ export default function sidebar({role}:Props){
                 </SidebarContent>
                 <div className="my-6"></div>
                 <SidebarFooter className="bg-gray-100">
-                    <div className="flex justify-center items-center gap-7 text-[8px] md:text-[10px] text-chart-2 font-mono p-2">
+                    <div className="flex justify-center items-center gap-7 text-[8px] md:text-[10px] text-chart-2  p-2">
                         <p>Copyright &copy;
                                 document.write{new Date().getFullYear()};
                             
@@ -137,7 +137,7 @@ export default function sidebar({role}:Props){
                             <SidebarMenuItem key={link.href} className="p-2">
                                 <a href={link.href}>
                                     <SidebarMenuButton  
-                                        className={`p-4 font-mono text-[12px] ${isActive ? "bg-blue-950 bg-linear-to-r from-blue-950 via-blue-800 to-blue-700 text-white":""} group hover:bg-blue-800 hover:text-white duration-500 flex justify-center items-center`} 
+                                        className={`p-4  text-lg ${isActive ? "bg-blue-950 bg-linear-to-r from-blue-950 via-blue-800 to-blue-700 text-white":""} group hover:bg-blue-800 hover:text-white duration-500 flex justify-center items-center`} 
                                     >
                                     {link.icon && <link.icon className=" " />}
                                     </SidebarMenuButton>

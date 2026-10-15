@@ -102,19 +102,19 @@ export default function CommencerAbonnement({open, onOpenChange, type, id, price
                         rounded-t-lg p-2 rounded-b-4xl h-40`}
                     >
                     <DialogTitle 
-                        className={`font-mono font-bold uppercase  p-3 
+                        className={` font-bold uppercase  p-3 
                         ${type === "annuel" ?("text-yellow-500"):("")}`}
                     >
                         {type}
                     </DialogTitle>
                     <div 
-                        className={`text-2xl font-mono font-bold  p-2
+                        className={`text-2xl  font-bold  p-2
                         ${type === "annuel" ?("text-white"):("")}`}
                     >
                         {price} XAF
                     </div>
                     <p 
-                        className={` font-mono text-xs relative left-2
+                        className={`  text-xs relative left-2
                         ${type === "annuel" ?("text-white"):("")}`}
                     >
                         {download}
@@ -160,7 +160,7 @@ export default function CommencerAbonnement({open, onOpenChange, type, id, price
 
                     <button
                         type="submit"
-                        className={` my-4 p-2 w-full rounded-lg text-white font-mono
+                        className={` my-4 p-2 w-full rounded-lg text-white 
                         ${type === "annuel" ?("bg-yellow-500"):("bg-blue-700")}`}
                     >
                         {isLoading ?(

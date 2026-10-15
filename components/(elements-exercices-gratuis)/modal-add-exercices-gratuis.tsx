@@ -184,19 +184,19 @@ export default function MoadalAddExerciceGratuit({token, open, onOpenChange, onS
         <Dialog open={open} onOpenChange={onOpenChange}>
             <DialogContent className={`w-96 `}>
                 <DialogHeader>
-                    <DialogTitle className={`font-mono font-extrabold text-blue-900 my-6 px-4`}>Nouvelle exercice gratuit</DialogTitle>
+                    <DialogTitle className={` font-extrabold text-blue-900 my-6 px-4`}>Nouvelle exercice gratuit</DialogTitle>
                 </DialogHeader>
                 <hr className=" relative top-10 font-bold" />
                 <div className="flex justify-between z-20 my-1">
-                    <div className={`w-10 h-10 rounded-full ${step == 0 ? 'bg-gray-200':'bg-blue-700'} p-2 flex items-center justify-center text-white font-mono`}>
+                    <div className={`w-10 h-10 rounded-full ${step == 0 ? 'bg-gray-200':'bg-blue-700'} p-2 flex items-center justify-center text-white `}>
                         1
                     </div>
 
-                    <div className={`w-10 h-10 rounded-full ${step <= 1 ? 'bg-gray-200':'bg-blue-700'} p-2 flex items-center justify-center text-white font-mono`}>
+                    <div className={`w-10 h-10 rounded-full ${step <= 1 ? 'bg-gray-200':'bg-blue-700'} p-2 flex items-center justify-center text-white `}>
                         2
                     </div>
 
-                    <div className={`w-10 h-10 rounded-full ${step <=2 ? 'bg-gray-200':'bg-blue-700'} p-2 flex items-center justify-center text-white font-mono`}>
+                    <div className={`w-10 h-10 rounded-full ${step <=2 ? 'bg-gray-200':'bg-blue-700'} p-2 flex items-center justify-center text-white `}>
                         3
                     </div>
                 </div>
@@ -332,7 +332,7 @@ export default function MoadalAddExerciceGratuit({token, open, onOpenChange, onS
                             
                             <button 
                                 type="submit"
-                                className="bg-blue-700 p-2 text-white font-mono text-[12px] rounded-sm w-full h-8"
+                                className="bg-blue-700 p-2 text-white  text-lg rounded-sm w-full h-8"
                             >
                                 {loading ?(
                                     <Loader />
@@ -355,7 +355,7 @@ export default function MoadalAddExerciceGratuit({token, open, onOpenChange, onS
                             onClick={()=>{
                                 setStep(step - 1)
                             }}
-                            className=" p-2  font-mono text-[12px] text-blue-700"
+                            className=" p-2   text-lg text-blue-700"
                         >
                             
                             <p id="button-connexion">précédent</p>
@@ -367,7 +367,7 @@ export default function MoadalAddExerciceGratuit({token, open, onOpenChange, onS
                             onClick={()=>(
                                 setStep(step +1)
                             )}
-                            className=" p-2  font-mono text-[12px] text-blue-700"
+                            className=" p-2   text-lg text-blue-700"
                         >
                             
                             <p id="button-connexion">suivant</p>

@@ -28,7 +28,7 @@ export default function CarouselPage(){
                             />
                         </div>
                         <div className=" p-4 bg-white flex justify-center items-center w-96 md:w-64 xl:w-72">
-                            <p className=" text-[10px] md:text-[11px] font-mono">
+                            <p className=" text-[10px] md:text-[11px] ">
                             De nombreux exercices conformes aux programmes officiels, pour de meilleurs résultats scolaires et aux examens.
                             </p>
                         </div>
@@ -46,7 +46,7 @@ export default function CarouselPage(){
                             />
                         </div>
                         <div className=" p-4 bg-white flex justify-center items-center w-full md:w-64 xl:w-72 rounded-r-xl">
-                            <p className=" text-[10px] md:text-[11px] font-mono">
+                            <p className=" text-[10px] md:text-[11px] ">
                             Les exercices permettent de mieux préparer ses examens. Réussite assurée !
                             </p>
                         </div>

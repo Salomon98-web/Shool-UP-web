@@ -25,7 +25,7 @@ export default function modalSuccess({open, onOpenChange, message}: Props){
                         <CheckCircle width="80" height="70" />
                     </DialogTitle>
                 </DialogHeader>
-                    <p className="font-mono text-[12px] font-semibold">
+                    <p className=" text-lg font-semibold">
                         {message}
                     </p>
             </DialogContent>

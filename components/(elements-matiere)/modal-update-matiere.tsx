@@ -79,7 +79,7 @@ export default function ModalUpdateMatiere({token, open, matiereValue, id, onOpe
         <Dialog open={open} onOpenChange={onOpenChange}>
             <DialogContent className={`w-96 `}>
                 <DialogHeader>
-                    <DialogTitle className={`font-mono font-bold text-blue-900 my-6 px-4`}>
+                    <DialogTitle className={` font-bold text-blue-900 my-6 px-4`}>
                         Modifier
                     </DialogTitle>
                 </DialogHeader>
@@ -101,7 +101,7 @@ export default function ModalUpdateMatiere({token, open, matiereValue, id, onOpe
 
                         <button 
                             type="submit"
-                            className="bg-blue-950 p-2 text-white font-mono text-[12px] rounded-sm w-32 h-8"
+                            className="bg-blue-950 p-2 text-white  text-lg rounded-sm w-32 h-8"
                         >
                             {loading ?(
                                 <Loader />

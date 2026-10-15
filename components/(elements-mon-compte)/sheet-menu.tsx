@@ -59,7 +59,7 @@ export default function MonCompte({token, open ,onOpenChange, onSuccess}:Props){
                             <User width={80} height={80}/>
                         </div>
                     </SheetTitle>
-                    <p className="text-center font-mono" >
+                    <p className="text-center " >
                         {dataUser.username}
                     </p>
                     <p className="text-chart-2">Date de création : {dataUser.created_at}</p>

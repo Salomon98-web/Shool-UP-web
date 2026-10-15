@@ -32,13 +32,13 @@ export default function Home() {
             />
             <div className=" bg-black opacity-60 absolute inset-0"></div>
             <div className=" flex flex-col relative top-35 gap-2">
-              <p className="text-white font-mono text-[20px]">Débutez avec <span className=" font-bold font-mono text-2xl">School UP</span> </p>
-              <p className="text-white font-mono text-[16px]">Votre banque d'exercices scolaires avec corrigés.</p>
+              <p className="text-white  text-2xl">Débutez avec <span className=" font-bold  text-2xl">School UP</span> </p>
+              <p className="text-white  text-xl">Votre banque d'exercices scolaires avec corrigés.</p>
             </div>
             <div className=" relative top-40 flex flex-col md:flex-row gap-2 ">
               <Link 
                 href="/signup" 
-                className=" flex justify-center items-center w-60 h-10 font-mono text-[16px] bg-white duration-300 hover:bg-blue-200 rounded-sm p-2 ">
+                className=" flex justify-center items-center w-60 h-10  text-xl bg-white duration-300 hover:bg-blue-200 rounded-sm p-2 ">
                 Commencer
               </Link>
             </div>
@@ -63,7 +63,7 @@ export default function Home() {
                 />
               </div>
               <div className=" p-4 bg-white flex justify-center items-center w-150 md:w-64 xl:w-72">
-                <p className=" text-[14px] font-mono">
+                <p className=" text-[14px] ">
                   De nombreux exercices conformes aux programmes officiels, pour de meilleurs résultats scolaires et aux examens.
                 </p>
               </div>
@@ -79,7 +79,7 @@ export default function Home() {
                 />
               </div>
               <div className=" p-4 bg-white flex justify-center items-center w-150 md:w-64 xl:w-72 rounded-r-xl">
-                <p className=" text-[14px] font-mono">
+                <p className=" text-[14px] ">
                   Les exercices permettent de mieux préparer ses examens. Réussite assurée !
                 </p>
               </div>
@@ -99,7 +99,7 @@ export default function Home() {
                 />
               </div>
               <div className=" p-4 bg-white flex justify-center w-150 items-center md:w-64 xl:w-72">
-                <p className=" text-[14px] font-mono">
+                <p className=" text-[14px] ">
                   Les exercices scolaires font progresser. Votre enfant aura de meilleurs résultats !
                 </p>
               </div>
@@ -115,7 +115,7 @@ export default function Home() {
                 />
               </div>
               <div className=" p-4 bg-white flex justify-center items-center w-150 md:w-64 xl:w-72">
-                <p className=" text-[14px] font-mono">
+                <p className=" text-[14px] ">
                   Votre banque d'exercices scolaires avec corrigés. Où vous voulez, quand vous voulez, sans vous déplacer !
                 </p>
               </div>
@@ -136,10 +136,10 @@ export default function Home() {
           <div className=" bg-black opacity-70 absolute inset-0"></div>
           <div className=" w-full h-full flex flex-col justify-center items-center gap-5 p-4">
             <div className=" flex flex-col gap-2">
-              <p className=" text-white text-center md:text-3xl font-mono z-50 text-2xl font-bold">Essayer gratuitement</p>
-              <p className=" text-center text-white z-50 font-mono text-[16px]">Téléchargez gratuitement des exercices avec corrigés.</p>
+              <p className=" text-white text-center md:text-3xl  z-50 text-2xl font-bold">Essayer gratuitement</p>
+              <p className=" text-center text-white z-50  text-xl">Téléchargez gratuitement des exercices avec corrigés.</p>
             </div>
-            <Link href="/exercices-gratuits" className=" p-2 bg-white z-50 rounded-sm w-72 md:w-96 text-center font-mono text-[12px]">
+            <Link href="/exercices-gratuits" className=" p-2 bg-white z-50 rounded-sm w-72 md:w-96 text-center  text-lg">
               Clique ici
             </Link>
           </div>
@@ -158,14 +158,14 @@ export default function Home() {
                 <Smartphone width={30} height={30} />
               </div>
               <div className="flex flex-col justify-center items-center p-2 ">
-                <p className=" font-mono text-md relative">SCANNEZ-MOI</p>
-                <p className="font-mono text-[12px]">Pour tétéchager l'application</p>
+                <p className="  text-md relative">SCANNEZ-MOI</p>
+                <p className=" text-lg">Pour tétéchager l'application</p>
               </div>
             </div>
           </div>
 
           <div className=" flex flex-col gap-2 relative bottom-8">
-            <p className=" text-center z-50 font-mono font-bold text-2xl">Disponible sur</p>
+            <p className=" text-center z-50  font-bold text-2xl">Disponible sur</p>
             <div className="flex justify-center items-center flex-row gap-2.5">
               <Image 
                   src={Playstore} width={200}  alt=""

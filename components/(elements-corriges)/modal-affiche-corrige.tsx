@@ -42,7 +42,7 @@ export default function modalAffichePDF({open, onOpenChange, fileName}:Props){
         <Dialog open={open} onOpenChange={onOpenChange}>
             <DialogContent className="h-full w-[50vh] lg:w-[75vh] flex flex-col p-2 overflow-hidden">
                 <DialogHeader className="h-12">
-                    <DialogTitle className="font-mono text-blue-950 text-[16px] p-2">Corrigé</DialogTitle>
+                    <DialogTitle className=" text-blue-950 text-xl p-2">Corrigé</DialogTitle>
                 </DialogHeader>
                 <hr />
                 <div className="h-[80vh] overflow-x-auto overflow-y-auto relative top-2">

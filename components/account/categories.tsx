@@ -60,7 +60,7 @@ export default function Category({token, role}:Props){
                 {/** topbar */}
                 <Topbar onSuccess={()=>{}} token={token} />
 
-                <div className=" relative top-7 p-2 font-mono text-sm px-4 lg:px-14">
+                <div className=" relative top-7 p-2  text-sm px-4 lg:px-14">
                     <hr className="p-2" />
                     <p className="text-chart-1">Catégorie</p>
                 </div>
@@ -71,7 +71,7 @@ export default function Category({token, role}:Props){
                         onClick={()=>{
                             setopenModalAddCategory(true)
                         }}
-                        className="  font-mono text-[11px] text-white bg-violet-800 max-w-96 p-2 rounded-sm"
+                        className="   text-[11px] text-white bg-violet-800 max-w-96 p-2 rounded-sm"
                     >
                         AJouter une catégorie
                     </button>
@@ -103,14 +103,14 @@ export default function Category({token, role}:Props){
                                                                 
                                         <div className=" bg-black opacity-30 absolute inset-0 rounded-sm"></div>
                                     </div> 
-                                    <p className=" font-mono font-bold text-[9px] uppercase line-clamp-1 truncate w-[24vw] md:w-[30vw]">{item.name}</p>
+                                    <p className="  font-bold text-[9px] uppercase line-clamp-1 truncate w-[24vw] md:w-[30vw]">{item.name}</p>
                                 </div>
                                 
                                 <div className=" flex flex-col justify-center items-center gap-12">
 
-                                {/*  <p className=" font-mono font-bold text-xs">{item.name}</p> */}
+                                {/*  <p className="  font-bold text-xs">{item.name}</p> */}
 
-                                <div className=" flex  gap-2 font-mono">
+                                <div className=" flex  gap-2 ">
                                     <button
                                         onClick={()=>{
                                             setIdCategory(item.id)

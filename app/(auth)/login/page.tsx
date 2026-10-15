@@ -69,7 +69,7 @@ function CardForm() {
     <>
     <Card className="w-full max-w-sm">
       <CardHeader className="bg-blue-950 bg-linear-to-r from-blue-950 via-blue-800  to-blue-700 rounded-b-4xl h-40 text-white flex justify-center items-center relative bottom-4">
-        <CardTitle className="font-mono  text-xl flex flex-col gap-2">
+        <CardTitle className="  text-xl flex flex-col gap-2">
           
           <div className=" flex justify-center">
             <Image
@@ -80,7 +80,7 @@ function CardForm() {
           </div>
           <p className="text-xs">Connectez-vous a votre compte </p>
         </CardTitle>
-        {/* <CardDescription className=" font-mono text-[10px] h-14">
+        {/* <CardDescription className="  text-[10px] h-14">
           Connectez-vous à votre compte
         </CardDescription> */}
       </CardHeader>
@@ -107,7 +107,7 @@ function CardForm() {
             </div>
             <div className="grid gap-2">
 
-              <Button  type="submit" className="w-full h-10 bg-blue-800 hover:bg-blue-700 duration-500 text-[12px] font-mono ">
+              <Button  type="submit" className="w-full h-10 bg-blue-800 hover:bg-blue-700 duration-500 text-lg  ">
 
                 {isLoading ?(
                   <Loader />
@@ -119,8 +119,8 @@ function CardForm() {
               </Button>
 
               <div className="flex flex-col relative top-4 justify-center items-center gap-3">
-                <p className=" font-mono text-[10px]">Vous n'avez pas de compte ? <Link className=" text-blue-950" href="/signup">Créer votre compte</Link></p>
-                <Link className=" font-mono text-[12px] text-blue-950" href="/">Retour</Link>
+                <p className="  text-[10px]">Vous n'avez pas de compte ? <Link className=" text-blue-950" href="/signup">Créer votre compte</Link></p>
+                <Link className="  text-lg text-blue-950" href="/">Retour</Link>
               </div>
 
             </div>

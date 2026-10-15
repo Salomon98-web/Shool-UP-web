@@ -30,19 +30,19 @@ export default function dashboard({token,role}:Props) {
           {/** topbar */}
           <Topbar token={token} onSuccess={()=>setRefresh(k=>k+1)} />
 
-          <div className=" relative top-7 p-2 font-mono text-sm px-4 lg:px-14">
+          <div className=" relative top-7 p-2  text-sm px-4 lg:px-14">
             <hr className="p-2" />
             <p className="text-chart-1">Abonnemet disponible</p>
           </div>
           <Abonnement role={role} refreshKey={refreshKey} onSuccess={()=>setRefresh(k=>k+1)} token={token}/>
 
-          <div className=" relative top-10 p-2 font-mono text-sm px-4 lg:px-14">
+          <div className=" relative top-10 p-2  text-sm px-4 lg:px-14">
             <hr className="p-2" />
             <p className="text-chart-1">Mes abonnemets</p>
           </div>
           <CartesMesAbonnemets refreshKey={refreshKey} token={token} onSuccess={()=>setRefresh(k=>k+1)}/>
 
-          <div className=" relative top-10 p-2 font-mono text-sm px-4 lg:px-14">
+          <div className=" relative top-10 p-2  text-sm px-4 lg:px-14">
             <hr className="p-2" />
             <p className="text-chart-1">Exercices disponibles</p>
           </div>
@@ -52,14 +52,14 @@ export default function dashboard({token,role}:Props) {
           {role == "admin" ?(
             <>
             {/* cartes abonnes*/}
-            <div className=" relative top-10 p-2 font-mono text-sm px-4 lg:px-14">
+            <div className=" relative top-10 p-2  text-sm px-4 lg:px-14">
               <hr className="p-2" />
               <p className="text-chart-1">Abonnés</p>
             </div>
             <CartesStatistiquesAbonnes token={token}/>
 
             {/* section statistique comptes*/}
-            <div className=" relative top-10 p-2 font-mono text-sm px-4 lg:px-14">
+            <div className=" relative top-10 p-2  text-sm px-4 lg:px-14">
               <hr className="p-2" />
               <p className="text-chart-1">Comptes</p>
             </div>

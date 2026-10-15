@@ -79,11 +79,11 @@ export default function cartes({token}:Props){
                     `}  
                 />
 
-                <p className="font-mono text-[12px] uppercase font-extrabold tracking-wide text-slate-800">Total</p>
+                <p className=" text-lg uppercase font-extrabold tracking-wide text-slate-800">Total</p>
                 <div className="h-20 flex justify-start items-center">
-                    <p className="font-mono font-black text-2xl"><ConvertNumber number={(data as any).totalAbonnes} /></p>
+                    <p className=" font-black text-2xl"><ConvertNumber number={(data as any).totalAbonnes} /></p>
                 </div>
-                <p className="font-mono text-xs text-chart-2">Abonnés</p>
+                <p className=" text-xs text-chart-2">Abonnés</p>
             </div>
 
             <div className={`group relative overflow-hidden rounded-md bg-linear-to-br from-yellow-50 to-pink-200  p-7 shadow-[0_15px_40px_rgba(0,0,0,0.08)]  
@@ -104,11 +104,11 @@ export default function cartes({token}:Props){
                     `}  
                 />
 
-                <p className="font-mono font-bold text-yellow-700 text-[12px] uppercase">en attente</p>
+                <p className=" font-bold text-yellow-700 text-lg uppercase">en attente</p>
                 <div className="h-20 flex justify-start items-center">
-                    <p className="font-mono font-black text-2xl"><ConvertNumber number={(data as any).totalAbonnesEnAttente} /></p>
+                    <p className=" font-black text-2xl"><ConvertNumber number={(data as any).totalAbonnesEnAttente} /></p>
                 </div>
-                <p className="font-mono text-xs text-chart-2">Abonnés</p>
+                <p className=" text-xs text-chart-2">Abonnés</p>
             </div>
 
             <div className={`group relative overflow-hidden rounded-md bg-linear-to-br from-gray-50 to-green-200  p-7 shadow-[0_15px_40px_rgba(0,0,0,0.08)]  
@@ -129,11 +129,11 @@ export default function cartes({token}:Props){
                     `}  
                 />
 
-                <p className="font-mono font-bold text-green-700 text-[12px] uppercase">Actifs</p>
+                <p className=" font-bold text-green-700 text-lg uppercase">Actifs</p>
                 <div className="h-20 flex justify-start items-center">
-                    <p className="font-mono font-black text-2xl"><ConvertNumber number={(data as any).totalAbonnesActif} /></p>
+                    <p className=" font-black text-2xl"><ConvertNumber number={(data as any).totalAbonnesActif} /></p>
                 </div>
-                <p className="font-mono text-xs text-chart-2">Abonnés</p>
+                <p className=" text-xs text-chart-2">Abonnés</p>
             </div>
 
             <div className={`group relative overflow-hidden rounded-md bg-linear-to-br from-gray-50 to-gray-200  p-7 shadow-[0_15px_40px_rgba(0,0,0,0.08)]  
@@ -154,11 +154,11 @@ export default function cartes({token}:Props){
                     `}  
                 />
 
-                <p className="font-mono font-bold text-red-700 text-[12px] uppercase">terminés</p>
+                <p className=" font-bold text-red-700 text-lg uppercase">terminés</p>
                 <div className="h-20 flex justify-start items-center">
-                    <p className="font-mono font-black text-2xl"><ConvertNumber number={(data as any).totalAbonnesTermine} /></p>
+                    <p className=" font-black text-2xl"><ConvertNumber number={(data as any).totalAbonnesTermine} /></p>
                 </div>
-                <p className="font-mono text-xs text-chart-2">Abonnés</p>
+                <p className=" text-xs text-chart-2">Abonnés</p>
             </div>
 
         </div>

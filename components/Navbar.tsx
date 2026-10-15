@@ -45,7 +45,7 @@ export default function Navbar(){
                         {links.map((link)=>(
                             <NavigationMenuItem key={link.href}>
                                 <NavigationMenuLink  href={link.href} active={pathname === link.href}
-                                    className="group inline-flex h-9 w-max items-center justify-center rounded-md px-4 py-2 font-mono text-[13px] transition-colors
+                                    className="group inline-flex h-9 w-max items-center justify-center rounded-md px-4 py-2 transition-colors
                                     hover:bg-white hover:text-accent-foreground text-white"
                                 >
                                     {link.label}
@@ -53,7 +53,7 @@ export default function Navbar(){
                             </NavigationMenuItem>
                         ))}
                         
-                        <Button className="bg-white text-black hover:bg-blue-900 hover:text-white duration-300 font-mono text-[12px] h-9">
+                        <Button className="bg-white text-black hover:bg-blue-900 hover:text-white duration-300  text-lg h-9">
                             <a href='/options'>Abonnez-vous</a>
                         </Button>
                     </NavigationMenuList>
@@ -66,7 +66,7 @@ export default function Navbar(){
                     </SheetTrigger>
 
                     <SheetContent side="top" className=" w-full p-4 bg-black opacity-65 text-white">
-                        <nav className="flex flex-col gap-4 mt-8 text-white font-mono text-[13px]">
+                        <nav className="flex flex-col gap-4 mt-8 text-white  text-lg">
                             {links.map((link) =>(
                                 <a 
                                     key={link.href} 
@@ -77,7 +77,7 @@ export default function Navbar(){
                                     
                                 </a>
                             ))}
-                            <a href="/options" className="p-2 bg-white max-w-max text-center font-mono text-[14px] text-black rounded-sm hover:transform hover:translate-x-2 duration-500">
+                            <a href="/options" className="p-2 bg-white max-w-max text-center  text-lg text-black rounded-sm hover:transform hover:translate-x-2 duration-500">
                                 Abonnez-vous
                             </a>
                         </nav>

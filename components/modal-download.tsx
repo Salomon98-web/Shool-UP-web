@@ -95,7 +95,7 @@ export default function modalDownload({open, onOpenChange, exerciceId}:Props){
         <Drawer open={open} onOpenChange={onOpenChange}>
             {/* <DrawerContent className={`w-full`}>
                 <DrawerHeader>
-                    <DrawerTitle className="text-[12px] md:text-[16px] font-bold font-mono text-blue-950">
+                    <DrawerTitle className="text-lg md:text-xl font-bold  text-blue-950">
                         School UP
                     </DrawerTitle>
                 </DrawerHeader>
@@ -127,15 +127,15 @@ export default function modalDownload({open, onOpenChange, exerciceId}:Props){
                     </div>)
                 }
                 <DrawerFooter>
-                    <p className="text-center font-mono text-[10px]">Veilliez saisir le code <strong>PIN</strong> de votre abonnement pour télécharger</p>
+                    <p className="text-center  text-[10px]">Veilliez saisir le code <strong>PIN</strong> de votre abonnement pour télécharger</p>
                 </DrawerFooter>
             </DrawerContent> */}
             <DrawerContent  className={`w-full h-auto p-4 flex justify-center items-center`}>
                 <DrawerHeader className="p-2">
-                    <DrawerTitle className=" font-mono font-bold text-blue-950">School UP</DrawerTitle>
+                    <DrawerTitle className="  font-bold text-blue-950">School UP</DrawerTitle>
                 </DrawerHeader>
                 <hr />
-                <div className="  h-full font-mono lg:my-12">
+                <div className="  h-full  lg:my-12">
                     <div className="flex flex-col gap-3 my-2">
                         <form className="my-10 ">
                             <InputOTP maxLength={4} value={code} onChange={handleChange} disabled={loading}>
@@ -165,7 +165,7 @@ export default function modalDownload({open, onOpenChange, exerciceId}:Props){
                     
                 </div>
                 <DrawerFooter>
-                        <p className="text-center font-mono text-[10px]">Veilliez saisir le code <strong>PIN</strong> de votre abonnement pour télécharger</p>
+                        <p className="text-center  text-[10px]">Veilliez saisir le code <strong>PIN</strong> de votre abonnement pour télécharger</p>
                     </DrawerFooter>
                 <DrawerClose className={`text-black`}>fermer</DrawerClose>
             </DrawerContent>

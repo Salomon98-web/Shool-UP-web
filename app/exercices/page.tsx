@@ -63,9 +63,9 @@ export default function page(){
                         />
                         <div className=" bg-black opacity-60 absolute inset-0"></div>
                         <div className=" flex flex-col justify-center items-center relative top-14 gap-2">
-                            <p className="text-white font-mono text-[18px]"><span className=" font-bold font-mono text-4xl">Exercices</span> </p>
+                            <p className="text-white  text-[18px]"><span className=" font-bold  text-4xl">Exercices</span> </p>
                             <div className="flex flex-col justify-center items-center w-full">
-                                <p className=" text-lg text-white font-mono">Cliquer sur votre catégorie</p>               
+                                <p className=" text-lg text-white ">Cliquer sur votre catégorie</p>               
                             </div>
                         </div>
                     </div>
@@ -80,7 +80,7 @@ export default function page(){
                         <div className=" flex flex-col items-center gap-4 my-4 w-full px-4 lg:px-28">
                             {data.length < 1 ? (
                                 <div className="my-14">
-                                    <p className="text-center text-chart-1 font-bold font-mono">Aucune catégories</p>
+                                    <p className="text-center text-chart-1 font-bold ">Aucune catégories</p>
                                 </div>
                             ):(
                                 <div className="flex flex-wrap items-center gap-4 my-14">
@@ -95,7 +95,7 @@ export default function page(){
                                                     />
                                                     
                                                     <div className=" bg-black opacity-60 absolute inset-0 rounded-sm"></div>
-                                                <p key={item.id} className="text-center font-bold font-mono text-[16px] text-white group-h text-wrap p-2 z-50 uppercase group-hover:transform group-hover:-translate-y-3 group-active:-translate-y-3 duration-500">{item.name}</p>
+                                                <p key={item.id} className="text-center font-bold  text-xl text-white group-h text-wrap p-2 z-50 uppercase group-hover:transform group-hover:-translate-y-3 group-active:-translate-y-3 duration-500">{item.name}</p>
                                             </div>
                                         </Link>
                                     ))}

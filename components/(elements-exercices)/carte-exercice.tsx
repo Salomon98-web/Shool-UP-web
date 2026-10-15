@@ -61,13 +61,13 @@ export default function CartesExercices({token, refreshKey}:Props){
                     <div className="w-12 h-12 rounded-xl bg-blue-200 p-2 flex justify-center items-center">
                         <FileText className=" text-blue-600" />
                     </div>
-                    <p className="font-mono text-chart-2  text-xs">Total Exercice</p>
+                    <p className=" text-chart-2  text-xs">Total Exercice</p>
                 </div>
                 <div className="my-3">
-                    <p className="font-mono text-blue-800 text-[12px] relative left-19 bottom-7"><span className="text-4xl font-extrabold "><ConvertNumber number={data.length} /></span></p>
+                    <p className=" text-blue-800 text-lg relative left-19 bottom-7"><span className="text-4xl font-extrabold "><ConvertNumber number={data.length} /></span></p>
 
                 </div>
-                <p className="font-mono text-gray-800 text-[12px]">exercices et corrigés</p>
+                <p className=" text-gray-800 text-lg">exercices et corrigés</p>
             </div>
         </div>
         </>

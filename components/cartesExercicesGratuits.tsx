@@ -55,7 +55,7 @@ export default function Cartes({id}:Props){
     if(data.length < 1){
         return(
            <div className="w-ull p-4 relative top-10 flex flex-col gap-5">
-                <p className="text-center text-chart-1 font-bold font-mono">Aucun exercice </p>
+                <p className="text-center text-chart-1 font-bold ">Aucun exercice </p>
            </div> 
         )
     }
@@ -76,7 +76,7 @@ export default function Cartes({id}:Props){
                             />
                         </div>
                         <div className="flex flex-col justify-center items-start">
-                            <p className="text-[9px] font-mono">{ item.type == "GABONAIS" ? 'Système Gebonais' : 'Système Francais'}</p>
+                            <p className="text-[9px] ">{ item.type == "GABONAIS" ? 'Système Gebonais' : 'Système Francais'}</p>
                         </div>
                     </div>
 
@@ -89,7 +89,7 @@ export default function Cartes({id}:Props){
                             opacity-10  group-hover:scale-125 duration-500 
                             `}  
                         />
-                        <p className=" text-[14px] p-2 font-mono">{item.description}</p>
+                        <p className=" text-[14px] p-2 ">{item.description}</p>
                     </div>
 
                     <div className="h-2">
@@ -97,7 +97,7 @@ export default function Cartes({id}:Props){
                     </div>
 
                     <div className="flex flex-row justify-between items-center p-2">
-                        <p className="font-mono text-[7px] flex flex-row justify-center items-center gap-1">
+                        <p className=" text-[7px] flex flex-row justify-center items-center gap-1">
                             <File width="20" className="text-red-600" />
                             <span>Exercice & corrigé</span> 
                         </p>
@@ -112,8 +112,8 @@ export default function Cartes({id}:Props){
                 <div className="flex flex-row gap-1">
                     <div className="w-6 h-6 bg-blue-950 rounded-xs group-hover:transform group-hover:-rotate-12 duration-500"></div>
                     <div className="flex flex-col justify-center items-start  ">
-                        <p className="text-[10px] font-semibold font-mono">{}</p>
-                        <p className=" text-[12px] font-black text-blue-950 font-mono">{}</p>
+                        <p className="text-[10px] font-semibold ">{}</p>
+                        <p className=" text-lg font-black text-blue-950 ">{}</p>
                     </div>
                 </div>
 

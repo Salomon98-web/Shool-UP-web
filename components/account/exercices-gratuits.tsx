@@ -84,7 +84,7 @@ export default function ExercicesGratuits({token, role}:Props){
                 {/** topbar */}
                 <Topbar onSuccess={()=>{}} token={token} />
 
-                <div className=" relative top-7 p-2 font-mono text-sm px-4 lg:px-14">
+                <div className=" relative top-7 p-2  text-sm px-4 lg:px-14">
                     <hr className="p-2" />
                     <p className="text-chart-1">Exercices gratuits</p>
                 </div>
@@ -95,7 +95,7 @@ export default function ExercicesGratuits({token, role}:Props){
                             onClick={()=>{
                                 setOpenModalAddExercice(true)
                             }}
-                            className="  font-mono text-[11px] text-white bg-blue-800 max-w-96 p-2 rounded-sm"
+                            className="   text-[11px] text-white bg-blue-800 max-w-96 p-2 rounded-sm"
                         >
                         AJouter une exercices
                     </button>
@@ -125,7 +125,7 @@ export default function ExercicesGratuits({token, role}:Props){
                                     `}  
                                 />
                                 <div className="w-full flex justify-between">
-                                    <p className=" font-mono font-bold text-[10px] md:text-xs p-2 line-clamp-1 truncate w-[38vw] md:w-[30vw]">{item.description}</p>
+                                    <p className="  font-bold text-[10px] md:text-xs p-2 line-clamp-1 truncate w-[38vw] md:w-[30vw]">{item.description}</p>
                                     <div className="w-6 h-6 rounded-xs group-hover:transform group-hover:-rotate-25 duration-500">
                                         <Image
                                             src={ item.type == "GABONAIS" ? drapeauGabon : drapeauFrance}
@@ -139,12 +139,12 @@ export default function ExercicesGratuits({token, role}:Props){
                                     <div className=" flex flex-col "> 
                                         
         
-                                        <p className="text-chart-2 font-mono  text-[8px] w-[38vw] md:w-[30vw] p-2">{item.matiere?.nom_matiere}</p>
-                                        <p className="text-chart-2 font-mono  text-[8px] w-[38vw] md:w-[30vw] p-2 relative bottom-2">{item.lecon?.titre}</p>
+                                        <p className="text-chart-2   text-[8px] w-[38vw] md:w-[30vw] p-2">{item.matiere?.nom_matiere}</p>
+                                        <p className="text-chart-2   text-[8px] w-[38vw] md:w-[30vw] p-2 relative bottom-2">{item.lecon?.titre}</p>
                                         
                                         <div className="w-full flex justify-between">
-                                            <p className="text-chart-2 font-mono  text-[8px] w-[38vw] md:w-[30vw] p-2 relative ">{item.classe?.name_class}</p>
-                                            <div className=" flex  gap-2 font-mono z-10">
+                                            <p className="text-chart-2   text-[8px] w-[38vw] md:w-[30vw] p-2 relative ">{item.classe?.name_class}</p>
+                                            <div className=" flex  gap-2  z-10">
                                                 <a  
                                                     href={`${process.env.NEXT_PUBLIC_BASE_URL3}/${item.exercice_file.name}`} 
                                                     target="_blank" className="text-chart-2"
