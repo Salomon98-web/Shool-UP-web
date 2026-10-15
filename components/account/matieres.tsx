@@ -71,7 +71,7 @@ export default function Matieres({token, role}:Props){
                 {/** topbar */}
                 <Topbar onSuccess={()=>{}} token={token} />
 
-                <div className=" relative top-7 p-2  text-sm px-4 lg:px-14">
+                <div className=" relative top-7 p-2 px-4 lg:px-14">
                     <hr className="p-2" />
                     <p className="text-chart-1">Matières</p>
                 </div>
@@ -82,7 +82,7 @@ export default function Matieres({token, role}:Props){
                             onClick={()=>{
                                 setOpenModalAddClass(true)
                             }}
-                            className="   text-[11px] text-white bg-indigo-800 max-w-96 p-2 rounded-sm"
+                            className="   text-md text-white bg-indigo-800 max-w-96 p-2 rounded-sm"
                         >
                         AJouter une matière
                     </button>
@@ -105,7 +105,7 @@ export default function Matieres({token, role}:Props){
                         
                             <div className="w-full flex justify-between bg-white shadow-sm p-2 rounded-lg">
                                 <div className=" flex flex-col p-2"> 
-                                    <p className="  font-bold text-[10px] md:text-xs p-2 line-clamp-1 truncate w-[38vw] md:w-[30vw]">{item.nom_matiere}</p>
+                                    <p className="  font-bold text-lg p-2 line-clamp-1 truncate w-[38vw] md:w-[30vw]">{item.nom_matiere}</p>
                                 </div>
                                 
                                 <div className=" flex flex-col justify-center items-center gap-12">

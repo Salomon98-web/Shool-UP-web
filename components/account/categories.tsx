@@ -60,8 +60,8 @@ export default function Category({token, role}:Props){
                 {/** topbar */}
                 <Topbar onSuccess={()=>{}} token={token} />
 
-                <div className=" relative top-7 p-2  text-sm px-4 lg:px-14">
-                    <hr className="p-2" />
+                <div className=" relative top-7 p-2 px-4 lg:px-14">
+                    <hr />
                     <p className="text-chart-1">Catégorie</p>
                 </div>
                 <CartesCategories token={token} refreshKey={refreshKey} />
@@ -71,7 +71,7 @@ export default function Category({token, role}:Props){
                         onClick={()=>{
                             setopenModalAddCategory(true)
                         }}
-                        className="   text-[11px] text-white bg-violet-800 max-w-96 p-2 rounded-sm"
+                        className="   text-md text-white bg-violet-800 max-w-96 p-2 rounded-sm"
                     >
                         AJouter une catégorie
                     </button>
@@ -103,7 +103,7 @@ export default function Category({token, role}:Props){
                                                                 
                                         <div className=" bg-black opacity-30 absolute inset-0 rounded-sm"></div>
                                     </div> 
-                                    <p className="  font-bold text-[9px] uppercase line-clamp-1 truncate w-[24vw] md:w-[30vw]">{item.name}</p>
+                                    <p className="  font-bold text-md uppercase line-clamp-1 truncate w-[24vw] md:w-[30vw]">{item.name}</p>
                                 </div>
                                 
                                 <div className=" flex flex-col justify-center items-center gap-12">

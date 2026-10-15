@@ -21,7 +21,7 @@ export default function Topbar({token,onSuccess}:Props){
                     onClick={()=>{
                         setModalLogout(true)
                     }}
-                    className={`bg-blue-800  z-50  text-[11px] hover:bg-blue-700 duration-500`}
+                    className={`bg-blue-800  z-50  text-md hover:bg-blue-700 duration-500`}
                 >
                     <Settings/>
                     Mon compte

@@ -37,7 +37,7 @@ export function Carte({item, type, classe, status, codePIN, debut, fin, nom, tel
         <>
         <div 
             key={item}
-            className={`flex flex-col h-auto shrink-0 min-w-78 to-blur group relative overflow-hidden rounded-md bg-linear-to-br  p-5 
+            className={`flex flex-col h-auto shrink-0 min-w-78 to-blur group relative overflow-hidden rounded-md bg-linear-to-br p-5 
             ${status === 0 ?("to-gray-700 via-gray-800 from-gray-950"):(null)}
             ${status === 3 ?("to-yellow-700 via-yellow-800 from-yellow-950"):(null)}
             ${status === 1 ?("to-green-700 via-green-800 from-green-950"):(null)}
@@ -50,21 +50,21 @@ export function Carte({item, type, classe, status, codePIN, debut, fin, nom, tel
                 className={`absolute right-38 top-39 h-48 w-48 rounded-full bg-pink-100 opacity-10 `}
             />
 
-            <div className="flex justify-between w-full gap-2 p-3  text-[10px]">
-                <p className="uppercase text-orange-400  font-bold text-md">{type}</p>
-                <p className="uppercase text-white  font-bold text-md">{classe}</p>
+            <div className="flex justify-between items-center w-full gap-2 p-3  text-lg">
+                <p className="uppercase text-orange-400  font-bold ">{type}</p>
+                <p className="uppercase text-white  font-bold ">{classe}</p>
             </div>
             
             <div className="flex justify-between">
-                <p className=" text-white  text-[8px] flex flex-row items-center"><Timer width={18}/> : {debut}</p>
-                <p className=" text-white  text-[8px] flex flex-row items-center"><TimerOff width={18} /> : {fin}</p>
+                <p className=" text-white  text-[11px] flex flex-row items-center"><Timer width={18}/> : {debut}</p>
+                <p className=" text-white  text-[11px] flex flex-row items-center"><TimerOff width={18} /> : {fin}</p>
             </div>
 
             <div className="flex justify-between p-2 ">
                 <div className="flex justify-between items-center gap-2">
                     <div className="p-2 flex flex-col gap-2">
-                        <p className=" uppercase text-white  text-[10px]">{nom}</p>
-                        <p className=" uppercase text-white  text-[10px]">+241 {tel}</p>
+                        <p className=" uppercase text-white  text-md ">{nom}</p>
+                        <p className=" uppercase text-white  text-[12px]">+241 {tel}</p>
                     </div>
                     
                 </div>
@@ -81,7 +81,7 @@ export function Carte({item, type, classe, status, codePIN, debut, fin, nom, tel
                             onClick={()=>{
                                 setCode(false);
                             }}
-                            className="p-2  text-xs rounded-sm bg-amber-500 w-14 text-center flex justify-center items-center text-[10px]"
+                            className="p-2 rounded-sm bg-amber-500 w-14 text-center flex justify-center items-center "
                         >
                             <Eye width={`30`} />
                         </button>
@@ -90,7 +90,7 @@ export function Carte({item, type, classe, status, codePIN, debut, fin, nom, tel
                             onClick={()=>{
                                 setCode(true);
                             }}
-                            className="p-2  text-xs rounded-sm bg-amber-500 w-14 flex justify-center items-center text-[10px]"
+                            className="p-2 rounded-sm bg-amber-500 w-14 flex justify-center items-center text-xl"
                         >
                             <EyeOff width={`30`} />
                         </button>
@@ -105,11 +105,11 @@ export function Carte({item, type, classe, status, codePIN, debut, fin, nom, tel
 
                     <>
                         <button 
-                            className="p-2  text-xs rounded-md text-yellow-200 relative left-2"
+                            className="p-2 rounded-md text-yellow-200 relative left-2"
                         >
                             Cliquer ici pour payer
                         </button>
-                        <p className=" text-[10px] text-yellow-400 text-center">En attente</p>
+                        <p className=" text-[13px] text-yellow-400 text-center">En attente</p>
                     </>
                 ):(null)}
                 {status == 1 ? (
@@ -155,7 +155,7 @@ export function Carte({item, type, classe, status, codePIN, debut, fin, nom, tel
                         console.log(onSuccess)
                         
                     }}
-                    className="z-20 bg-red-600 max-w-max p-2 rounded-lg text-white flex justify-center items-center shadow-2xl"
+                    className="z-10 bg-red-600 max-w-max p-2 rounded-lg text-white flex justify-center items-center shadow-2xl"
                 >
                     <LucideDelete />
                 </button>

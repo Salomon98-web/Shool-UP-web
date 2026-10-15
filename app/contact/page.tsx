@@ -54,14 +54,14 @@ export default function page(){
                         <input 
                             type="text" 
                             name="" id="" 
-                            className="w-full h-10 p-2 bg-gray-200 border border-gray-300 rounded-sm hover:transform hover:translate-x-2 duration-500  text-[14px]" 
+                            className="w-full h-10 p-2 bg-gray-200 border border-gray-300 rounded-sm hover:transform hover:translate-x-2 duration-500  text-lg" 
                             placeholder="Entrer votre nom"
                         />
 
                         <input 
                             type="text" 
                             name="" id="" 
-                            className="w-full h-10 p-2 bg-gray-200 border border-gray-300 rounded-sm hover:transform hover:translate-x-2 duration-500  text-[14px]" 
+                            className="w-full h-10 p-2 bg-gray-200 border border-gray-300 rounded-sm hover:transform hover:translate-x-2 duration-500  text-lg" 
                             placeholder="Entrer votre adresse mail"
                         />
                         
@@ -69,12 +69,12 @@ export default function page(){
                         <input 
                             type="text" 
                             name="" id="" 
-                            className="w-full h-10 p-2 bg-gray-200 border border-gray-300 rounded-sm hover:transform hover:translate-x-2 duration-500  text-[14px]" 
+                            className="w-full h-10 p-2 bg-gray-200 border border-gray-300 rounded-sm hover:transform hover:translate-x-2 duration-500  text-lg" 
                             placeholder="Sujet"
                         />
                         <textarea 
                             name="" id=""
-                            className="w-full h-32 p-2 bg-gray-200 border border-gray-300 rounded-sm hover:transform hover:translate-x-2 duration-500  text-[14px]" 
+                            className="w-full h-32 p-2 bg-gray-200 border border-gray-300 rounded-sm hover:transform hover:translate-x-2 duration-500  text-lg" 
                             placeholder="Message"
                         ></textarea>
 

@@ -31,7 +31,7 @@ export default function ExercicesGratuits(){
             <div className="flex flex-1 flex-col my-10 gap-8">
                 <div className="flex justify-start items-center px-4 lg:px-28">
                     <div className="flex flex-col justify-center items-center w-full">
-                        <p className="text-[14px]  text-blue-900">Cliquer sur une classe</p>               
+                        <p className="text-lg  text-blue-900">Cliquer sur une classe</p>               
                     </div>
                 </div>{/* 
                 <MatieresExercicesGratuits /> 

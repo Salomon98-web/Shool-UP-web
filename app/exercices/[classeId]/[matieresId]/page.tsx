@@ -92,7 +92,7 @@ export default function page({params}:Props){
                 <div className="flex justify-start items-center px-4 lg:px-28">
                     <div className="flex flex-col justify-center w-full">
                         <p className="text-2xl text-blue-950  font-extrabold">Matière</p> 
-                        <p className=" text-[14px] md:text-sm  text-chart-2">Cliquer sur une matière pour accéder a la/les leçon(s)</p>               
+                        <p className=" text-lg md:text-sm  text-chart-2">Cliquer sur une matière pour accéder a la/les leçon(s)</p>               
                     </div>
                 </div>
                 <div className="px-4 lg:px-28">

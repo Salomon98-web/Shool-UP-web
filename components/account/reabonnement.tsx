@@ -120,7 +120,7 @@ export default function Reabonnement(){
                                     </InputOTP>
                                 </div>
                                 <div className="flex flex-row gap-2">
-                                    <p className=" text-[10px]">Changer votre abonnement</p>
+                                    <p className=" text-md">Changer votre abonnement</p>
                                     <Switch 
                                         onCheckedChange={()=>{
                                             change == true ? setChange(false) : setChange(true)

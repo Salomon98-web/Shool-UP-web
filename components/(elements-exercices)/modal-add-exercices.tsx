@@ -367,7 +367,7 @@ export default function MoadalAddExercice({token, open, onOpenChange, onSuccess,
                             
                             <button 
                                 type="submit"
-                                className="bg-blue-700 p-2 text-white  text-lg rounded-sm w-full h-8"
+                                className="bg-blue-700 p-2 text-white  text-lg rounded-sm w-full h-12"
                             >
                                 {loading ?(
                                     <Loader />

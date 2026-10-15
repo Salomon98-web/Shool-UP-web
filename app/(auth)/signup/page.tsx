@@ -151,8 +151,8 @@ export function CreatAccount() {
               </Button>
 
               <div className="flex flex-col relative top-4 justify-center items-center gap-3">
-                <p className="text-lg  ">Vous avez déjà un compte ? <Link className="  text-blue-950" href="/login">Connectez-vous</Link></p>
-                <Link className="  text-lg text-blue-950" href="/">Retour</Link>
+                <p className="text-sm  ">Vous avez déjà un compte ? <Link className="  text-blue-950" href="/login">Connectez-vous</Link></p>
+                <Link className="  text-sm text-blue-950" href="/">Retour</Link>
               </div>
 
             </div>

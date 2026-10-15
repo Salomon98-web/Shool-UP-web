@@ -132,7 +132,7 @@ export default function modalDownload({open, onOpenChange, exerciceId}:Props){
             </DrawerContent> */}
             <DrawerContent  className={`w-full h-auto p-4 flex justify-center items-center`}>
                 <DrawerHeader className="p-2">
-                    <DrawerTitle className="  font-bold text-blue-950">School UP</DrawerTitle>
+                    <DrawerTitle className=" text-2xl  font-bold text-blue-950">School UP</DrawerTitle>
                 </DrawerHeader>
                 <hr />
                 <div className="  h-full  lg:my-12">
@@ -148,7 +148,7 @@ export default function modalDownload({open, onOpenChange, exerciceId}:Props){
                             </InputOTP>
                             
                         </form>
-                        <div className="px-9 flex flex-row justify-center gap-3 ">
+                        <div className="px-9 flex flex-row justify-center gap-3 text-lg">
                             <p className="">{maskedValue == true ? 'Afficher': 'Masquer'} votre code</p>
                             <Switch onCheckedChange={()=>{
                             maskedValue == false ? setMaskedValue(true):setMaskedValue(false)
@@ -165,7 +165,7 @@ export default function modalDownload({open, onOpenChange, exerciceId}:Props){
                     
                 </div>
                 <DrawerFooter>
-                        <p className="text-center  text-[10px]">Veilliez saisir le code <strong>PIN</strong> de votre abonnement pour télécharger</p>
+                        <p className="text-center  text-sm">Veilliez saisir le code <strong>PIN</strong> de votre abonnement pour télécharger</p>
                     </DrawerFooter>
                 <DrawerClose className={`text-black`}>fermer</DrawerClose>
             </DrawerContent>

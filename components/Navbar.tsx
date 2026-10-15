@@ -45,7 +45,7 @@ export default function Navbar(){
                         {links.map((link)=>(
                             <NavigationMenuItem key={link.href}>
                                 <NavigationMenuLink  href={link.href} active={pathname === link.href}
-                                    className="group inline-flex h-9 w-max items-center justify-center rounded-md px-4 py-2 transition-colors
+                                    className="group inline-flex text-lg h-9 w-max items-center justify-center rounded-md px-4 py-2 transition-colors
                                     hover:bg-white hover:text-accent-foreground text-white"
                                 >
                                     {link.label}

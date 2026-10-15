@@ -102,7 +102,7 @@ export default function sidebar({role}:Props){
                                     onClick={()=>{
                                         setModalLogout(true)
                                     }}
-                                    className={`bg-blue-800  z-50  text-[11px] hover:bg-blue-700 duration-500`}
+                                    className={`bg-blue-800  z-50  text-md hover:bg-blue-700 duration-500`}
                                 >
                                     Déconnexion
                                 </Button>
@@ -113,7 +113,7 @@ export default function sidebar({role}:Props){
                 </SidebarContent>
                 <div className="my-6"></div>
                 <SidebarFooter className="bg-gray-100">
-                    <div className="flex justify-center items-center gap-7 text-[8px] md:text-[10px] text-chart-2  p-2">
+                    <div className="flex justify-center items-center gap-7 text-[8px] md:text-md text-chart-2  p-2">
                         <p>Copyright &copy;
                                 document.write{new Date().getFullYear()};
                             

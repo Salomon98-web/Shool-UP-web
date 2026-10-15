@@ -80,6 +80,8 @@ export default function Option() {
         >
            <ArrowBigLeftIcon /> 
         </button>
+
+        <div className="my-5"></div>
     </div>
   );
 }

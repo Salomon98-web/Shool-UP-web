@@ -103,7 +103,7 @@ export default function ModalUpdateClasse({token, open, classeValue, id, onOpenC
 
                         <button 
                             type="submit"
-                            className="bg-blue-950 p-2 text-white  text-lg rounded-sm w-32 h-8"
+                            className="bg-blue-950 p-2 text-white  text-lg rounded-sm w-32 h-12"
                         >
                             {loading ?(
                                 <Loader />

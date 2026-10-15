@@ -7,7 +7,7 @@ import Images2 from "@/public/2.jpg";
 import Images3 from "@/public/3.jpg";
 import Images4 from "@/public/4.jpg";
 import Appstore from "@/public/appstore.jpg"
-import Playstore from "@/public/playstore.jpg"
+import Playstore from "@/public/playstore.png"
 import Navbar from "@/components/Navbar";
 import Category from "@/components/category";
 import Footer from "@/components/footer";
@@ -63,7 +63,7 @@ export default function Home() {
                 />
               </div>
               <div className=" p-4 bg-white flex justify-center items-center w-150 md:w-64 xl:w-72">
-                <p className=" text-[14px] ">
+                <p className=" text-md ">
                   De nombreux exercices conformes aux programmes officiels, pour de meilleurs résultats scolaires et aux examens.
                 </p>
               </div>
@@ -79,7 +79,7 @@ export default function Home() {
                 />
               </div>
               <div className=" p-4 bg-white flex justify-center items-center w-150 md:w-64 xl:w-72 rounded-r-xl">
-                <p className=" text-[14px] ">
+                <p className=" text-md ">
                   Les exercices permettent de mieux préparer ses examens. Réussite assurée !
                 </p>
               </div>
@@ -99,7 +99,7 @@ export default function Home() {
                 />
               </div>
               <div className=" p-4 bg-white flex justify-center w-150 items-center md:w-64 xl:w-72">
-                <p className=" text-[14px] ">
+                <p className=" text-md ">
                   Les exercices scolaires font progresser. Votre enfant aura de meilleurs résultats !
                 </p>
               </div>
@@ -115,7 +115,7 @@ export default function Home() {
                 />
               </div>
               <div className=" p-4 bg-white flex justify-center items-center w-150 md:w-64 xl:w-72">
-                <p className=" text-[14px] ">
+                <p className=" text-md ">
                   Votre banque d'exercices scolaires avec corrigés. Où vous voulez, quand vous voulez, sans vous déplacer !
                 </p>
               </div>
@@ -146,8 +146,10 @@ export default function Home() {
         </div>
       </div>
 
+      <div className="my-2"></div>
+
       <div className=" w-full h-80 relative my-12">
-        <div className=" w-full h-full flex flex-col md:flex-row justify-center items-center gap-5 p-4">
+        <div className=" w-full h-full flex flex-col lg:flex-row justify-center items-center gap-5 p-4">
           
           <div className="flex flex-col justify-center items-center gap-5 p-4">
             <div className="relative  flex flex-col gap-1.5 px-2 md:px-0">
@@ -158,23 +160,23 @@ export default function Home() {
                 <Smartphone width={30} height={30} />
               </div>
               <div className="flex flex-col justify-center items-center p-2 ">
-                <p className="  text-md relative">SCANNEZ-MOI</p>
-                <p className=" text-lg">Pour tétéchager l'application</p>
+                <p className="  text-md relative font-extrabold">SCANNEZ-MOI</p>
+                <p className=" md:text-lg font-semibold">Pour tétéchager l'application</p>
               </div>
             </div>
           </div>
 
           <div className=" flex flex-col gap-2 relative bottom-8">
-            <p className=" text-center z-50  font-bold text-2xl">Disponible sur</p>
-            <div className="flex justify-center items-center flex-row gap-2.5">
+            <p className=" text-center z-50  font-bold text-2xl relative top-19">Disponible sur</p>
+            <div className="flex justify-center items-center flex-row gap-2">
               <Image 
-                  src={Playstore} width={200}  alt=""
-                  className="object-cover" 
-              />
+                  src={Playstore} width={300}  alt=""
+                  className="object-cover w-100" 
+              />{/* 
               <Image 
-                  src={Appstore} width={200}  alt=""
-                  className="object-cover" 
-              />
+                  src={Appstore} width={50}  alt=""
+                  className="object-cover relative top-1.5 w-38 md:w-50" 
+              /> */}
             </div>
           </div>
         </div>

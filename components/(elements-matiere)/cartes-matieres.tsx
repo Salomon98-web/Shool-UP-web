@@ -61,7 +61,7 @@ export default function CartesClasses({token, refreshKey}:Props){
                     <div className="w-12 h-12 rounded-xl bg-indigo-200 p-2 flex justify-center items-center">
                         <BookOpen className=" text-indigo-600" />
                     </div>
-                    <p className=" text-chart-2  text-xs">Total matière</p>
+                    <p className=" text-chart-2">Total matière</p>
                 </div>
                 <div className="my-3">
                     <p className=" text-indigo-800 text-lg relative left-19 bottom-7"><span className="text-4xl font-extrabold "><ConvertNumber number={data.length} /></span></p>

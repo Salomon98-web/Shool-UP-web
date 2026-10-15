@@ -92,7 +92,7 @@ export default function Abonnement({token, role, onSuccess, refreshKey}:Props){
                 {data.map((abonnement:any)=>(
                     <div 
                         key={abonnement.id} 
-                        className={`relative overflow-hidden flex flex-col group duration-500  bg-linear-to-br rounded-sm h-78 shrink-0 min-w-64 p-4 gap-2 
+                        className={`relative overflow-hidden flex flex-col group duration-500  bg-linear-to-br text-xl rounded-sm h-85 shrink-0 min-w-64 p-4 gap-2 
                         ${abonnement.type == "annuel"?('from-blue-950 bg-blue-700 via-blue-800 to-blur to-blue-950'):('bg-blue-100 from-blue-50 via-blue-50 to-blur to-blue-100 border border-blue-200')}`}
                     >
                         <div className="w-full flex justify-between">
@@ -107,7 +107,7 @@ export default function Abonnement({token, role, onSuccess, refreshKey}:Props){
                                         setId(abonnement.id)
                                         setOpenModalDelete(true)
                                     }}      
-                                    className="z-30 w-12 h-12 rounded-lg bg-red-700 flex items-center justify-center text-white"
+                                    className="z-10 w-12 h-12 rounded-lg bg-red-700 flex items-center justify-center text-white"
                                 >
                                     <LucideDelete />
                                 </button>
@@ -120,7 +120,7 @@ export default function Abonnement({token, role, onSuccess, refreshKey}:Props){
 
                         <p className={`  text-md ${abonnement.type == "annuel"?('text-white'):('')}  font-extrabold uppercase`}>{abonnement.type}</p>
 
-                        <p className={`${abonnement.type == "annuel"?('text-white'):('')} text-wrap  text-[10px]`}>
+                        <p className={`${abonnement.type == "annuel"?('text-white'):('')} text-wrap  text-sm`}>
                             {abonnement.type == "annuel"?(<span> d'avantages, plus <br/> d'économies</span>):(<span>Idéal pour commencer <br/> et profiter de nos services</span>)}
                         </p>
                         <p className="flex flex-row gap-2 ">
@@ -128,8 +128,8 @@ export default function Abonnement({token, role, onSuccess, refreshKey}:Props){
                             <span className={` ${abonnement.type == "annuel"?('text-white'):('')} relative top-5`}>XAF</span>
                         </p>
 
-                        <p className={` ${abonnement.type == "annuel"?('text-white bg-blue-800'):('bg-blue-200')}  text-[10px] w-full p-2  rounded-lg flex flex-row gap-2 items-center`}>
-                            <span className={`text-xs w-9 h-9 rounded-full ${abonnement.type == "annuel" ?('bg-blue-600 '):('bg-blue-600 text-white')}  flex justify-center items-center`}>
+                        <p className={` ${abonnement.type == "annuel"?('text-white bg-blue-800'):('bg-blue-200')}  text-sm w-full p-2  rounded-lg flex flex-row gap-2 items-center`}>
+                            <span className={`text-md w-9 h-9 rounded-full ${abonnement.type == "annuel" ?('bg-blue-600 '):('bg-blue-600 text-white')}  flex justify-center items-center`}>
                                 {abonnement.type == "annuel" ?(<Download width={20} />):(<Zap/>)}
                             </span>
                             {abonnement.limit_techarge} téléchargements / jour
@@ -142,7 +142,7 @@ export default function Abonnement({token, role, onSuccess, refreshKey}:Props){
                                 setPrice(abonnement.montant)
                                 setNbrDownload(abonnement.limit_techarge)
                             }}
-                            className={` p-2  ${abonnement.type == "annuel" ?('bg-yellow-400'):('bg-blue-700 text-white')} w-full   text-[10px] flex justify-center items-center 
+                            className={` p-2  ${abonnement.type == "annuel" ?('bg-yellow-400'):('bg-blue-700 text-white')} w-full   text-md flex justify-center items-center 
                             rounded-md my-3`}
                         >
                             commencer

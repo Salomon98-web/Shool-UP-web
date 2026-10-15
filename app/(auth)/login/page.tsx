@@ -78,7 +78,7 @@ function CardForm() {
               width={130}
             />
           </div>
-          <p className="text-xs">Connectez-vous a votre compte </p>
+          <p className="text-md">Connectez-vous a votre compte </p>
         </CardTitle>
         {/* <CardDescription className="  text-[10px] h-14">
           Connectez-vous à votre compte
@@ -119,8 +119,8 @@ function CardForm() {
               </Button>
 
               <div className="flex flex-col relative top-4 justify-center items-center gap-3">
-                <p className="  text-[10px]">Vous n'avez pas de compte ? <Link className=" text-blue-950" href="/signup">Créer votre compte</Link></p>
-                <Link className="  text-lg text-blue-950" href="/">Retour</Link>
+                <p className="  text-sm">Vous n'avez pas de compte ? <Link className=" text-blue-950" href="/signup">Créer votre compte</Link></p>
+                <Link className="  text-sm text-blue-950" href="/">Retour</Link>
               </div>
 
             </div>

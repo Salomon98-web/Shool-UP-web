@@ -107,7 +107,7 @@ export default function ModalUpdateLecon({token, open, leconValue, id, onOpenCha
 
                         <button 
                             type="submit"
-                            className="bg-blue-950 p-2 text-white  text-lg rounded-sm w-32 h-8"
+                            className="bg-blue-950 p-2 text-white  text-lg rounded-sm w-32 h-12"
                         >
                             {loading ?(
                                 <Loader />

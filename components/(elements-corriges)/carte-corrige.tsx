@@ -61,7 +61,7 @@ export default function CartesMesCorriges({token, refreshKey}:Props){
                     <div className="w-12 h-12 rounded-xl bg-yellow-200 p-2 flex justify-center items-center">
                         <Download className=" text-yellow-600" />
                     </div>
-                    <p className=" text-chart-2  text-xs">Total Corrigé</p>
+                    <p className=" text-chart-2">Total Corrigé</p>
                 </div>
                 <div className="my-3">
                     <p className=" text-yellow-800 text-lg relative left-19 bottom-7"><span className="text-4xl font-extrabold "><ConvertNumber number={data.length} /></span></p>

@@ -59,10 +59,10 @@ export default function MonCompte({token, open ,onOpenChange, onSuccess}:Props){
                             <User width={80} height={80}/>
                         </div>
                     </SheetTitle>
-                    <p className="text-center " >
+                    <p className="text-center text-lg font-bold" >
                         {dataUser.username}
                     </p>
-                    <p className="text-chart-2">Date de création : {dataUser.created_at}</p>
+                    <p className="text-chart-2 text-xs md:text-md">Date de création : {dataUser.created_at}</p>
                 </SheetHeader>
                 <hr />
                 <div className=" h-auto p-2 flex flex-col gap-2.5 w-full scroll-auto overflow-y-auto">
