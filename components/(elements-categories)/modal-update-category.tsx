@@ -51,12 +51,17 @@ export default function MoadalUpdateCategory({token, open, categoryValue, id, on
         const nouvelleErreus: string[] = [];
         const formData = new FormData(e.currentTarget)
         console.log(formData.get("file"))
+        const urlParams = new URLSearchParams()
+
+        urlParams.append("name", formData.get("name") as any)
+        
         const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/category/${id}`,{
             method:"PUT",
             headers:{
                 "X-Api-Key": token as string,
+                "Content-Type":"application/x-www-form-urlencode"
             },
-            body:formData,
+            body:urlParams.toString(),
         })
 
         const statusCode = res.status;
