@@ -13,6 +13,10 @@ import {
     ComboboxEmpty,
     ComboboxList 
 } from "../ui/combobox";
+import { ArrowBigLeft } from "lucide-react";
+import ModalPayement from "../(elements-payement)/modal-payement";
+import { useToastCustom } from "@/components/ui/toast-custom";
+import Loader from "../loading";
 
 
 export default function Reabonnement(){
@@ -25,18 +29,24 @@ export default function Reabonnement(){
     const [openModalAddClasse, setOpenModalAddClass] = useState(false)
     const [refreshKey, setRefresh] = useState(0)
     const [dataAbonnement, setDataAbonnement] = useState([])
-    const [loading, setLoading] = useState(true)
+    const [loading, setLoading] = useState(false)
     {/**changer abonnement */}
     const [change, setChange] = useState(false);
     {/**code PIN */}
     const [code, setCode] = useState('')
     {/**abonnement select */}
     const [selectedDefault, setSelectedDefault] = useState(0)
+    {/**abonne */}
+    const [dataAbonne, setDataAbonne] = useState([])
+    {/**modal payment */}
+    const [openModalPayement, setOpenModalPayement] = useState(false)
 
     const router = useRouter()
 
+    const toast = useToastCustom()
+
     useEffect(()=>{
-        const classes = async ()=>{
+        /* const classes = async ()=>{
             const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/classe`,{
                 method:"GET"
             })
@@ -49,8 +59,9 @@ export default function Reabonnement(){
                 setDataClasse(result)
                 console.log(result)
             }
-        }
-        const abonnement = async ()=>{
+        } */
+
+        /* const abonnement = async ()=>{
             const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/abonnement`,{
                 method:"GET",
                 
@@ -68,12 +79,37 @@ export default function Reabonnement(){
             }
             
             console.log(result[selectedDefault])
+        } */
+
+        const abonne = async ()=>{
+            setLoading(true)
+            if(code.length === 4){
+                
+                const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/member/bycode/${code}`,{
+                    method:"GET"
+                })
+                const status = res.status
+                const result = await res.json()
+                if(!res.ok){
+                    toast.error(result.message)
+                    setDataAbonne([])
+                    setLoading(false)
+                }else{
+                    setLoading(false)
+                    setDataAbonne(result)
+                    console.log(result)
+                }
+            }else{
+                setLoading(false)
+            }
         }
-        abonnement()
-        classes()
+
+        /* abonnement() */
+        /* classes() */
+        abonne()
         //setChange(true)
        /*  window.scrollTo({top:0, behavior:"smooth"}) */
-    },[refreshKey, change, selectedDefault])
+    },[refreshKey, change, selectedDefault, code])
 
     return(
         <>
@@ -92,7 +128,7 @@ export default function Reabonnement(){
                     {/* <p className="text-chart-1">Réabonnez-vous !</p> */}
                 </div>
                 <div className="w-full h-full flex justify-center items-center">
-                    <div className="border rounded-lg h-auto w-84 bg-white shadow">
+                    <div className="border rounded-lg h-auto w-84 bg-white shadow p-1.5">
                         <div className="flex flex-col p-4">
                             <form className="flex flex-col gap-4">
                                 <div className="w-full h-auto from-blue-950 bg-blue-700 via-blue-800 to-blur to-blue-950 rounded-lg p-4 flex flex-col justify-center items-center gap-4 relative overflow-hidden">
@@ -100,16 +136,9 @@ export default function Reabonnement(){
                                         className={`absolute -right-19 -top-32 h-48 w-48 rounded-full bg-violet-100 opacity-10 `}
                                     />
                                     <p className=" text-lg text-white">Veillez entrer votre code <strong>PIN</strong></p>
-                                    {/* <input 
-                                        className="border-2 border-gray-300 bg-white rounded-lg w-full h-12 p-2 flex justify-center items-center "
-                                        type="password" 
-                                        name=""
-                                        required
-                                    /> */}
+                                   
                                     <InputOTP required maxLength={4} name="" value={code} onChange={(e)=>{
                                         setCode(e)
-                                        
-                                        //console.log(code)
                                     }}>
                                         <InputOTPGroup className="gap-2 w-full flex justify-center items-center">
                                             <InputOTPSlot masked={false} index={0} className="rounded-md border-2 w-12 h-12 text-xl bg-white text-blue-800 font-bold"></InputOTPSlot>
@@ -119,7 +148,7 @@ export default function Reabonnement(){
                                         </InputOTPGroup>
                                     </InputOTP>
                                 </div>
-                                <div className="flex flex-row gap-2">
+                                {/* <div className="flex flex-row items-center gap-2">
                                     <p className=" text-md">Changer votre abonnement</p>
                                     <Switch 
                                         onCheckedChange={()=>{
@@ -143,7 +172,7 @@ export default function Reabonnement(){
                                         <p className="flex flex-row gap-2 ">
                                             <span className={`${(dataAbonnement as any).type == "annuel"?('text-yellow-600'):('')}  font-extrabold text-4xl`}>{(dataAbonnement as any).montant}</span>
                                             <span className={` ${(dataAbonnement as any).type == "annuel"?('text-yellow-600'):('')} relative top-5`}>XAF</span>
-                                            <span className="relative left-1 top-4 text-lg w-full my-2">{(dataAbonnement as any).limit_techarge} téléchargements / jour</span>
+                                            <span className="relative left-1 top-4 text-sm w-full my-2">{(dataAbonnement as any).limit_techarge} téléchargements / jour</span>
                                         </p>
                                         <input type="hidden" name="" required value={(dataAbonnement as any).id} />
                                         <input type="hidden" name="classe_id" value={classeId}/>
@@ -173,39 +202,84 @@ export default function Reabonnement(){
                                     
                                 ):(null)}
                                 {code.length === 4 ?(
+                                    
+                                    <>
+                                    {change === true ?(
+                                        <button
+                                            className={`p-2 bg-blue-700 rounded-lg  text-white`}
+                                        >
+                                            Changer
+                                        </button>
+                                    ):(
+                                        null
+                                    )}
+                                    
+                                    </>
+                                ):(
+                                    
+                                    null
+                                )} */}
+                                
+                            </form>
+                            <div className="my-2">
+                                {loading ? (<Loader />) :(null)}
+                            </div>
+                            {code.length === 4 ?(
+                                <>
+                                
+                                {dataAbonne.length === 0 ?(
                                     <button
-                                        type="submit" 
-                                        className="p-2 bg-blue-700 rounded-lg  text-white"
+                                        disabled 
+                                        className="p-2 bg-gray-300 rounded-lg  text-white"
                                     >
                                         Réabonner
                                     </button>
                                 ):(
                                     <button
-                                        disabled
-                                        type="submit" 
-                                        className="p-2 bg-gray-300 rounded-lg  text-white"
+                                        onClick={()=>{
+                                            setOpenModalPayement(true)
+                                        }}
+                                        className={`p-2 bg-blue-700 rounded-lg  text-white`}
                                     >
                                         Réabonner
                                     </button>
+                                    
                                 )}
                                 
-                            </form>
+                                </>
+                            ):(
+                                <button
+                                    disabled 
+                                    className="p-2 bg-gray-300 rounded-lg  text-white"
+                                >
+                                    Réabonner
+                                </button>
+                            )}
                         </div>
                         <div className=" flex justify-center">
                             <button
                                 onClick={()=>{
                                     router.back()
                                 }}
-                                className="p-2  text-lg text-blue-700"
+                                className="p-2  text-lg bg-blue-700 max-w-max rounded-full text-white"
                             >
-                                Retour
+                                <ArrowBigLeft/>
                             </button>
                         </div>
                     </div>
                 </div>
                 
             </div>
-        </div>  
+        </div>
+        <ModalPayement 
+            nomAbonnement={(dataAbonne as any).name} 
+            classe={(dataAbonne as any).classe?.name_class} 
+            amount={(dataAbonne as any).abonnement_type?.[0].montant}
+            codePIN={(dataAbonne as any).code} 
+            onSuccess={()=>{}}
+            open={openModalPayement}
+            onOpenchange={setOpenModalPayement}
+        />  
         </>
     )
 }

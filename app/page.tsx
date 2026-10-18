@@ -53,8 +53,8 @@ export default function Home() {
 
           <div className=" flex flex-col lg:flex-row gap-6 justify-center md:p-5">
 
-            <div className=" flex flex-row shadow-lg transition-transform hover:shadow-xl duration-500 group">
-              <div className=" left-2 bg-gray-300 w-150 md:w-56 xl:w-72 h-50 group-hover:-rotate-6 duration-500 relative">
+            <div className=" flex flex-col sm:flex-row shadow-lg transition-transform hover:shadow-xl duration-500 group">
+              <div className=" bg-gray-300 w-full md:w-56 xl:w-72 h-50 group-hover:-rotate-6 duration-500 relative">
                 <Image 
                   src={Images1}
                   alt=""
@@ -62,15 +62,15 @@ export default function Home() {
                   className=" object-cover"
                 />
               </div>
-              <div className=" p-4 bg-white flex justify-center items-center w-150 md:w-64 xl:w-72">
+              <div className=" p-4 bg-white flex justify-center items-center w-full md:w-64 xl:w-72 rounded-lg">
                 <p className=" text-md ">
                   De nombreux exercices conformes aux programmes officiels, pour de meilleurs résultats scolaires et aux examens.
                 </p>
               </div>
             </div>
 
-            <div className="flex flex-row shadow-lg transition-transform hover:shadow-xl duration-500 group">
-              <div className=" left-2 bg-gray-300 w-150 md:w-56 xl:w-72 h-50 group-hover:rotate-6 duration-500 relative">
+            <div className="flex flex-col sm:flex-row shadow-lg transition-transform hover:shadow-xl duration-500 group">
+              <div className=" bg-gray-300 w-full md:w-56 xl:w-72 h-50 group-hover:rotate-6 duration-500 relative">
                 <Image 
                   src={Images2}
                   alt=""
@@ -78,7 +78,7 @@ export default function Home() {
                   className=" object-cover"
                 />
               </div>
-              <div className=" p-4 bg-white flex justify-center items-center w-150 md:w-64 xl:w-72 rounded-r-xl">
+              <div className=" p-4 bg-white flex justify-center items-center w-full md:w-64 xl:w-72 rounded-r-xl">
                 <p className=" text-md ">
                   Les exercices permettent de mieux préparer ses examens. Réussite assurée !
                 </p>
@@ -89,8 +89,8 @@ export default function Home() {
 
           <div className=" flex flex-col lg:flex-row gap-6 justify-center md:p-5">
 
-            <div className="flex flex-row shadow-lg transition-transform hover:shadow-xl duration-500 group">
-              <div className=" left-2 bg-gray-300 w-150 md:w-56 xl:w-72 h-50 group-hover:-rotate-6 duration-500 relative">
+            <div className="flex flex-col sm:flex-row shadow-lg transition-transform hover:shadow-xl duration-500 group">
+              <div className=" bg-gray-300 w-full md:w-56 xl:w-72 h-50 group-hover:-rotate-6 duration-500 relative">
                 <Image 
                   src={Images3}
                   alt=""
@@ -98,15 +98,15 @@ export default function Home() {
                   className=" object-cover"
                 />
               </div>
-              <div className=" p-4 bg-white flex justify-center w-150 items-center md:w-64 xl:w-72">
+              <div className=" p-4 bg-white flex justify-center w-full items-center md:w-64 xl:w-72">
                 <p className=" text-md ">
                   Les exercices scolaires font progresser. Votre enfant aura de meilleurs résultats !
                 </p>
               </div>
             </div>
 
-            <div className="flex flex-row shadow-lg transition-transform hover:shadow-xl duration-500 group">
-              <div className=" left-2 bg-gray-300 w-150 md:w-56 xl:w-72 h-50 group-hover:rotate-6 duration-500 relative">
+            <div className="flex flex-col sm:flex-row shadow-lg transition-transform hover:shadow-xl duration-500 group">
+              <div className=" bg-gray-300 w-full md:w-56 xl:w-72 h-50 group-hover:rotate-6 duration-500 relative">
                 <Image 
                   src={Images4}
                   alt=""
@@ -114,7 +114,7 @@ export default function Home() {
                   className=" object-cover"
                 />
               </div>
-              <div className=" p-4 bg-white flex justify-center items-center w-150 md:w-64 xl:w-72">
+              <div className=" p-4 bg-white flex justify-center items-center w-full md:w-64 xl:w-72">
                 <p className=" text-md ">
                   Votre banque d'exercices scolaires avec corrigés. Où vous voulez, quand vous voulez, sans vous déplacer !
                 </p>
@@ -161,7 +161,7 @@ export default function Home() {
               </div>
               <div className="flex flex-col justify-center items-center p-2 ">
                 <p className="  text-md relative font-extrabold">SCANNEZ-MOI</p>
-                <p className=" md:text-lg font-semibold">Pour tétéchager l'application</p>
+                <p className="text-sm md:text-lg font-semibold">Pour tétéchager l'application</p>
               </div>
             </div>
           </div>

@@ -29,9 +29,6 @@ export default function Abonnement({token, role, onSuccess, refreshKey}:Props){
         const abonnement = async ()=>{
             const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/abonnement`,{
                 method:"GET",
-                headers:{
-                    "X-Api-Key": token as string,
-                }
             })
             
 

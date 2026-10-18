@@ -89,7 +89,7 @@ export default function cartesExercices({classeId, matiereId, leconId}:Props){
             { data.map((item:any)=>(
                 <div key={item.id} className="flex flex-col w-full h-auto border border-gray-200 shadow-lg hover:shadow-mauve-400 group hover:shadow-xl 
                 duration-500 rounded-sm gap-2">
-                <div className="flex flex-row gap-1 p-4">
+                {/* <div className="flex flex-row gap-1 p-4">
                     <div className="w-6 h-6 rounded-xs group-hover:transform group-hover:-rotate-25 duration-500">
                         <Image
                             src={ item.type == "GABONAIS" ? drapeauGabon : drapeauFrance}
@@ -100,9 +100,9 @@ export default function cartesExercices({classeId, matiereId, leconId}:Props){
                     <div className="flex flex-col justify-center items-start">
                         <p className="text-[9px] ">{ item.type == "GABONAIS" ? 'Système Gabonais' : 'Système Francais'}</p>
                     </div>
-                </div>
+                </div> */}
 
-                <div className={`font-medium relative overflow-hidden bottom-3 h-37 text-white ${item.type == "GABONAIS"?'bg-blue-800  bg-linear-to-r from-blue-950 via-blue-800 to-blue-500':'bg-red-800 bg-linear-to-r from-red-950 via-red-800 to-red-500'}`}>
+                <div className={`rounded-t-md font-medium relative overflow-hidden bottom-3 h-37 text-white ${item.type == "GABONAIS"?'bg-blue-800  bg-linear-to-r from-blue-950 via-blue-800 to-blue-500':'bg-red-800 bg-linear-to-r from-red-950 via-red-800 to-red-500'}`}>
                     <FileText 
                         className={`  
                         absolute bottom-0 right-1 -rotate-10 
@@ -114,12 +114,11 @@ export default function cartesExercices({classeId, matiereId, leconId}:Props){
                     <p className=" text-lg lg:text-lg p-2 ">{item.description}</p>
                 </div>
 
-                <div className="flex flex-row justify-between items-center p-2">
-                    <p className=" text-[7px] flex flex-row justify-center items-center gap-1 w-full">
+                <div className="flex flex-row items-center p-2 gap-2">
+                    <p className=" text-xs flex flex-row justify-center items-center gap-1 w-full">
                         <File width="20" className="text-red-600" />
                         <span>Exercice & corrigé</span> 
                     </p>
-                    <div className=" flex justify-between  w-full">
                         <button onClick={()=>{
                                 setFileName(item.file.name)
                                 setOpenModalApercu(true)
@@ -133,7 +132,6 @@ export default function cartesExercices({classeId, matiereId, leconId}:Props){
                         }} className=" text-[8px] text-blue-950">
                             <Download width="20" className="text-sm text-blue-950" />
                         </button>
-                    </div>
                 </div>
                     
             </div>

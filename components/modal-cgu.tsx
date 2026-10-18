@@ -20,16 +20,17 @@ export default function CGU(){
         <p className=" text-blue-950">Cliquer ici pour lire</p>
       </DialogTrigger>
 
-      <DialogContent className="w-auto">
-        <DialogHeader className=" font-bold text-lg text-blue-950 h-8">
-          <DialogTitle className={`font-extrabold`}>Contrat d'utilisateur</DialogTitle>
+      <DialogContent className="w-96">
+        <DialogHeader className=" font-bold text-lg text-blue-950 h-auto">
+          <DialogTitle className={`font-extrabold text-2xl`}>Contrat d'utilisateur</DialogTitle>
         </DialogHeader>
         <hr />
-        <div className="flex flex-col gap-4 w-96 text-xs ">
+        <div className="flex flex-col gap-4 w-full text-lg">
           <span className="text-black ">
             Les exercices avec corrigés présents sur cette plate-forme sont la propriété exclusive de <span className="font-bold"> School UP</span>.
           </span>
-          <span className=" text-black ">
+          <hr />
+          <span className=" text-black">
             Toute reproduction en vue de commercialisation, par un usager, est formellement interdite sous peine de poursuites judiciaires.
           </span>
         </div>

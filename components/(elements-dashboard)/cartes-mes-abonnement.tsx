@@ -4,6 +4,8 @@ import { useEffect, useState } from "react"
 import { Eye, EyeOff, Timer, TimerOff, LucideDelete } from "lucide-react"
 import LoaderCarte from "../loading-carte"
 import ModalDeleteMonabonnement from "./modal-delete-mon-abonnement"
+import ModalPayement from "../(elements-payement)/modal-payement"
+import Link from "next/link"
 
 interface Props{
     token:string | undefined
@@ -24,14 +26,20 @@ interface PropsCarte{
     debut:any
     fin:any 
     nom:any
+    mnt:any //montant de l'abonnement
 }
 
-export function Carte({item, type, classe, status, codePIN, debut, fin, nom, tel, id, token, onSuccess}:any){
+export function Carte({item, type, classe, status, codePIN, debut, fin, nom, tel, id, token, onSuccess, mnt}:PropsCarte){
 
     const [openModalDelete, setOpenModalDelete] = useState(false)
     const[code, setCode] = useState(false)
     const [idAbonne, setIdAbonne] = useState<number>(0)
     const [abonnementName, setAbonnementName] = useState<string>('')
+    {/**modal payment */}
+    const [openModalPayement, setOpenModalPayement] = useState(false)
+    const [classeName, setClasse] = useState<string>('')
+    const [amount, setAmount] = useState<number>(0)
+    const [codePin, setCodePIN] = useState<number>(0)
 
     return(
         <>
@@ -105,7 +113,14 @@ export function Carte({item, type, classe, status, codePIN, debut, fin, nom, tel
 
                     <>
                         <button 
-                            className="p-2 rounded-md text-yellow-200 relative left-2"
+                            onClick={()=>{
+                                setAbonnementName(nom)
+                                setClasse(classe)
+                                setAmount(mnt)
+                                setCodePIN(codePIN)
+                                setOpenModalPayement(true)
+                            }}
+                            className="p-2 rounded-md text-yellow-200 relative left-2 z-20"
                         >
                             Cliquer ici pour payer
                         </button>
@@ -117,11 +132,11 @@ export function Carte({item, type, classe, status, codePIN, debut, fin, nom, tel
                     
                     <>
                         <button 
-                            className="p-2  text-xs rounded-md text-green-200 relative left-2"
+                            className="p-2  text-md rounded-md text-green-200 relative left-2"
                         >
                             Abonnement validé
                         </button>
-                        <p className=" text-[10px] text-green-400 text-center">Actif</p>
+                        <p className=" text-[13px] text-green-400 text-center">Actif</p>
                     </>
                 ):(null)}
                 {status == 2 ? (
@@ -129,21 +144,22 @@ export function Carte({item, type, classe, status, codePIN, debut, fin, nom, tel
                     
                     <>
                         <button 
-                            className="p-2  text-xs rounded-md text-red-900 relative left-2"
+                            className="p-2  text-md rounded-md text-red-900 relative left-2"
                         >
                             Abonnement suspendu
                         </button>
-                        <p className=" text-[10px] text-red-200 text-center">Bloqué</p>
+                        <p className=" text-[13px] text-red-200 text-center">Bloqué</p>
                     </>
                 ):(null)}
                 {status == 0 ? (
                     <>
-                        <button 
-                            className=" text-[10px] text-white "
+                        <Link 
+                            href="/reabonnement"
+                            className=" text-md text-white text-center"
                         >
                             Cliquer ici pour vous réabonner
-                        </button>
-                        <p className=" text-[10px] text-red-400 text-center">Terminé</p>
+                        </Link>
+                        <p className=" text-[13px] text-red-400 text-center">Terminé</p>
                     </>
                     
                 ):(null)}
@@ -161,7 +177,23 @@ export function Carte({item, type, classe, status, codePIN, debut, fin, nom, tel
                 </button>
             </div>
         </div>
-         <ModalDeleteMonabonnement token={token} id={idAbonne} abonnementName={abonnementName} open={openModalDelete} onOpenOnChange={setOpenModalDelete} onSuccess={onSuccess} />
+        <ModalPayement 
+            nomAbonnement={abonnementName} 
+            classe={classeName} 
+            amount={amount} 
+            codePIN={codePin} 
+            onSuccess={onSuccess}
+            open={openModalPayement}
+            onOpenchange={setOpenModalPayement}
+        />
+        <ModalDeleteMonabonnement 
+            token={token} 
+            id={idAbonne} 
+            abonnementName={abonnementName} 
+            open={openModalDelete} 
+            onOpenOnChange={setOpenModalDelete} 
+            onSuccess={onSuccess} 
+        />
         </>
     )
 }
@@ -238,7 +270,22 @@ export default function cartes({token, refreshKey}:Props){
         <div className=" w-full flex flex-row items-center h-auto p-2 relative top-10 px-4 lg:px-14">
             <div className="flex overflow-x-auto pb-4 scrollbar-hide gap-2 ">
                 {data.map((item:any)=>(
-                    <Carte key={item.id} type={item.abonnement_type[0].type} classe={item.classe[0].name_class} status={item.status} codePIN={item.code} debut={item.start_date} fin={item.end_date} nom={item.name} tel={item.phone} id={item.id} token={token} onSuccess={()=>setRefresh(k=>k+1)} />
+                    <Carte 
+                        key={item.id} 
+                        item={item.id}
+                        type={item.abonnement_type[0].type} 
+                        classe={item.classe[0].name_class} 
+                        status={item.status} 
+                        codePIN={item.code} 
+                        debut={item.start_date} 
+                        fin={item.end_date} 
+                        nom={item.name} 
+                        tel={item.phone} 
+                        id={item.id} 
+                        token={token} 
+                        onSuccess={()=>setRefresh(k=>k+1)}
+                        mnt={item.abonnement_type[0].montant} 
+                    />
                 ))}
             </div>
         </div>

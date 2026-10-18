@@ -80,14 +80,15 @@ export default function CommencerAbonnement({open, onOpenChange, type, id, price
         const statusCode = res.status
         const data = await res.json()
         if(!res.ok){
-            toast.error(`${data[0]?.message}`)
+            
+           data[0]?.message ? toast.error(`${data[0]?.message}`) : toast.error(`${data.message}`)
             setIsLoading(false)
         }else{
             toast.success("Operation réussie ! Activer votre abonnement en payant le montant")
             setIsLoading(false)
             onSuccess() 
         }
-        console.log(data)
+        console.log(data.length)
     }
 
     return(

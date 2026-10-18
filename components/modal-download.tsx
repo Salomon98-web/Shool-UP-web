@@ -1,15 +1,6 @@
 "use client"
 
 import { 
-    Dialog,
-    DialogContent,
-    DialogDescription,
-    DialogTitle,
-    DialogFooter,
-    DialogHeader,
-    DialogTrigger,
-} from "@/components/ui/dialog";
-import { 
     Drawer,
     DrawerContent,
     DrawerHeader,

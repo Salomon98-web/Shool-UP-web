@@ -80,7 +80,7 @@ export default function ModalDeleteMonabonnement({token, id, abonnementName, ope
                         Avertissement 
                     </DialogTitle>
                 </DialogHeader>
-                <div className="p-2 flex flex-col gap-14 text-lg  text-lg">
+                <div className="p-2 flex flex-col gap-14 text-lg ">
                     <p className="">
                         vous êtes sur le point de supprimer votre abonnement <strong>{abonnementName}</strong>, êtes-vous sur de vouloir continuer ?
                     </p>

@@ -31,7 +31,7 @@ export default function Category(){
         return(
             <div className=" flex flex-col p-3 gap-2">
                 <div className="">
-                <p className=" text-sm   text-gray-400 text-center">Nos catégories</p>
+                <p className=" text-gray-400 text-center">Nos catégories</p>
             </div>
                 <div className=" w-full flex flex-row justify-center items-center h-auto p-2">
                     <div className="flex overflow-x-auto pb-4 scrollbar-hide gap-2 ">
