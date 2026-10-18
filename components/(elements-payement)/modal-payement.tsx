@@ -129,6 +129,7 @@ export default function ModalPayement({nomAbonnement, classe, amount, codePIN, o
         if(open == false){
             setMessageError('')
             setMessageSuccess('')
+            setLoading(false)
         }
     },[open])
 
