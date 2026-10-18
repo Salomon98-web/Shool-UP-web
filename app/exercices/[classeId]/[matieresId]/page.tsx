@@ -118,10 +118,10 @@ export default function page({params}:Props){
                             <div className="flex justify-start mx-auto px-4 lg:px-28">
                                 <div className="flex flex-col gap-4 w-full">
                                     {data.map((item:any)=>(
-                                        <Link key={item.id} href={`/exercices/${param.classeId}/${param.matieresId}/${item.matiere.id}`}>
+                                        <Link key={item.id} href={`/exercices/${param.classeId}/${param.matieresId}/${item.id}`}>
                                             <div className="flex justify-start items-center group bg-gray-100 duration-500 hover:shadow-lg 
                                                 hover:shadow-mauve-300 w-full h-auto rounded-sm p-4 ">
-                                                <p className="text-start font-bold  text-xl text-wrap">{item.matiere.nom_matiere}</p>
+                                                <p className="text-start font-bold  text-xl text-wrap">{item.nom_matiere}</p>
                                             </div>
                                         </Link>
                                     ))}
