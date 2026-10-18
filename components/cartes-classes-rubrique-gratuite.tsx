@@ -46,7 +46,7 @@ export default function cartes(){
             ):(
                 <div className="flex flex-wrap justify-center gap-4">
                     {data.map((item:any)=>(
-                        <Link key={item.id} href={`/exercices-gratuits/${item.classe.id}`}>
+                        <Link key={item.classe.id} href={`/exercices-gratuits/${item.classe.id}`}>
                             <div className="flex justify-center items-center group border bg-gray-100 duration-500 hover:shadow-mauve-300 shadow-xs 
                                 hover:shadow-lg hover:transform hover:rotate-2 w-72 h-24 rounded-lg p-2 ">
                                 <p className="text-center font-bold  text-lg text-wrap">{item.classe.name_class}</p>

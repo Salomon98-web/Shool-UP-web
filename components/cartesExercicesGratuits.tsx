@@ -67,7 +67,7 @@ export default function Cartes({id}:Props){
             { data.map((item:any)=>(
                 <div key={item.id} className="flex flex-col w-full h-auto border border-gray-200 shadow-lg hover:shadow-mauve-400 group hover:shadow-xl 
                     duration-500 rounded-sm gap-2">
-                    <div className="flex flex-row gap-1 p-4">
+                    {/* <div className="flex flex-row gap-1 p-4">
                         <div className="w-6 h-6 rounded-xs group-hover:transform group-hover:-rotate-25 duration-500">
                             <Image
                                 src={ item.type == "GABONAIS" ? drapeauGabon : drapeauFrance}
@@ -78,9 +78,9 @@ export default function Cartes({id}:Props){
                         <div className="flex flex-col justify-center items-start">
                             <p className="text-[9px] ">{ item.type == "GABONAIS" ? 'Système Gebonais' : 'Système Francais'}</p>
                         </div>
-                    </div>
+                    </div> */}
 
-                    <div className={`font-medium relative overflow-hidden bottom-3 h-37 text-white ${item.type == "GABONAIS"?'bg-blue-800  bg-linear-to-r from-blue-950 via-blue-800 to-blue-500':'bg-red-800 bg-linear-to-r from-red-950 via-red-800 to-red-500'}`}>
+                    <div className={`font-medium relative overflow-hidden bottom-3 h-37 text-white rounded-t-sm ${item.type == "GABONAIS"?'bg-blue-800  bg-linear-to-r from-blue-950 via-blue-800 to-blue-500':'bg-red-800 bg-linear-to-r from-red-950 via-red-800 to-red-500'}`}>
                         <Gift 
                             className={`  
                             absolute bottom-0 right-1 -rotate-10 

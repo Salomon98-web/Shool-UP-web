@@ -102,7 +102,7 @@ export default function cartesExercices({classeId, matiereId, leconId}:Props){
                     </div>
                 </div> */}
 
-                <div className={`rounded-t-md font-medium relative overflow-hidden bottom-3 h-37 text-white ${item.type == "GABONAIS"?'bg-blue-800  bg-linear-to-r from-blue-950 via-blue-800 to-blue-500':'bg-red-800 bg-linear-to-r from-red-950 via-red-800 to-red-500'}`}>
+                <div className={`rounded-t-sm font-medium relative overflow-hidden bottom-3 h-37 text-white ${item.type == "GABONAIS"?'bg-blue-800  bg-linear-to-r from-blue-950 via-blue-800 to-blue-500':'bg-red-800 bg-linear-to-r from-red-950 via-red-800 to-red-500'}`}>
                     <FileText 
                         className={`  
                         absolute bottom-0 right-1 -rotate-10 
