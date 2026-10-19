@@ -71,7 +71,7 @@ export default function Category({token, role}:Props){
                         onClick={()=>{
                             setopenModalAddCategory(true)
                         }}
-                        className="   text-md text-white bg-violet-800 max-w-96 p-2 rounded-sm"
+                        className=" uppercase text-md text-white bg-violet-800 max-w-96 p-2 rounded-sm"
                     >
                         AJouter une catégorie
                     </button>

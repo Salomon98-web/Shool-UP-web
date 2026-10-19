@@ -95,9 +95,9 @@ export default function Exercices({token, role}:Props){
                             onClick={()=>{
                                 setOpenModalAddExercice(true)
                             }}
-                            className="   text-md text-white bg-blue-800 max-w-96 p-2 rounded-sm"
+                            className=" uppercase  text-md text-white bg-blue-800 max-w-96 p-2 rounded-sm"
                         >
-                        AJouter une exercices
+                        AJouter un exercice
                     </button>
                 </div>
 

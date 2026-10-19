@@ -6,7 +6,6 @@ import Images1 from "@/public/1.jpg";
 import Images2 from "@/public/2.jpg";
 import Images3 from "@/public/3.jpg";
 import Images4 from "@/public/4.jpg";
-import Appstore from "@/public/appstore.jpg"
 import Playstore from "@/public/playstore.png"
 import Navbar from "@/components/Navbar";
 import Category from "@/components/category";
@@ -25,12 +24,12 @@ export default function Home() {
 
           <div className="flex flex-col justify-center  w-full h-full gap-2 bg-gray-300 p-4 relative bottom-24 ">
             <Image 
-                src={Imagehome}
+                src={Images3}
                 alt=""
                 fill
                 className=" object-cover"
             />
-            <div className=" bg-black opacity-60 absolute inset-0"></div>
+            <div className=" bg-black opacity-40 absolute inset-0"></div>
             <div className=" flex flex-col relative top-35 gap-2">
               <p className="text-white  text-2xl">Débutez avec <span className=" font-bold  text-2xl">School UP</span> </p>
               <p className="text-white  text-xl">Votre banque d'exercices scolaires avec corrigés.</p>
@@ -56,7 +55,7 @@ export default function Home() {
             <div className=" flex flex-col sm:flex-row shadow-lg transition-transform hover:shadow-xl duration-500 group">
               <div className=" bg-gray-300 w-full md:w-56 xl:w-72 h-50 group-hover:-rotate-6 duration-500 relative">
                 <Image 
-                  src={Images1}
+                  src={Imagehome}
                   alt=""
                   fill
                   className=" object-cover"
@@ -72,7 +71,7 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row shadow-lg transition-transform hover:shadow-xl duration-500 group">
               <div className=" bg-gray-300 w-full md:w-56 xl:w-72 h-50 group-hover:rotate-6 duration-500 relative">
                 <Image 
-                  src={Images2}
+                  src={Images1}
                   alt=""
                   fill
                   className=" object-cover"
@@ -92,7 +91,7 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row shadow-lg transition-transform hover:shadow-xl duration-500 group">
               <div className=" bg-gray-300 w-full md:w-56 xl:w-72 h-50 group-hover:-rotate-6 duration-500 relative">
                 <Image 
-                  src={Images3}
+                  src={Images2}
                   alt=""
                   fill
                   className=" object-cover"
@@ -108,7 +107,7 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row shadow-lg transition-transform hover:shadow-xl duration-500 group">
               <div className=" bg-gray-300 w-full md:w-56 xl:w-72 h-50 group-hover:rotate-6 duration-500 relative">
                 <Image 
-                  src={Images4}
+                  src={Imagehome}
                   alt=""
                   fill
                   className=" object-cover"
@@ -126,21 +125,19 @@ export default function Home() {
         </div>
         {/* Essayer gratuitement */}
         <div className=" w-full h-80 bg-gray-50 relative">
-          
           <Image 
               src={ImageExercicesgratuits}
               alt=""
               fill
               className=" object-cover"
           />
-          <div className=" bg-black opacity-70 absolute inset-0"></div>
+          <div className=" bg-black opacity-45 absolute inset-0"></div>
           <div className=" w-full h-full flex flex-col justify-center items-center gap-5 p-4">
             <div className=" flex flex-col gap-2">
-              <p className=" text-white text-center md:text-3xl  z-50 text-2xl font-bold">Essayer gratuitement</p>
-              <p className=" text-center text-white z-50  text-xl">Téléchargez gratuitement des exercices avec corrigés.</p>
+              <p className=" text-white text-center md:text-3xl uppercase z-50 text-4xl font-bold">Essayer gratuitement</p>
             </div>
-            <Link href="/exercices-gratuits" className=" p-2 bg-white z-50 rounded-sm w-72 md:w-96 text-center  text-lg">
-              Clique ici
+            <Link href="/exercices-gratuits" className="uppercase p-2 bg-white z-50 rounded-sm w-72 md:w-96 text-center  text-lg">
+              Cliquez ici
             </Link>
           </div>
         </div>
@@ -151,17 +148,20 @@ export default function Home() {
       <div className=" w-full h-80 relative my-12">
         <div className=" w-full h-full flex flex-col lg:flex-row justify-center items-center gap-5 p-4">
           
-          <div className="flex flex-col justify-center items-center gap-5 p-4">
-            <div className="relative  flex flex-col gap-1.5 px-2 md:px-0">
-              <QRCode value={`https://schoolup.ga`} size={200}/>
-            </div>
+          <div className="flex flex-col justify-center items-center gap-5 p-4 relative top-9 ">
             <div className=" h-auto w-auto rounded-full flex justify-center items-center right-3 md:right-5 relative bottom-8 p-3">
-              <div className=" bg-blue-700 h-14 w-14 text-white rounded-full relative right-1 flex justify-center items-center">
-                <Smartphone width={30} height={30} />
-              </div>
-              <div className="flex flex-col justify-center items-center p-2 ">
+              <div className="flex flex-col justify-center items-center p-2 gap-2">
+                <div className="relative top-4 flex flex-col gap-1.5 px-2 md:px-0">
+                  <QRCode 
+                    value={`https://schoolup.ga`} 
+                    size={200}
+                  />
+                </div>
                 <p className="  text-md relative font-extrabold">SCANNEZ-MOI</p>
                 <p className="text-sm md:text-lg font-semibold">Pour tétéchager l'application</p>
+                <div className=" bg-blue-700 max-w-max max-h-max p-2 text-white rounded-full flex justify-center items-center">
+                  <Smartphone width={30} height={30} />
+                </div>
               </div>
             </div>
           </div>

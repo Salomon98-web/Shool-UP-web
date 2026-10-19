@@ -88,7 +88,7 @@ export default function sidebar({role}:Props){
                                 <SidebarMenuItem key={link.href} className="p-2">
                                     <a href={link.href}>
                                         <SidebarMenuButton  
-                                            className={`p-4  text-lg ${isActive ? "bg-blue-950 bg-linear-to-r from-blue-950 via-blue-800  to-blue-700 text-white":""} group hover:bg-blue-800 hover:text-white duration-500`} 
+                                            className={`p-4 uppercase text-lg ${isActive ? "bg-blue-950 bg-linear-to-r from-blue-950 via-blue-800  to-blue-700 text-white":""} group hover:bg-blue-800 hover:text-white duration-500`} 
                                         >
                                             {link.label}
                                         </SidebarMenuButton>
@@ -102,7 +102,7 @@ export default function sidebar({role}:Props){
                                     onClick={()=>{
                                         setModalLogout(true)
                                     }}
-                                    className={`bg-blue-800  z-50  text-md hover:bg-blue-700 duration-500`}
+                                    className={`bg-blue-800  z-50 uppercase text-md hover:bg-blue-700 duration-500`}
                                 >
                                     Déconnexion
                                 </Button>

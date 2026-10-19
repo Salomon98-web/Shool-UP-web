@@ -63,7 +63,7 @@ export default function page(){
                         />
                         <div className=" bg-black opacity-60 absolute inset-0"></div>
                         <div className=" flex flex-col justify-center items-center relative top-14 gap-2">
-                            <p className="text-white  text-[18px]"><span className=" font-bold  text-4xl">Exercices</span> </p>
+                            <p className="text-white  text-[18px]"><span className=" font-bold uppercase text-4xl">Exercices</span> </p>
                             <div className="flex flex-col justify-center items-center w-full">
                                 <p className=" text-lg text-white ">Cliquer sur votre catégorie</p>               
                             </div>
@@ -94,7 +94,7 @@ export default function page(){
                                                         className=" object-cover rounded-sm group-hover:shadow-gray-900 group-hover:shadow-lg duration-500"
                                                     />
                                                     
-                                                    <div className=" bg-black opacity-60 absolute inset-0 rounded-sm"></div>
+                                                    <div className=" bg-black opacity-40 absolute inset-0 rounded-sm"></div>
                                                 <p key={item.id} className="text-center font-bold  text-xl text-white group-h text-wrap p-2 z-50 uppercase group-hover:transform group-hover:-translate-y-3 group-active:-translate-y-3 duration-500">{item.name}</p>
                                             </div>
                                         </Link>

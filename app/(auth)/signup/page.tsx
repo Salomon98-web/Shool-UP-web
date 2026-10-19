@@ -86,7 +86,7 @@ export function CreatAccount() {
               width={130}
             />
           </div>
-          <p className="text-xs ">Créer votre compte</p>
+          <p className="text-md ">Créer votre compte</p>
         </CardTitle>
       </CardHeader>
       <CardContent>
@@ -114,7 +114,7 @@ export function CreatAccount() {
             <hr />
             <FieldSet>
 
-              <FieldLegend className="font-bold">Contrat d'utilisateur</FieldLegend>
+              <FieldLegend className="font-bold ">Contrat d'utilisateur</FieldLegend>
 
               <FieldDescription>
                 <CGU />

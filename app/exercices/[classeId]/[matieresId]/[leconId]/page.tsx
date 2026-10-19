@@ -123,7 +123,7 @@ export default function page({params}:Props){
                             />
                             <div className=" bg-black opacity-60 absolute inset-0"></div>
                             <div className=" flex flex-col justify-center items-center relative top-14 gap-2">
-                                <p className="text-white  text-lg text-wrap"><span className=" font-bold  text-xl">{dataCategory?.name}</span> </p>
+                                <p className="text-white  text-lg text-wrap"><span className=" font-bold uppercase text-4xl">{dataCategory?.name}</span> </p>
                             </div>
                         </div>
                     )}
@@ -134,17 +134,17 @@ export default function page({params}:Props){
                 <div className="flex justify-start items-center px-4 lg:px-28">
                     <div className="flex flex-col justify-center w-full">
                         {loading ? (''):(
-                            <p className="flex flex-col text-xl text-blue-950 ">
+                            <p className="flex flex-col text-2xl text-blue-950 ">
                                 <span className=" font-bold  ">{dataClasse?.name_class}</span>
                                 <span>{dataMatiere?.nom_matiere}</span>
                             </p> 
                         )}
-                        <p className=" text-lg text-chart-2  text-[13px]">Selectionner votre leçon accéder aux exercices</p>               
+                        <p className=" text-lg text-chart-2 ">Selectionner votre leçon accéder aux exercices</p>               
                     </div>
                 </div>
                 <div className="px-4 lg:px-28 flex flex-row items-center gap-2 my-8">
-                    <Link href={`/exercices/${param.classeId}`} className="p-2 bg-blue-950 text-white rounded-sm  text-lg">Retour</Link>
-                    <Link href={`/exercices/${param.classeId}/${param.matieresId}`} className="p-2 bg-blue-950 text-white rounded-sm  text-lg">Toutes les matières</Link>
+                    <Link href={`/exercices/${param.classeId}`} className="p-2 bg-blue-950 text-white rounded-sm uppercase text-lg">Retour</Link>
+                    <Link href={`/exercices/${param.classeId}/${param.matieresId}`} className="p-2 bg-blue-950 text-white rounded-sm  uppercase text-lg">Toutes les matières</Link>
                 </div>
                 {loading ? (
                     <div className="flex justify-start  px-4 lg:px-28">
@@ -169,8 +169,8 @@ export default function page({params}:Props){
                                     <Link key={item.id} href={`/exercices/${param.classeId}/${param.matieresId}/${param.leconId}/${item.id}`}>
                                         <div className="flex justify-start items-center group bg-gray-100 duration-500 hover:shadow-lg 
                                                 hover:shadow-mauve-300 w-full h-auto rounded-sm p-4 ">
-                                            <p className="flex gap-3 text-start font-semibold  text-lg text-wrap">
-                                                <span className="flex justify-center items-center relative -top-6 text-2xl text-white p-3 rounded-sm bg-blue-950">{index + 1}</span>{item.titre}
+                                            <p className="flex gap-3 text-start text-xl uppercase font-bold text-wrap">
+                                                <span className="flex justify-center items-center relative -top-6 font-bold text-white p-3 rounded-sm bg-blue-950">{index + 1}</span>{item.titre}
                                             </p>
                                         </div>
                                     </Link>

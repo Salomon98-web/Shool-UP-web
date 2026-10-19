@@ -59,13 +59,13 @@ export default function CartesCategories({token, refreshKey}:Props){
                     <div className="w-12 h-12 rounded-xl bg-violet-200 p-2 flex justify-center items-center">
                         <BookOpenText className=" text-violet-600" />
                     </div>
-                    <p className=" text-chart-2">Domaine</p>
+                    <p className=" text-chart-2 uppercase">Domaine</p>
                 </div>
                 <div className="my-3">
                     <p className=" text-violet-800 text-lg relative left-19 bottom-7"><span className="text-4xl font-extrabold "><ConvertNumber number={(data as any).totalCategorie} /></span></p>
 
                 </div>
-                <p className=" text-violet-800 text-lg">catégories</p>
+                <p className=" text-violet-800 text-lg uppercase">catégories</p>
             </div>
         </div>
     )

@@ -82,7 +82,7 @@ export default function Lecons({token, role}:Props){
                             onClick={()=>{
                                 setOpenModalAddClass(true)
                             }}
-                            className="   text-md text-white bg-purple-800 max-w-96 p-2 rounded-sm"
+                            className=" uppercase text-md text-white bg-purple-800 max-w-96 p-2 rounded-sm"
                         >
                         AJouter une leçon
                     </button>

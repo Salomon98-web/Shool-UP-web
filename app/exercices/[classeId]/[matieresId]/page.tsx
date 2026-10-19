@@ -81,7 +81,7 @@ export default function page({params}:Props){
                             />
                             <div className=" bg-black opacity-60 absolute inset-0"></div>
                             <div className=" flex flex-col justify-center items-center relative top-14 gap-2">
-                                <p className="text-white  text-lg text-wrap"><span className=" font-bold  text-xl">{dataCategory?.name}</span> </p>
+                                <p className="text-white  text-lg text-wrap"><span className=" font-bold  uppercase text-4xl">{dataCategory?.name}</span> </p>
                             </div>
                         </div>
                     )}
@@ -91,12 +91,12 @@ export default function page({params}:Props){
             <div className="flex flex-1 flex-col my-10 gap-8">
                 <div className="flex justify-start items-center px-4 lg:px-28">
                     <div className="flex flex-col justify-center w-full">
-                        <p className="text-2xl text-blue-950  font-extrabold">Matière</p> 
+                        <p className="text-2xl uppercase text-blue-950 font-extrabold">Matière</p> 
                         <p className=" text-lg md:text-sm  text-chart-2">Cliquer sur une matière pour accéder a la/les leçon(s)</p>               
                     </div>
                 </div>
                 <div className="px-4 lg:px-28">
-                    <Link href={`/exercices/${param.classeId}`} className="p-2 bg-blue-950 text-white rounded-sm ">Retour</Link>
+                    <Link href={`/exercices/${param.classeId}`} className="p-2 bg-blue-950 text-white rounded-md uppercase ">Retour</Link>
                 </div>
                 {loading ? (
                     <div className="flex justify-start  px-4 lg:px-28">

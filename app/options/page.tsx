@@ -33,7 +33,7 @@ export default function Option() {
                             `}  
                         />
                     <p className="text-center font-bold  group-h text-wrap uppercase text-lg">Premier abonnement</p>
-                    <p className="text-chart-2  text-[10px]">cliquer içi</p>
+                    <p className="text-chart-2  text-md">cliquer içi</p>
                 </div>
             </Link>
 
@@ -49,7 +49,7 @@ export default function Option() {
                             `}  
                         />
                     <p className="text-center font-bold  group-h text-wrap uppercase text-lg">connectez-vous</p>
-                    <p className="text-chart-2  text-[10px]">cliquer içi</p>
+                    <p className="text-chart-2  text-md">cliquer içi</p>
                 </div>
             </Link>
 
@@ -65,7 +65,7 @@ export default function Option() {
                             `}  
                         />
                     <p className="text-center font-bold  group-h text-wrap uppercase text-lg">Réabonnez-vous</p>
-                    <p className="text-chart-2  text-[10px]">cliquer içi</p>
+                    <p className="text-chart-2  text-md">cliquer içi</p>
                 </div>
             </Link>
 

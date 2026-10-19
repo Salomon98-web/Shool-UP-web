@@ -135,7 +135,7 @@ export default function Reabonnement(){
                                     <div  
                                         className={`absolute -right-19 -top-32 h-48 w-48 rounded-full bg-violet-100 opacity-10 `}
                                     />
-                                    <p className=" text-lg text-white">Veillez entrer votre code <strong>PIN</strong></p>
+                                    <p className=" text-lg text-white">Entrer votre code <strong>PIN</strong></p>
                                    
                                     <InputOTP required maxLength={4} name="" value={code} onChange={(e)=>{
                                         setCode(e)
@@ -239,9 +239,9 @@ export default function Reabonnement(){
                                         onClick={()=>{
                                             setOpenModalPayement(true)
                                         }}
-                                        className={`p-2 bg-blue-700 rounded-lg  text-white`}
+                                        className={`p-2 bg-blue-700 rounded-lg uppercase text-white`}
                                     >
-                                        Réabonner
+                                        valider
                                     </button>
                                     
                                 )}
@@ -250,9 +250,9 @@ export default function Reabonnement(){
                             ):(
                                 <button
                                     disabled 
-                                    className="p-2 bg-gray-300 rounded-lg  text-white"
+                                    className="p-2 bg-gray-300 rounded-lg uppercase text-white"
                                 >
-                                    Réabonner
+                                    valider
                                 </button>
                             )}
                         </div>

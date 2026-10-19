@@ -19,7 +19,7 @@ export default function page(){
                             </div>
                             <p className="  flex flex-col">
                                 <span className="text-[10px] text-chart-2">Email</span>
-                                <span>contact@schoolup.ga</span>
+                                <span>contact@schoolup.net</span>
                             </p>
                         </div>
 
@@ -39,7 +39,7 @@ export default function page(){
                             </div>
                             <p className="  flex flex-col">
                                 <span className="text-[10px] text-chart-2">Localisation</span>
-                                <span>située à Libreville au Gabon</span>
+                                <span>Libreville, Gabon</span>
                             </p>
                         </div>
 
@@ -48,7 +48,7 @@ export default function page(){
                     <form action="" className="flex flex-col justify-center items-center gap-4 w-[85vw] md:w-96 h-auto border border-gray-300 rounded-lg p-4 shadow-lg group duration-500">
 
                         <div className="p-4 my-5">
-                            <p className="text-black font-black  text-2xl">Envoyez-nous un message</p>
+                            <p className="text-black font-black uppercase text-2xl">écrivez-nous</p>
                         </div>
 
                         <input 

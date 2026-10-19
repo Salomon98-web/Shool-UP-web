@@ -82,7 +82,7 @@ export default function StatsUsers({token}:Props){
                             <ConvertNumber number={(data as any).totalAccount} />
                         </p>
 
-                        <p className=" text-md text-chart-2">Utilisateur-s</p>
+                        <p className=" text-md text-chart-2 uppercase">Utilisateurs</p>
                     </div>
                     
                 </div>
@@ -124,7 +124,7 @@ export default function StatsUsers({token}:Props){
                             <ConvertNumber number={(data as any).totalDesactive} />
                         </p>
 
-                        <p className=" text-md text-chart-2">Compte-s bloqué-s</p>
+                        <p className=" text-md text-chart-2 uppercase">Comptes bloqués</p>
                     </div>
                 </div>
             </div>
@@ -145,7 +145,7 @@ export default function StatsUsers({token}:Props){
                             <ConvertNumber number={(data as any).totalSupprime} />
                         </p>
 
-                        <p className=" text-md text-chart-2">Compte-s supprimé-s</p>
+                        <p className=" text-md text-chart-2 uppercase">Comptes supprimés</p>
                     </div>
                 </div>
             </div>
