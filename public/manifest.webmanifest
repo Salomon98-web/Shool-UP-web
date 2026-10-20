@@ -11,14 +11,27 @@
   "theme_color": "#ffffff",
   "icons": [
     {
-      "src": "https://schoolup.net/SCHOOL UP_LOGO 1.png",
+      "src": "https://schoolup.net/icon1.png",
       "type": "image/png",
-      "sizes": "5197x2835",
+      "sizes": "192x192",
       "isSquare": false,
       "isPng": true,
       "isWebp": false,
       "isJpg": false,
-      "width": 5197,
+      "width": 192,
+      "is512x512": false,
+      "is256x256": false,
+      "is192x192": false
+    },
+    {
+      "src": "https://schoolup.net/icon2.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "isSquare": false,
+      "isPng": true,
+      "isWebp": false,
+      "isJpg": false,
+      "width": 512,
       "is512x512": false,
       "is256x256": false,
       "is192x192": false
