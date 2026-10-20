@@ -60,7 +60,7 @@ export default function Category(){
                     {data.map((category:any)=>(
                         <div key={category.id} className=" flex flex-col items-center justify-center shadow-lg bg-gray-200 group duration-500 
                             rounded-sm h-20 md:h-60 shrink-0 min-w-60 p-2 gap-2 hover:shadow-mauve-300 hover:shadow-lg">
-                            <p className="  text-black font-semibold  group-hover:transform group-hover:-translate-y-1 group-active:-translate-y-1 duration-500">{category.name}</p>
+                            <p className="  text-black font-semibold  group-hover:transform group-hover:-translate-y-1 group-active:-translate-y-1 duration-500 uppercase">{category.name}</p>
                             {/* <span className="text-[10px]  text-gray-400">19 exercices</span> */}
                         </div>
                     ))}
