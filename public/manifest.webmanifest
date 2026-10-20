@@ -7,7 +7,7 @@
   "orientation": "any",
   "scope": "https://schoolup.net",
   "short_name": "schoolup",
-  "start_url": "https://schoolup.net",
+  "start_url": "/",
   "theme_color": "#ffffff",
   "icons": [
     {
