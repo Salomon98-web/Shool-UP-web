@@ -15,7 +15,21 @@ const nextConfig: NextConfig = {
 
   allowedDevOrigins: ['10.165.113.141'],
   reactStrictMode:true,
+  turbopack:{}
 };
 
+const withPWA = require("@ducanh2912/next-pwa").default({
+  dest:"public",
+  cacheOnFrontEndNav: true,
+  aggressiveFrontEndNavCaching: true,
+  reloadOnOnline:true,
+  swcMinify:true,
+  workboxOptions:{
+    disableDevLogs: true,
+  },
+  disable: process.env.NODE_ENV === "development",
+})
+
+module.exports = withPWA(nextConfig)
 
 export default nextConfig;
