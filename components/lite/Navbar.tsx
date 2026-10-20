@@ -22,7 +22,7 @@ const links = [
     {href: '/lite/', label: 'Accueil', icon:Home},
     {href: '/lite/exercices', label: 'Exercices', icon:BookOpen},
     {href: '/lite/reabonnement', label: 'Réabonnement', icon:Crown},
-    {href: 'https://schoolup.net', label: 'Mon compte', icon:UserCircle},
+    {href: 'https://schoolup.net/login', label: 'Mon compte', icon:UserCircle},
 ].filter((lien): lien is {href: string; label: string; icon:any} => lien !==null);;
 
 export default function Navbar(){

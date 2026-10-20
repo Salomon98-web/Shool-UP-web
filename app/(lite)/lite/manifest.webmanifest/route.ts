@@ -5,7 +5,7 @@ export async function GET() {
     "background_color": "#ffffff",
   "description": "Votre banque d'exercices scolaires avec corrigés.",
   "dir": "ltr",
-  "display": "minimal-ui",
+  "display": "standalone",
   "name": "schoolup",
   "orientation": "any",
   "scope": "https://schoolup.net/lite",
