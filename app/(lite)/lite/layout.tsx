@@ -13,13 +13,18 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
+/* export const metadata: Metadata = {
   title: "School UP",
   icons:{
     icon:"/SCHOOL%20UP_LOGO%201.png"
   },
   description: "Votre banque d'exercices scolaires avec corrigés.",
-};
+}; */
+
+export const metadata = {
+  manifest: '/manifest.webmanifest',
+}
+
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
