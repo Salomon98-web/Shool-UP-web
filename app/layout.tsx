@@ -16,9 +16,10 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "School UP",
   icons:{
-    icon:"/SCHOOL%20UP_LOGO%201.png"
+    icon:"/icon1.png"
   },
   description: "Votre banque d'exercices scolaires avec corrigés.",
+  manifest: "/manifest.webmanifest",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
