@@ -145,7 +145,7 @@ export default function Home() {
 
       <div className="my-2"></div>
 
-      <div className=" w-full h-80 relative my-12">
+      <div className=" w-full h-80 relative my-12 hidden xl:block">
         <div className=" w-full h-full flex flex-col lg:flex-row justify-center items-center gap-5 p-4">
           
           <div className="flex flex-col justify-center items-center gap-5 p-4 relative top-9 ">
