@@ -5,9 +5,9 @@
   "display": "standalone",
   "name": "schoolup",
   "orientation": "any",
-  "scope": "https://schoolup.net/lite",
+  "scope": "https://schoolup.net",
   "short_name": "schoolup",
-  "start_url": "https://schoolup.net/lite",
+  "start_url": "https://schoolup.net",
   "theme_color": "#ffffff",
   "icons": [
     {
