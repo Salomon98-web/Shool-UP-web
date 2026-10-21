@@ -13,10 +13,10 @@ export default function QRCode({value, size=250}){
                 fgColor="#000000"
                 includeMargin={true}
                 imageSettings={{
-                    src:"/SCHOOL UP_LOGO COULEURS.png",
+                    src:"/logoforqrcod.jpg",
                     excavate:true,
                     height:40,
-                    width:50,
+                    width:40,
                 }}
             />
         </div>
