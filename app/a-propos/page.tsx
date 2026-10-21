@@ -23,7 +23,7 @@ export default function Apropos(){
                         />
                         <div className=" bg-black opacity-60 absolute inset-0"></div>
                         <div className=" flex flex-col justify-center items-center relative top-14 gap-2">
-                            <p className="text-white  text-2xl"><span className=" font-bold  uppercase text-4xl">A propos de nous</span> </p>
+                            <p className="text-white  text-2xl"><span className=" font-bold  uppercase md:text-4xl">A propos de nous</span> </p>
                         </div>
                     </div>
                 </div>

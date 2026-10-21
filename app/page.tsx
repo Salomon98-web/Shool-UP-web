@@ -31,7 +31,7 @@ export default function Home() {
             />
             <div className=" bg-black opacity-40 absolute inset-0"></div>
             <div className=" flex flex-col relative top-35 gap-2">
-              <p className="text-white  text-2xl">Débutez avec <span className=" font-bold  text-2xl">School UP</span> </p>
+              <h3 className="text-white text-lg md:text-3xl">Débutez avec <span className="text-xl md:text-4xl font-extrabold">School UP</span></h3>
               <p className="text-white  text-xl">Votre banque d'exercices scolaires avec corrigés.</p>
             </div>
             <div className=" relative top-40 flex flex-col md:flex-row gap-2 ">
@@ -132,9 +132,9 @@ export default function Home() {
               className=" object-cover"
           />
           <div className=" bg-black opacity-45 absolute inset-0"></div>
-          <div className=" w-full h-full flex flex-col justify-center items-center gap-5 p-4">
+          <div className=" w-full h-full flex flex-col justify-center items-center gap-5 p-4 relative top-19">
             <div className=" flex flex-col gap-2">
-              <p className=" text-white text-center md:text-3xl uppercase z-50 text-4xl font-bold">Essayer gratuitement</p>
+              <p className=" text-white text-center md:text-3xl uppercase z-50 text-2xl font-bold">Essayer gratuitement</p>
             </div>
             <Link href="/exercices-gratuits" className="uppercase p-2 bg-white z-50 rounded-sm w-72 md:w-96 text-center  text-lg">
               Cliquez ici

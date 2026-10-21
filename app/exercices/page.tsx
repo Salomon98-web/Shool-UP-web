@@ -63,9 +63,9 @@ export default function page(){
                         />
                         <div className=" bg-black opacity-60 absolute inset-0"></div>
                         <div className=" flex flex-col justify-center items-center relative top-14 gap-2">
-                            <p className="text-white  text-[18px]"><span className=" font-bold uppercase text-4xl">Exercices</span> </p>
+                            <p className="text-white  text-2xl"><span className=" font-bold uppercase md:text-4xl">Exercices</span> </p>
                             <div className="flex flex-col justify-center items-center w-full">
-                                <p className=" text-lg text-white ">Cliquer sur votre catégorie</p>               
+                                <p className=" text-lg text-white ">Cliquez sur votre catégorie</p>               
                             </div>
                         </div>
                     </div>

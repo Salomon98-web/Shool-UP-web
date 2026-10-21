@@ -9,8 +9,8 @@ import { Smartphone } from "lucide-react";
 export default function Footer(){
     return(
         <footer className=" w-full flex flex-col ">
-            <div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 md:justify-items-center gap-5 w-full my-14 py-10 px-4 lg:px-28">
-                <div className="hidden xl:flex flex-col gap-4 ">
+            <div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 md:justify-items-center gap-9 w-full my-14 py-10 px-4 lg:px-28">
+                <div className="flex-col gap-4 ">
                     <p className="  font-bold text-2xl">Contactez-nous</p>
                     <div className=" flex flex-col gap-2 text-lg">
                         <p className="">Email :<br/> <span className=" text-blue-800">contact@schoolup.net</span></p>
@@ -19,7 +19,7 @@ export default function Footer(){
                         <p className="">Téléphone :<br/> <span className=" text-blue-800">(+241) 065 45 01 34</span></p>
                     </div>
                 </div>
-                <div className="hidden xl:flex flex-col gap-4">
+                <div className="flex-col gap-4">
                     <p className=" text-2xl font-bold">Liens d'accès rapides</p>
                     <div className=" flex flex-col gap-4 ">
                         <Link href='/exercices-gratuits' className="hover:transform hover:translate-x-2 duration-500 text-blue-950 text-lg">Exercices gratuits</Link>
@@ -33,7 +33,7 @@ export default function Footer(){
                 </div>
             </div>
             
-            <div className=" bg-blue-950 lg:h-10 flex justify-center items-center gap-7 text-white text-[11px]  p-2">
+            <div className=" bg-blue-950 h-10 flex justify-center items-center gap-7 text-white text-[11px]  p-2">
                 <p>
                     Copyright &copy;
                     {new Date().getFullYear()};

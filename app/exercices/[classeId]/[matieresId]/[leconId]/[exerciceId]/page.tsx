@@ -133,7 +133,7 @@ export default function classeExercices({params}:Props){
                             />
                             <div className=" bg-black opacity-60 absolute inset-0"></div>
                             <div className=" flex flex-col justify-center items-center relative top-14 gap-2">
-                                <p className="text-white  text-lg text-wrap"><span className=" font-bold  uppercase text-4xl">{dataCategory?.name}</span> </p>
+                                <p className="text-white  text-2xl text-wrap"><span className=" font-bold  uppercase md:text-4xl">{dataCategory?.name}</span> </p>
                             </div>
                         </div>
                     )}

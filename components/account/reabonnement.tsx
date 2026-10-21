@@ -230,9 +230,9 @@ export default function Reabonnement(){
                                 {dataAbonne.length === 0 ?(
                                     <button
                                         disabled 
-                                        className="p-2 bg-gray-300 rounded-lg  text-white"
+                                        className="p-2 bg-gray-300 rounded-lg uppercase text-white"
                                     >
-                                        Réabonner
+                                        valider
                                     </button>
                                 ):(
                                     <button

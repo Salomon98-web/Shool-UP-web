@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { Skeleton } from "@/components/ui/skeleton";
+import { GraduationCap } from "lucide-react";
 
 export default function Category(){
 
@@ -58,10 +59,18 @@ export default function Category(){
             <div className=" w-full flex flex-row justify-center items-center h-auto p-2">
                 <div className="flex overflow-x-auto pb-4 scrollbar-hide gap-2 ">
                     {data.map((category:any)=>(
-                        <div key={category.id} className=" flex flex-col items-center justify-center shadow-lg bg-gray-200 group duration-500 
+                        <div key={category.id} className="relative overflow-hidden flex flex-col items-center justify-center shadow-lg bg-gray-200 group duration-500 
                             rounded-sm h-20 md:h-60 shrink-0 min-w-60 p-2 gap-2 hover:shadow-mauve-300 hover:shadow-lg">
                             <p className="  text-black font-semibold  group-hover:transform group-hover:-translate-y-1 group-active:-translate-y-1 duration-500 uppercase">{category.name}</p>
                             {/* <span className="text-[10px]  text-gray-400">19 exercices</span> */}
+                            <GraduationCap
+                                className={`  
+                                absolute right-1 -rotate-10 
+                                h-60 w-60  
+                                text-gray-600 
+                                opacity-10  group-hover:scale-125 duration-500 
+                                `}  
+                            />
                         </div>
                     ))}
                 </div>

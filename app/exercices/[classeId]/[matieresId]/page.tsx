@@ -81,7 +81,7 @@ export default function page({params}:Props){
                             />
                             <div className=" bg-black opacity-60 absolute inset-0"></div>
                             <div className=" flex flex-col justify-center items-center relative top-14 gap-2">
-                                <p className="text-white  text-lg text-wrap"><span className=" font-bold  uppercase text-4xl">{dataCategory?.name}</span> </p>
+                                <p className="text-white  text-2xl text-wrap"><span className=" font-bold  uppercase md:text-4xl">{dataCategory?.name}</span> </p>
                             </div>
                         </div>
                     )}
@@ -92,7 +92,7 @@ export default function page({params}:Props){
                 <div className="flex justify-start items-center px-4 lg:px-28">
                     <div className="flex flex-col justify-center w-full">
                         <p className="text-2xl uppercase text-blue-950 font-extrabold">Matière</p> 
-                        <p className=" text-lg md:text-sm  text-chart-2">Cliquer sur une matière pour accéder a la/les leçon(s)</p>               
+                        <p className=" text-lg md:text-sm  text-chart-2">Cliquez sur une matière pour accéder aux leçons</p>               
                     </div>
                 </div>
                 <div className="px-4 lg:px-28">
@@ -121,7 +121,7 @@ export default function page({params}:Props){
                                         <Link key={item.id} href={`/exercices/${param.classeId}/${param.matieresId}/${item.id}`}>
                                             <div className="flex justify-start items-center group bg-gray-100 duration-500 hover:shadow-lg 
                                                 hover:shadow-mauve-300 w-full h-auto rounded-sm p-4 ">
-                                                <p className="text-start font-bold  text-xl text-wrap">{item.nom_matiere}</p>
+                                                <p className="text-start font-bold uppercase text-xl text-wrap">{item.nom_matiere}</p>
                                             </div>
                                         </Link>
                                     ))}

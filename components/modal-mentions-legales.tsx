@@ -26,7 +26,6 @@ export default function MentionsLegales(){
             <SheetContent  className={`w-full h-auto p-2 `}>
                 <SheetHeader className="flex justify-center items-center">
                     <Image src={logoschoolup} width={150} alt="" />
-                    <SheetTitle className=" font-bold text-blue-950 text-2xl">Mentions légales</SheetTitle>
                 </SheetHeader>
                 <div className="max-h-max max-w-max overflow-auto h-full flex flex-col text-chart-4 border rounded-lg p-2 bg-gray-50 relative bottom-5">
                     <p className=" my-4 text-lg ">La plateforme numérique School UP Gabon est gérée par la société DIGITALIA SARL, située à Libreville au Gabon.</p>

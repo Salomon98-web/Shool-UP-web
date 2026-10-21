@@ -44,7 +44,7 @@ export default function exercices({params}:Props){
             <div className="flex flex-1 flex-col my-10 gap-8">
                 <div className="flex justify-start items-center px-4 lg:px-28">
                     <div className="flex flex-col justify-start items-start w-full">
-                        <Link href="/exercices-gratuits" className="p-2 bg-blue-950 rounded-sm  text-white text-lg" >Toutes les classes</Link>               
+                        <Link href="/exercices-gratuits" className="p-2 bg-blue-950 rounded-sm uppercase text-white text-lg" >Toutes les classes</Link>               
                     </div>
                 </div>{/* 
                 <MatieresExercicesGratuits /> */}

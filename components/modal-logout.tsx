@@ -56,16 +56,16 @@ export default function Logout({open, onOpenChange}:Props){
         <AlertDialog open={open} onOpenChange={onOpenChange}>
             <AlertDialogContent className={`w-92`}>
                 <AlertDialogHeader className="my-2">
-                    <AlertDialogTitle className={`text-md  font-bold text-blue-800`}>
+                    <AlertDialogTitle className={`text-md uppercase font-bold text-blue-800`}>
                         Déconnectez-vous
                     </AlertDialogTitle>
                     
                 </AlertDialogHeader>
                 <hr />
-                <div className="flex flex-row gap-4">
+                <div className="flex flex-row justify-center gap-4">
                     <Button
                         onClick={handlerLogout} 
-                        className={`w-20  text-xs`}
+                        className={`w-20 bg-blue-800 hover:bg-blue-900 duration-500 text-xs`}
                     >
                         {loading ? (<Loader />):(" OUI !")}
                         

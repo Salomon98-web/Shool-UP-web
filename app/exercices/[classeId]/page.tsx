@@ -83,7 +83,7 @@ export default function page({params}:Props){
                             />
                             <div className=" bg-black opacity-60 absolute inset-0"></div>
                             <div className=" flex flex-col justify-center items-center relative top-14 gap-2">
-                                <p className="text-white  text-xl text-wrap"><span className=" font-bold uppercase text-4xl">{dataCategory?.name}</span> </p>
+                                <p className="text-white text-2xl text-wrap"><span className=" font-bold uppercase md:text-4xl">{dataCategory?.name}</span> </p>
                             </div>
                         </div>
                     )}
@@ -94,7 +94,7 @@ export default function page({params}:Props){
                 <div className="flex justify-center items-center px-4 lg:px-28">
                     <div className="flex flex-col justify-center w-full">
                         <p className=" text-blue-950 text-center uppercase text-xl font-extrabold">Classe</p> 
-                        <p className=" text-lg text-center text-chart-2 ">Cliquer sur votre classe</p>               
+                        <p className=" text-lg text-center text-chart-2 ">Cliquez sur votre classe</p>               
                     </div>
                 </div>
                 {loading ? (
@@ -110,7 +110,7 @@ export default function page({params}:Props){
                                     <Link key={item.id} href={`/exercices/${param.classeId}/${item.id}`}>
                                         <div className="flex justify-center items-center group border bg-gray-100 duration-500 hover:shadow-mauve-300 shadow-xs 
                                             hover:shadow-lg hover:transform hover:rotate-2 w-72 h-24 rounded-lg p-2">
-                                            <p className="text-center font-bold  text-xl group-h text-wrap">{item.name_class}</p>
+                                            <p className="text-center font-bold uppercase text-xl group-h text-wrap">{item.name_class}</p>
                                         </div>
                                     </Link>
                                 ))}
