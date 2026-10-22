@@ -20,6 +20,20 @@ export const metadata: Metadata = {
   },
   description: "Votre banque d'exercices scolaires avec corrigés.",
   manifest: "/manifest.webmanifest",
+  openGraph:{
+    title:"School UP",
+    description:"Votre banque d'exercices scolaires avec corrigés.",
+    url:"https://schoolup.net",
+    images:[
+      {
+        url:"/3.jpg",
+        width:1200,
+        height:630,
+        alt:"school UP"
+      }
+    ],
+    type:"website",
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
