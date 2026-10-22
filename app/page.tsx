@@ -11,7 +11,6 @@ import Navbar from "@/components/Navbar";
 import Category from "@/components/category";
 import Footer from "@/components/footer";
 import QRCode from "@/components/ui/qr-code";
-import { Smartphone } from "lucide-react";
 
 export default function Home() {
   return (
