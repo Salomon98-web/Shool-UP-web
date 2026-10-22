@@ -152,7 +152,7 @@ export default function Home() {
               <div className="flex flex-col justify-center items-center p-2 gap-2">
                 <div className="relative top-4 flex flex-col gap-1.5 px-2 md:px-0">
                   <QRCode 
-                    value={`https://schoolup.ga`} 
+                    value={`https://schoolup.net/School UP.apk`} 
                     size={200}
                   />
                 </div>
