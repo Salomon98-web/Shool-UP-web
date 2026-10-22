@@ -27,6 +27,7 @@ import Loader from "../loading";
 import { Input } from "../ui/input";
 import { useToastCustom } from "@/components/ui/toast-custom";
 import { json } from "stream/consumers";
+import CalculFrais from "@/functions/calcul-frais";
 
 interface Props{
     nomAbonnement:any
@@ -140,7 +141,10 @@ export default function ModalPayement({nomAbonnement, classe, amount, codePIN, o
                 
                 <div className="flex flex-col gap-2.5 w-full">
                     <div className="border-2 border-green-200 rounded-lg p-2 bg-green-50 w-full text-md md:text-lg">
-                        <p className="">Vous êtes sur le point de valider votre abonnement <strong>{nomAbonnement}</strong> de la classe de <strong>{classe}</strong> <br />Montant a payer <strong className="text-red-500">{amount} XAF</strong></p>
+                        <p className="">
+                            Vous êtes sur le point de valider votre abonnement <strong>{nomAbonnement}</strong> de la classe de <strong>{classe}</strong> 
+                            <br />Montant à payer <strong className="text-red-500">{amount} FCFA. </strong>  Frais appliqués :<strong> <CalculFrais number={amount} /> FCFA</strong>
+                        </p>
                     </div>
                     <div className="w-full border rounded-lg p-2 h-72">
                         <form className="w-full flex flex-col gap-4 p-2" onSubmit={handleSubmit}>

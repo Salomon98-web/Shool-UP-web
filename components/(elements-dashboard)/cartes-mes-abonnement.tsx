@@ -155,7 +155,7 @@ export function Carte({item, type, classe, status, codePIN, debut, fin, nom, tel
                     <>
                         <Link 
                             href="/reabonnement"
-                            className=" text-md text-white text-center"
+                            className=" text-md text-white text-center z-10"
                         >
                             Cliquer ici pour vous réabonner
                         </Link>
