@@ -81,7 +81,7 @@ export default function Corriges({token, role}:Props){
 
                 <div className=" relative top-7 p-2  px-4 lg:px-14">
                     <hr className="p-2" />
-                    <p className="text-chart-1">Corrigés</p>
+                    <p className="text-chart-3">Corrigés</p>
                 </div>
                 <CartesCorriges token={token} refreshKey={refreshKey} />
 

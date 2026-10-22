@@ -86,7 +86,7 @@ export default function ExercicesGratuits({token, role}:Props){
 
                 <div className=" relative top-7 p-2 px-4 lg:px-14">
                     <hr className="p-2" />
-                    <p className="text-chart-1">Exercices gratuits</p>
+                    <p className="text-chart-3">Exercices gratuits</p>
                 </div>
                 <CartesExercices token={token} refreshKey={refreshKey} />
 
@@ -139,10 +139,10 @@ export default function ExercicesGratuits({token, role}:Props){
                                     <div className=" flex flex-col "> 
                                         
         
-                                        <p className="text-chart-2  text-md w-[38vw] md:w-[30vw] p-2">{item.matiere?.nom_matiere}</p>
+                                        <p className="text-chart-2  text-md w-[38vw] md:w-[30vw] p-2 uppercase">{item.matiere?.nom_matiere}</p>
                                         
                                         <div className="w-full flex justify-between">
-                                            <p className="text-chart-2 text-sm w-[38vw] md:w-[30vw] p-2 relative ">{item.classe?.name_class}</p>
+                                            <p className="text-chart-2 text-sm w-[38vw] md:w-[30vw] p-2 relative uppercase">{item.classe?.name_class}</p>
                                             <div className=" flex  gap-2  z-10">
                                                 <a  
                                                     href={`${process.env.NEXT_PUBLIC_BASE_URL3}/${item.exercice_file.name}`} 

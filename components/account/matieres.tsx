@@ -73,7 +73,7 @@ export default function Matieres({token, role}:Props){
 
                 <div className=" relative top-7 p-2 px-4 lg:px-14">
                     <hr className="p-2" />
-                    <p className="text-chart-1">Matières</p>
+                    <p className="text-chart-3">Matières</p>
                 </div>
                 <CartesMatieres token={token} refreshKey={refreshKey} />
 
@@ -105,7 +105,7 @@ export default function Matieres({token, role}:Props){
                         
                             <div className="w-full flex justify-between bg-white shadow-sm p-2 rounded-lg">
                                 <div className=" flex flex-col p-2"> 
-                                    <p className="  font-bold text-lg p-2 line-clamp-1 truncate w-[38vw] md:w-[30vw]">{item.nom_matiere}</p>
+                                    <p className="  font-bold text-lg p-2 line-clamp-1 truncate w-[38vw] md:w-[30vw] uppercase">{item.nom_matiere}</p>
                                 </div>
                                 
                                 <div className=" flex flex-col justify-center items-center gap-12">

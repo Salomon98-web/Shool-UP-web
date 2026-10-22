@@ -20,9 +20,9 @@ export default function ExercicesGratuits(){
                             fill
                             className=" object-cover"
                         />
-                        <div className=" bg-black opacity-60 absolute inset-0"></div>
+                        <div className=" bg-black opacity-45 absolute inset-0"></div>
                         <div className=" flex flex-col justify-center items-center relative top-14 gap-2">
-                            <p className="text-white  text-lg"><span className=" font-bold  text-xl uppercase">Exercices gratuits</span> </p>
+                            <p className="text-white  text-lg"><span className=" font-bold  md:text-4xl uppercase">Exercices gratuits</span> </p>
                         </div>
                     </div>
                 </div>

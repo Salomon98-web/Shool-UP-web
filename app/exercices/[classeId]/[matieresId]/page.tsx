@@ -79,7 +79,7 @@ export default function page({params}:Props){
                                 fill
                                 className=" object-cover group-hover:shadow-gray-900 group-hover:shadow-lg duration-500"
                             />
-                            <div className=" bg-black opacity-60 absolute inset-0"></div>
+                            <div className=" bg-black opacity-45 absolute inset-0"></div>
                             <div className=" flex flex-col justify-center items-center relative top-14 gap-2">
                                 <p className="text-white  text-2xl text-wrap"><span className=" font-bold  uppercase md:text-4xl">{dataCategory?.name}</span> </p>
                             </div>
@@ -91,8 +91,8 @@ export default function page({params}:Props){
             <div className="flex flex-1 flex-col my-10 gap-8">
                 <div className="flex justify-start items-center px-4 lg:px-28">
                     <div className="flex flex-col justify-center w-full">
-                        <p className="text-2xl uppercase text-blue-950 font-extrabold">Matière</p> 
-                        <p className=" text-lg md:text-sm  text-chart-2">Cliquez sur une matière pour accéder aux leçons</p>               
+                        <p className="text-2xl uppercase text-blue-950 font-extrabold">Matières</p> 
+                        <p className=" text-lg text-chart-2">Cliquez sur une matière pour accéder aux leçons</p>               
                     </div>
                 </div>
                 <div className="px-4 lg:px-28">

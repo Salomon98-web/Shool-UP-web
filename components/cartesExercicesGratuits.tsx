@@ -93,11 +93,11 @@ export default function Cartes({id}:Props){
                     </div>
 
                     <div className="h-2">
-                        <p className="font-mon text-[10px] text-chart-2 relative left-3">{item.matiere.nom_matiere}</p>
+                        <p className="font-mon text-xs md:text-md text-center text-chart-2 relative left-3">{item.matiere.nom_matiere}</p>
                     </div>
 
-                    <div className="flex flex-row justify-between items-center p-2">
-                        <p className=" text-[7px] flex flex-row justify-center items-center gap-1">
+                    <div className="flex flex-col justify-justify-center items-center p-2">
+                        <p className="text-xs md:text-lg flex flex-row justify-center items-center gap-1">
                             <File width="20" className="text-red-600" />
                             <span>Exercice & corrigé</span> 
                         </p>

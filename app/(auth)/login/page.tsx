@@ -78,7 +78,7 @@ function CardForm() {
               width={130}
             />
           </div>
-          <p className="text-md">Connectez-vous a votre compte </p>
+          <p className="text-md">Connectez-vous à votre compte </p>
         </CardTitle>
         {/* <CardDescription className="  text-[10px] h-14">
           Connectez-vous à votre compte

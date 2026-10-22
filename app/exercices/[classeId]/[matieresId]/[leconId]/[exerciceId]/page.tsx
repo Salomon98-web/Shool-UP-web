@@ -131,7 +131,7 @@ export default function classeExercices({params}:Props){
                                 fill
                                 className=" object-cover group-hover:shadow-gray-900 group-hover:shadow-lg duration-500"
                             />
-                            <div className=" bg-black opacity-60 absolute inset-0"></div>
+                            <div className=" bg-black opacity-45 absolute inset-0"></div>
                             <div className=" flex flex-col justify-center items-center relative top-14 gap-2">
                                 <p className="text-white  text-2xl text-wrap"><span className=" font-bold  uppercase md:text-4xl">{dataCategory?.name}</span> </p>
                             </div>
@@ -144,9 +144,9 @@ export default function classeExercices({params}:Props){
                 <div className="flex justify-start items-center px-4 lg:px-28">
                     <div className="flex flex-col justify-center w-full">
                         <p className="font-bold text-2xl ">{dataClasse?.name_class}</p>
-                        <p className="font-bold text-blue-950 text-2xl "> <span>{dataMatiere?.nom_matiere}</span></p>
+                        <p className="font-bold text-blue-950 text-2xl uppercase"> <span>{dataMatiere?.nom_matiere}</span></p>
                         <p className="text-xl uppercase  text-chart-2 text-wrap"> <span>{dataLecon?.titre}</span></p> 
-                        <p className=" text-lg text-chart-2  relative top-4">Téléchargez vos exercices</p> 
+                        <p className=" text-lg text-chart-2  relative top-4">Téléchargez vos exercices et corrigés</p> 
                     </div>
                 </div>
                 <div className="px-4 lg:px-28 flex flex-row gap-2 items-center">

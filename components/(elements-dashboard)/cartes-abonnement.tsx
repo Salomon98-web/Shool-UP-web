@@ -118,11 +118,11 @@ export default function Abonnement({token, role, onSuccess, refreshKey}:Props){
                         <p className={`  text-md ${abonnement.type == "annuel"?('text-white'):('')}  font-extrabold uppercase`}>{abonnement.type}</p>
 
                         <p className={`${abonnement.type == "annuel"?('text-white'):('')} text-wrap  text-sm`}>
-                            {abonnement.type == "annuel"?(<span> d'avantages, plus <br/> d'économies</span>):(<span>Idéal pour commencer <br/> et profiter de nos services</span>)}
+                            {abonnement.type == "annuel"?(<span>Valable 12 mois<br/>(toute l'année scolaire et les vacances)</span>):(<span>Jusqu'à 90 téléchargements <br/> en 1 mois</span>)}
                         </p>
                         <p className="flex flex-row gap-2 ">
                             <span className={`${abonnement.type == "annuel"?('text-white'):('')}  font-extrabold text-4xl`}>{abonnement.montant}</span>
-                            <span className={` ${abonnement.type == "annuel"?('text-white'):('')} relative top-5`}>XAF</span>
+                            <span className={` ${abonnement.type == "annuel"?('text-white'):('')} relative top-5`}>FCFA</span>
                         </p>
 
                         <p className={` ${abonnement.type == "annuel"?('text-white bg-blue-800'):('bg-blue-200')}  text-sm w-full p-2  rounded-lg flex flex-row gap-2 items-center`}>

@@ -21,7 +21,7 @@ export default function Apropos(){
                             fill
                             className=" object-cover"
                         />
-                        <div className=" bg-black opacity-60 absolute inset-0"></div>
+                        <div className=" bg-black opacity-45 absolute inset-0"></div>
                         <div className=" flex flex-col justify-center items-center relative top-14 gap-2">
                             <p className="text-white  text-2xl"><span className=" font-bold  uppercase md:text-4xl">A propos de nous</span> </p>
                         </div>

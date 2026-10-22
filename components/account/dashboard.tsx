@@ -32,13 +32,13 @@ export default function dashboard({token,role}:Props) {
 
           <div className=" relative top-7 p-2  text-lg px-4 lg:px-14">
             <hr className="p-2" />
-            <p className="text-chart-3">Abonnemet disponible</p>
+            <p className="text-chart-3">Abonnements disponibles</p>
           </div>
           <Abonnement role={role} refreshKey={refreshKey} onSuccess={()=>setRefresh(k=>k+1)} token={token}/>
 
           <div className=" relative top-10 p-2 text-lg px-4 lg:px-14">
             <hr className="p-2" />
-            <p className="text-chart-3">Mes abonnemets</p>
+            <p className="text-chart-3">Mes abonnements</p>
           </div>
           <CartesMesAbonnemets refreshKey={refreshKey} token={token} onSuccess={()=>setRefresh(k=>k+1)}/>
 

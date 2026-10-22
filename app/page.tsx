@@ -107,7 +107,7 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row shadow-lg transition-transform hover:shadow-xl duration-500 group">
               <div className=" bg-gray-300 w-full md:w-56 xl:w-72 h-50 group-hover:rotate-6 duration-500 relative">
                 <Image 
-                  src={Imagehome}
+                  src={Images4}
                   alt=""
                   fill
                   className=" object-cover"
@@ -158,10 +158,8 @@ export default function Home() {
                   />
                 </div>
                 <p className="  text-md relative font-extrabold">SCANNEZ-MOI</p>
-                <p className="text-sm md:text-lg font-semibold">Pour tétéchager l'application</p>
-                <div className=" bg-blue-700 max-w-max max-h-max p-2 text-white rounded-full flex justify-center items-center">
-                  <Smartphone width={30} height={30} />
-                </div>
+                <p className="text-sm md:text-lg font-semibold">Pour téléchager l'application</p>
+                <p className="text-sm md:text-lg font-normal">APK Version 1.0</p>
               </div>
             </div>
           </div>

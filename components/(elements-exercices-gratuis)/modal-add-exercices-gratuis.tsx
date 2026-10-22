@@ -184,7 +184,7 @@ export default function MoadalAddExerciceGratuit({token, open, onOpenChange, onS
         <Dialog open={open} onOpenChange={onOpenChange}>
             <DialogContent className={`w-96 `}>
                 <DialogHeader>
-                    <DialogTitle className={` font-extrabold text-blue-900 my-6 px-4`}>Nouvelle exercice gratuit</DialogTitle>
+                    <DialogTitle className={` font-bold text-blue-900 my-6 px-4`}>Nouvel exercice</DialogTitle>
                 </DialogHeader>
                 <hr className=" relative top-10 font-bold" />
                 <div className="flex justify-between z-20 my-1">

@@ -111,14 +111,15 @@ export default function cartesExercices({classeId, matiereId, leconId}:Props){
                         opacity-10  group-hover:scale-125 duration-500 
                         `}  
                     />
-                    <p className=" text-lg lg:text-lg p-2 ">{item.description}</p>
+                    <p className=" text-2xl lg:text-lg p-2 ">{item.description}</p>
                 </div>
 
-                <div className="flex flex-row items-center p-2 gap-2">
-                    <p className=" text-xs flex flex-row justify-center items-center gap-1 w-full">
+                <div className="flex flex-col items-center p-2 gap-2">
+                    <p className="text-xs md:text-lg flex flex-row justify-center items-center gap-1 w-full">
                         <File width="20" className="text-red-600" />
                         <span>Exercice & corrigé</span> 
                     </p>
+                    <div className="w-full flex gap-2.5 justify-end">
                         <button onClick={()=>{
                                 setFileName(item.file.name)
                                 setOpenModalApercu(true)
@@ -132,6 +133,8 @@ export default function cartesExercices({classeId, matiereId, leconId}:Props){
                         }} className=" text-[8px] text-blue-950">
                             <Download width="20" className="text-sm text-blue-950" />
                         </button>
+                    </div>
+                    
                 </div>
                     
             </div>

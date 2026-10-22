@@ -62,7 +62,7 @@ export default function Category({token, role}:Props){
 
                 <div className=" relative top-7 p-2 px-4 lg:px-14">
                     <hr />
-                    <p className="text-chart-1">Catégorie</p>
+                    <p className="text-chart-3">Catégorie</p>
                 </div>
                 <CartesCategories token={token} refreshKey={refreshKey} />
 

@@ -97,7 +97,7 @@ export function CreatAccount() {
                 id="username"
                 name="username"
                 type="text"
-                placeholder="Définisser votre nom d'utilisateur"
+                placeholder="Définissez votre nom d'utilisateur"
                 required
               />
             </div>

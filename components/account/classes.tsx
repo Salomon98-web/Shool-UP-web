@@ -73,7 +73,7 @@ export default function Classes({token, role}:Props){
 
                 <div className=" relative top-7 p-2 px-4 lg:px-14">
                     <hr className="p-2" />
-                    <p className="text-chart-1">Classes</p>
+                    <p className="text-chart-3">Classes</p>
                 </div>
                 <CartesClasses token={token} refreshKey={refreshKey} />
 
@@ -105,11 +105,11 @@ export default function Classes({token, role}:Props){
                         
                             <div className="w-full flex flex-col bg-white shadow-sm p-2 rounded-lg">
                                 <div className=" flex flex-col "> 
-                                    <p className="  font-bold text-lg p-2 line-clamp-1 truncate w-[38vw] md:w-[30vw]">{item.name_class}</p>
+                                    <p className="  font-bold text-lg p-2 line-clamp-1 truncate w-[38vw] md:w-[30vw] uppercase">{item.name_class}</p>
     
                                     
                                     <div className="w-full flex justify-between">
-                                        <p className="text-chart-2 line-clamp-1 truncate text-xs w-[38vw] md:w-[30vw] p-2">{item.category?.name}</p>
+                                        <p className="text-chart-2 line-clamp-1 truncate text-xs w-[38vw] md:w-[30vw] p-2 uppercase">{item.category?.name}</p>
                                         <div className=" flex  gap-2 ">
                                             <button
                                                 onClick={()=>{

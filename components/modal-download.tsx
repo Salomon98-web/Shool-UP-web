@@ -126,7 +126,7 @@ export default function modalDownload({open, onOpenChange, exerciceId}:Props){
                     <DrawerTitle className=" text-2xl  font-bold text-blue-950">School UP</DrawerTitle>
                 </DrawerHeader> */}
                 <DrawerFooter className="border rounded-lg max-w-max max-h-max p-2 bg-gray-50">
-                    <p className="text-center  text-sm">Veilliez saisir le code <strong>PIN</strong> de votre abonnement pour télécharger</p>
+                    <p className="text-center  text-sm">Veuillez saisir le code <strong>PIN</strong> de votre abonnement pour télécharger</p>
                 </DrawerFooter>
                 {/* <hr /> */}
                 <div className=" bg-blue-100 rounded-lg h-full my-3">

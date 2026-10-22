@@ -124,7 +124,7 @@ export default function cartes({token}:Props){
                     <div className="w-12 h-12 rounded-xl bg-orange-200 p-2 flex justify-center items-center">
                         <Download className=" text-orange-600" />
                     </div>
-                    <p className=" text-chart-2 uppercase">mes téléchargement</p>
+                    <p className=" text-chart-2 uppercase">mes téléchargements</p>
                 </div>
                 <div className="my-3">
                     <p className=" text-orange-800 text-lg relative left-19 bottom-7"><span className="text-2xl font-extrabold "><ConvertNumber number={(data as any).activiteTelechargement} /></span></p>
