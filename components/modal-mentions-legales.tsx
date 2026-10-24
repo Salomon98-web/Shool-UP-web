@@ -19,7 +19,7 @@ export default function MentionsLegales(){
     const [open, setOpen] = useState(false)
     return(
         <Sheet open={open} onOpenChange={setOpen}>
-            <SheetTrigger className="p-2 bg-blue-950 w-max h-max rounded-sm text-white hover:transform hover:scale-105 duration-500  text-lg ">
+            <SheetTrigger className="p-2 bg-blue-800 w-max h-max rounded-sm text-white hover:transform hover:scale-105 duration-500  text-lg ">
                 Mentions légales
             </SheetTrigger>
             

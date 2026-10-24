@@ -54,7 +54,7 @@ export default function CartesClasses({token, refreshKey}:Props){
                         className={`  
                         absolute bottom-0 right-1 -rotate-10 
                         h-40 w-40  
-                        text-gray-500 
+                        text-indigo-500 
                         opacity-10  group-hover:scale-125 duration-500 
                         `}  
                     />

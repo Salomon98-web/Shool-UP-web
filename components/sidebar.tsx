@@ -26,7 +26,9 @@ import {
     BookOpen,
     Pencil,
     Settings,
-    UserIcon
+    UserPlus2,
+    UserIcon,
+    BadgeAlert,
 } from "lucide-react";
 import { Button } from "./ui/button";
 import Logout from "./modal-logout"
@@ -49,9 +51,9 @@ export default function sidebar({role}:Props){
 
         {href: '/mes-corriges', label: 'Mes corrigés', icon: Download},
 
-        {href: '/reabonnement', label: 'Se réabonner', icon: UserIcon},
+        {href: '/reabonnement', label: 'Se réabonner', icon: BadgeAlert},
 
-        role === "admin" ? {href: '/abonnes', label: 'Abonnés', icon: Home} : null,
+        role === "admin" ? {href: '/abonnes', label: 'Abonnés', icon: UserPlus2} : null,
 
         role === "admin" ? {href: '/categories', label: 'Catégorie', icon: BookOpenText} : null,
 

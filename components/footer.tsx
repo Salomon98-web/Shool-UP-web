@@ -1,10 +1,7 @@
 import Link from "next/link";
 import MentionsLegales from "@/components/modal-mentions-legales";
-import QRCode from "./ui/qr-code";
+import Paternaires from "@/public/partenaire.jpg"
 import Image from "next/image";
-import Appstore from "@/public/appstore.jpg"
-import Playstore from "@/public/playstore.jpg"
-import { Smartphone } from "lucide-react";
 
 export default function Footer(){
     return(
@@ -26,11 +23,22 @@ export default function Footer(){
                         <Link href='/a-propos' className="hover:transform hover:translate-x-2 duration-500 text-blue-950 text-lg">A propos de nous</Link>
                         <Link href='/contact' className="hover:transform hover:translate-x-2 duration-500 text-blue-950 text-lg">Contacts</Link>
                         <Link href='/options' className="hover:transform hover:translate-x-2 duration-500 bg-violet-950 text-lg max-w-max max-h-max p-2 rounded-lg text-white">Abonnez-vous</Link>
+                        <MentionsLegales />
                     </div>
                 </div>
-                <div className=" flex flex-col gap-4">
-                    <MentionsLegales />
+                <div className="flex-col gap-4">
+                    <p className=" text-2xl font-bold">Nos partenaires</p>
+                    <div className=" flex flex-col gap-4 ">
+                        <Image 
+                            src={Paternaires}
+                            alt=""
+                            width={250}
+                        />
+                    </div>
                 </div>
+                {/* <div className=" flex flex-col gap-4">
+                    <MentionsLegales />
+                </div> */}
             </div>
             
             <div className=" bg-blue-950 h-10 flex justify-center items-center gap-7 text-white text-[11px]  p-2">

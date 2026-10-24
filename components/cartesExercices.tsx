@@ -119,7 +119,7 @@ export default function cartesExercices({classeId, matiereId, leconId}:Props){
                         <File width="20" className="text-red-600" />
                         <span>Exercice & corrigé</span> 
                     </p>
-                    <div className="w-full flex gap-2.5 justify-end">
+                    <div className="w-full flex gap-4 justify-center">
                         <button onClick={()=>{
                                 setFileName(item.file.name)
                                 setOpenModalApercu(true)

@@ -1,5 +1,6 @@
 "use client"  
-import { createContext, useContext, useState, ReactNode } from "react"  
+import { createContext, useContext, useState, ReactNode } from "react" 
+import { CheckCircle, XCircle, AlertTriangle, OctagonAlert} from "lucide-react" 
   
 type Toast = { id: number, message: string, type: "success" | "error" | "info" }  
   
@@ -25,8 +26,8 @@ export function ToasterProvider({ children }: { children: ReactNode }) {
       {children}  
         <div className="fixed top-18 right-4 z-100 flex flex-col gap-2">  
             {toasts.map(t => (  
-              <div key={t.id} className={`w-82 h-auto px-4 py-3 rounded-lg shadow-lg text-sm  animate-in slide-in-from-top-4 duration-300 
-                ${t.type === "success"? "border border-green-600 bg-green-100" : t.type === "error"? "border border-red-600 bg-red-100" : "border border-zinc-600 bg-zinc-100"}`}>  
+              <div key={t.id} className={`flex flex-col gap-2 w-82 h-auto px-4 py-3 rounded-lg shadow-lg text-md md:text-lg  animate-in slide-in-from-top-4 duration-300 
+                ${t.type === "success"? "border-l-8 rounded-md border-l-green-600" : t.type === "error"? "border-l-8 rounded-md border-l-red-600 " : "border-l-8 rounded-md border-l-zinc-600"} bg-gray-300 `}>
                 {t.message}  
               </div>  
             ))}  

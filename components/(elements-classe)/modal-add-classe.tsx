@@ -95,7 +95,7 @@ export default function MoadalAddClasse({token, open, onOpenChange, onSuccess,}:
             setLoading(false) 
             onSuccess()
         }
-        console.log(result);
+        /* console.log(result); */
     }
 
     return(

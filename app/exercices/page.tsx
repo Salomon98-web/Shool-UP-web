@@ -7,6 +7,7 @@ import Link from "next/link";
 import LoaderText from "@/components/loading-text";
 import Image from "next/image";
 import Imageexercice from "@/public/exercices.jpg"
+import Images4 from "@/public/4.jpg";
 
 export default function page(){
     const [data, setData] = useState([])
@@ -56,7 +57,7 @@ export default function page(){
 
                     <div className="flex flex-col justify-center  w-full h-full gap-2 bg-gray-300 p-4 relative bottom-24 ">
                         <Image 
-                            src={Imageexercice}
+                            src={Images4}
                             alt=""
                             fill
                             className=" object-cover"
