@@ -23,7 +23,7 @@ export default function InfosAfterSignup({open, onOpenChange}:Props){
                 <DialogHeader >
                     <DialogTitle className={`  flex flex-row items-center gap-3`}>
                        <CheckCircle2 className="text-green-600" width="70" height="70" /> 
-                       <span className="text-green-700">Felicitation !</span>
+                       <span className="text-green-700">Félicitations !</span>
                     </DialogTitle>
                 </DialogHeader>
 
@@ -34,16 +34,16 @@ export default function InfosAfterSignup({open, onOpenChange}:Props){
 
                     <div className="flex flex-col gap-2">
                         <ol className="list-decimal list-inside space-y-2 marker:font-bold marker:text-2xl text-base ">
-                            <li>Cliquer sur continuer pour vous connecter a votre compte School UP</li>
+                            <li>Cliquez sur <strong> continuer </strong>pour vous connecter à votre compte School UP</li>
                             <li>Dans votre compte School UP choisissez votre abonnement</li>
-                            <li>Une fois votre abonnement choisi, definissez votre configuration et cliquer sur valider</li>
-                            <li>En fin cliquer sur payer pour activer votre abonnement</li>
+                            <li>Une fois votre abonnement choisi, définissez votre configuration et cliquez sur <strong>valider</strong></li>
+                            <li>Enfin cliquew sur <strong>payer</strong> pour activer votre abonnement</li>
                         </ol>
                     </div>
                 </div>
 
                 <DialogDescription className="bg-gray-100 h-auto p-2 rounded-lg">
-                    Votre compte school UP vous permettra de consulter les corrigés de tous vos téléchargements, d'acheter vos abonnements et de vous réabonner
+                    Votre compte school UP vous permettra de consulter les corrigés de tous vos téléchargements, de payer vos abonnements et de vous réabonner.
                 </DialogDescription>
 
                 <div className=" flex justify-end">

@@ -13,11 +13,11 @@ import { Document, Page, pdfjs } from "react-pdf"
 import 'react-pdf/dist/Page/AnnotationLayer.css'
 import 'react-pdf/dist/Page/TextLayer.css'
 
-pdfjs.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
-/* pdfjs.GlobalWorkerOptions.workerSrc = new URL(
+/* pdfjs.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`; */
+pdfjs.GlobalWorkerOptions.workerSrc = new URL(
     'pdfjs-dist/build/pdf.worker.min.mjs',
     import.meta.url
-).toString() */
+).toString()
 
 interface Props{
     open:boolean;
@@ -39,7 +39,7 @@ export default function modalApercuPDF({open, onOpenChange, fileName}:Props){
     return(
         <>
         <Dialog open={open} onOpenChange={onOpenChange}>
-            <DialogContent className="h-[65vw] md:h-[30vw] lg:h-[25vw] w-[75vh] flex flex-col p-2 overflow-hidden">
+            <DialogContent className="h-[65vw] md:h-[30vw] lg:h-[15vw] w-[75vh] flex flex-col p-2 overflow-hidden">
                 <DialogHeader className="h-12">
                     <DialogTitle className=" text-blue-950 text-xl p-2">Apercu</DialogTitle>
                 </DialogHeader>

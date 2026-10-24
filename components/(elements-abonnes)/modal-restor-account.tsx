@@ -44,7 +44,7 @@ export default function ModalRestorAccount({token, id, nomAbonne, open, onOpenOn
         const statusCode = res.status;
          
         if(res.ok){
-            toast.success("Abonnement bloqué !")
+            toast.success("Compte restauré !")
             setLoading(false) 
             onSuccess()
             onOpenOnChange(false)

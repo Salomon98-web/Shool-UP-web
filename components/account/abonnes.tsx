@@ -138,6 +138,7 @@ export default function Abonnes({token, role}:Props){
                                         ${item.payeur.status_account === 3 ? 'border-red-200 bg-red-50' : 'border-blue-200 bg-blue-50'}`}
                                 >
                                     <p className={` text-lg p-2 line-clamp-1 truncate w-[38vw] md:w-[30vw]`}>{item.payeur.name}</p>
+                                    <p className={` text-xs text-end text-chart-2 p-2 line-clamp-1 truncate w-[38vw] md:w-[30vw]`}>{item.payeur.role}</p>
                                     
                                     {item.payeur.status_account === 3 ?(
                                         <Delete 
@@ -192,9 +193,8 @@ export default function Abonnes({token, role}:Props){
                                                     ):null}
                                                 </p>
                                             </div>
-                                            <hr />
-                                            <div className=" flex  gap-2  z-10">
-                                                
+                                            
+                                            <div className={`${item.payeur.role === 'admin'?'hidden':null} flex  gap-2  z-10`}>
                                                 <button 
                                                     onClick={()=>{
                                                         setidAbonne(item.abonne)

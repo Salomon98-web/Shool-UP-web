@@ -46,7 +46,7 @@ export default function ModalLockAccount({token, id, nomAbonne, open, onOpenOnCh
         const statusCode = res.status;
          
         if(res.ok){
-            toast.success("Abonnement bloqué !")
+            toast.success("Compte supprimé !")
             setLoading(false) 
             onSuccess()
             onOpenOnChange(false)

@@ -89,7 +89,7 @@ export default function Cartes({id}:Props){
                             opacity-10  group-hover:scale-125 duration-500 
                             `}  
                         />
-                        <p className=" text-lg p-2 ">{item.description}</p>
+                        <p className=" text-2xl p-2 font-extrabold text-center"><i>{item.description}</i></p>
                     </div>
 
                     <div className="h-2">

@@ -111,7 +111,7 @@ export default function cartesExercices({classeId, matiereId, leconId}:Props){
                         opacity-10  group-hover:scale-125 duration-500 
                         `}  
                     />
-                    <p className=" text-2xl lg:text-lg p-2 ">{item.description}</p>
+                    <p className=" text-2xl p-2 font-extrabold text-center"><i>{item.description}</i></p>
                 </div>
 
                 <div className="flex flex-col items-center p-2 gap-2">

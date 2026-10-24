@@ -28,11 +28,11 @@ export default function Footer(){
                 </div>
                 <div className="flex-col gap-4">
                     <p className=" text-2xl font-bold">Nos partenaires</p>
-                    <div className=" flex flex-col gap-4 ">
+                    <div className=" flex flex-col gap-4 relative top-1.5">
                         <Image 
                             src={Paternaires}
                             alt=""
-                            width={250}
+                            width={100}
                         />
                     </div>
                 </div>
