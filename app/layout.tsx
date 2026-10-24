@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     url:"https://schoolup.net",
     images:[
       {
-        url:"/3.jpg",
+        url:"https://schoolup.net/3.jpg",
         width:1200,
         height:630,
         alt:"school UP"
