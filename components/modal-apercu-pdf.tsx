@@ -9,15 +9,11 @@ import {
     DialogTitle,
     DialogFooter
 } from "@/components/ui/dialog"
+import * as pdfjsLib from "pdfjs-dist"
 import { Document, Page, pdfjs } from "react-pdf"
 import 'react-pdf/dist/Page/AnnotationLayer.css'
 import 'react-pdf/dist/Page/TextLayer.css'
 
-/* pdfjs.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`; */
-pdfjs.GlobalWorkerOptions.workerSrc = new URL(
-    'pdfjs-dist/build/pdf.worker.min.mjs',
-    import.meta.url
-).toString()
 
 interface Props{
     open:boolean;
@@ -35,6 +31,14 @@ export default function modalApercuPDF({open, onOpenChange, fileName}:Props){
     const zoomOut = ()=>{
         setScale((prev)=>Math.min(prev - 0.5, 0.7))
     }
+
+    useEffect(()=>{
+        /* pdfjs.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`; */
+        pdfjs.GlobalWorkerOptions.workerSrc = new URL(
+            'pdfjs-dist/build/pdf.worker.min.mjs',
+            import.meta.url
+        ).toString()
+    },[])
     
     return(
         <>
