@@ -33,32 +33,29 @@ export default function modalApercuPDF({open, onOpenChange, fileName}:Props){
     }
 
     useEffect(()=>{
-        pdfjs.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
-        /* pdfjs.GlobalWorkerOptions.workerSrc = new URL(
+        /* pdfjs.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`; */
+        pdfjs.GlobalWorkerOptions.workerSrc = new URL(
             'pdfjs-dist/build/pdf.worker.min.mjs',
             import.meta.url
-        ).toString() */
+        ).toString()
     },[])
     
     return(
         <>
         <Dialog open={open} onOpenChange={onOpenChange}>
-            <DialogContent className="h-[65vw] md:h-[30vw] lg:h-[15vw] w-[75vh] flex flex-col p-2 overflow-hidden">
+            <DialogContent className="h-48 md:h-100 lg:h-109 xl:h-110 flex flex-col p-2">
                 <DialogHeader className="h-12">
                     <DialogTitle className=" text-blue-950 text-xl p-2">Apercu</DialogTitle>
                 </DialogHeader>
                 <hr />
-                <div className="h-[80vh] overflow-x-auto overflow-y-hidden relative top-2">
-                    <div className="flex justify-center min-w-max mx-auto h-full p-4">
-                        <Document
-                            file={`${process.env.NEXT_PUBLIC_BASE_URL}/download/control-pdf/${fileName}`}
-                            
-                        >
-                            <Page 
-                                pageNumber={1}
-                                scale={1} 
-                            />
-                        </Document> 
+                <div className="absolute inset-0 z-10 bg-transparent ">
+                    <div onContextMenu={(e)=>{e.preventDefault()}} className="w-full h-full ">
+                        
+                        <iframe
+                            src={`/pdf-preview/${fileName}#toolbar=0&navpanes=0&scrollbar=0&zoom=`}
+                            className="w-full h-full "
+                        />
+                        <div onContextMenu={(e)=>{e.preventDefault()}} className="absolute inset-0 z-10 bg-transparent"></div>
                     </div>
                 </div>
             </DialogContent>

@@ -93,7 +93,7 @@ export default function page(){
                         /> */}
 
                         <input 
-                            type="text" 
+                            type="email" 
                             name="sender" id="" 
                             className="w-full h-10 p-2 bg-gray-200 border border-gray-300 rounded-sm hover:transform hover:translate-x-2 duration-500  text-lg" 
                             placeholder="Entrer votre adresse mail"

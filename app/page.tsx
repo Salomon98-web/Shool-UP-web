@@ -6,6 +6,7 @@ import Images1 from "@/public/1.jpg";
 import Images2 from "@/public/2.jpg";
 import Images3 from "@/public/3.jpg";
 import Images4 from "@/public/4.jpg";
+import Image5logo from "@/public/IMG_3001.jpg"
 import Playstore from "@/public/playstore.png"
 import Navbar from "@/components/Navbar";
 import Category from "@/components/category";
@@ -152,7 +153,7 @@ export default function Home() {
               <div className="flex flex-col justify-center items-center p-2 gap-2">
                 <div className="relative top-4 flex flex-col gap-1.5 px-2 md:px-0">
                   <QRCode 
-                    value={`https://schoolup.net/School UP.apk`} 
+                    value={`https://schoolup.net/SchoolUP.apk`} 
                     size={200}
                   />
                 </div>
@@ -164,7 +165,14 @@ export default function Home() {
           </div>
 
           <div className=" flex flex-col gap-2 relative bottom-8">
-            <p className=" text-center z-50  font-bold text-2xl relative top-19">Disponible sur</p>
+            <div className="flex flex-col gap-2">
+              <Image 
+                  src={Image5logo} width={300}  alt=""
+                  className="object-cover w-50 relative top-23.5 left-24" 
+              />
+              <p className=" text-center z-50  font-bold text-2xl relative top-19">Disponible sur</p>
+            </div>
+            
             <div className="flex justify-center items-center flex-row gap-2">
               <Image 
                   src={Playstore} width={300}  alt=""

@@ -143,7 +143,7 @@ export default function classeExercices({params}:Props){
             <div className="flex flex-1 flex-col my-10 gap-8">
                 <div className="flex justify-start items-center px-4 lg:px-28">
                     <div className="flex flex-col justify-center w-full">
-                        <p className="font-bold text-2xl ">{dataClasse?.name_class}</p>
+                        <p className="font-bold text-2xl uppercase">{dataClasse?.name_class}</p>
                         <p className="font-bold text-blue-950 text-2xl uppercase"> <span>{dataMatiere?.nom_matiere}</span></p>
                         <p className="text-xl uppercase  text-chart-2 text-wrap"> <span>{dataLecon?.titre}</span></p> 
                         <p className=" text-lg text-chart-2  relative top-4">Téléchargez vos exercices et corrigés</p> 
