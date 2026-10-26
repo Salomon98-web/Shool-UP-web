@@ -75,7 +75,7 @@ export default function Cartes({id}:Props){
                                 width={80}
                             />
                         </div>
-                        <div className="flex flex-col justify-center items-start">
+                        <div className="flex flex-col justify-center items-start file:">
                             <p className="text-[9px] ">{ item.type == "GABONAIS" ? 'Système Gebonais' : 'Système Francais'}</p>
                         </div>
                     </div> */}
