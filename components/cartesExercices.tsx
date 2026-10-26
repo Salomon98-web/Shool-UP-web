@@ -102,7 +102,7 @@ export default function cartesExercices({classeId, matiereId, leconId}:Props){
                     </div>
                 </div> */}
 
-                <div className={`rounded-t-sm font-medium relative overflow-hidden bottom-3 h-37 text-white ${item.type == "GABONAIS"?'bg-blue-800  bg-linear-to-r from-blue-950 via-blue-800 to-blue-500':'bg-red-800 bg-linear-to-r from-red-950 via-red-800 to-red-500'}`}>
+                <div className={`rounded-t-sm font-medium relative overflow-hidden bottom-3 h-37 text-white ${item.type == "CLASSIQUES"?'bg-blue-800  bg-linear-to-r from-blue-950 via-blue-800 to-blue-500':'bg-green-800 bg-linear-to-r from-green-950 via-green-800 to-green-500'}`}>
                     <FileText 
                         className={`  
                         absolute bottom-0 right-1 -rotate-10 
@@ -111,7 +111,13 @@ export default function cartesExercices({classeId, matiereId, leconId}:Props){
                         opacity-10  group-hover:scale-125 duration-500 
                         `}  
                     />
-                    <p className=" text-2xl p-2 font-extrabold text-center"><i>{item.description}</i></p>
+                    <p className="text-lg md:text-2xl p-2 font-extrabold text-center"><i>{item.description}</i></p>
+                </div>
+
+                <div className="h-2 ">
+                    <p className="font-mon text-xs md:text-md text-center  font-bold relative left-3 uppercase">
+                        {item.type === 'EPREUVES' ? 'évaluation générale':null}
+                    </p>
                 </div>
 
                 <div className="flex flex-col items-center p-2 gap-2">

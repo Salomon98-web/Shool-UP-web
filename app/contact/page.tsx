@@ -35,6 +35,8 @@ export default function page(){
             toast.success("Envoi réussi !")
             setLoading(false) 
         }
+
+        /* console.log(result) */
     }
     return(
         <div className="flex flex-col gap-4">

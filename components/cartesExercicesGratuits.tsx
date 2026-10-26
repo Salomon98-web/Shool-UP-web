@@ -80,7 +80,7 @@ export default function Cartes({id}:Props){
                         </div>
                     </div> */}
 
-                    <div className={`font-medium relative overflow-hidden bottom-3 h-37 text-white rounded-t-sm ${item.type == "GABONAIS"?'bg-blue-800  bg-linear-to-r from-blue-950 via-blue-800 to-blue-500':'bg-red-800 bg-linear-to-r from-red-950 via-red-800 to-red-500'}`}>
+                    <div className={`font-medium relative overflow-hidden bottom-3 h-37 text-white rounded-t-sm ${item.type == "CASSIQUES"?'bg-blue-800  bg-linear-to-r from-blue-950 via-blue-800 to-blue-500':'bg-green-800 bg-linear-to-r from-green-950 via-green-800 to-green-500'}`}>
                         <Gift 
                             className={`  
                             absolute bottom-0 right-1 -rotate-10 
@@ -89,11 +89,11 @@ export default function Cartes({id}:Props){
                             opacity-10  group-hover:scale-125 duration-500 
                             `}  
                         />
-                        <p className=" text-2xl p-2 font-extrabold text-center"><i>{item.description}</i></p>
+                        <p className="text-lg md:text-2xl p-2 font-extrabold text-center"><i>{item.description}</i></p>
                     </div>
 
-                    <div className="h-2">
-                        <p className="font-mon text-xs md:text-md text-center text-chart-2 relative left-3">{item.matiere.nom_matiere}</p>
+                    <div className="h-2 ">
+                        <p className="font-mon text-xs md:text-md text-center text-chart-2 relative left-3 uppercase">{item.matiere.nom_matiere}</p>
                     </div>
 
                     <div className="flex flex-col justify-justify-center items-center p-2">

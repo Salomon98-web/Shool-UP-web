@@ -209,11 +209,11 @@ export default function MoadalUpdateExercice({
                                     <ComboboxInput placeholder="Selectionner un type" className={`h-12`} />
                                     <ComboboxContent>
                                         <ComboboxList>
-                                            <ComboboxItem className={`uppercase`} value={`GABONAIS`} >
-                                                GABONAIS
+                                            <ComboboxItem className={`uppercase`} value={`CLASSIQUES`} >
+                                                CLASSIQUES
                                             </ComboboxItem>
-                                            <ComboboxItem className={`uppercase`} value={`FRANCAIS`} >
-                                                FRANCAIS
+                                            <ComboboxItem className={`uppercase`} value={`EPREUVES`} >
+                                                EPREUVES
                                             </ComboboxItem>
                                         </ComboboxList>
                                     </ComboboxContent>
@@ -311,7 +311,7 @@ export default function MoadalUpdateExercice({
                             <>
                             <button 
                                 type="submit"
-                                className="bg-blue-700 p-2 text-white  text-lg rounded-sm w-full h-8"
+                                className="bg-blue-700 p-2 text-white  text-lg rounded-sm w-full h-12"
                             >
                                 {loading ?(
                                 <Loader />

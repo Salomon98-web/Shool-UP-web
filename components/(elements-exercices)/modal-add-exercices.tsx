@@ -211,11 +211,11 @@ export default function MoadalAddExercice({token, open, onOpenChange, onSuccess,
                                     <ComboboxInput placeholder="Selectionner un type" className={`h-12`} />
                                     <ComboboxContent>
                                         <ComboboxList>
-                                            <ComboboxItem className={`uppercase`} value={`GABONAIS`} >
-                                                GABONAIS
+                                            <ComboboxItem className={`uppercase`} value={`CLASSIQUES`} >
+                                                CLASSIQUES
                                             </ComboboxItem>
-                                            <ComboboxItem className={`uppercase`} value={`FRANCAIS`} >
-                                                FRANCAIS
+                                            <ComboboxItem className={`uppercase`} value={`EPREUVES`} >
+                                                EPREUVES
                                             </ComboboxItem>
                                         </ComboboxList>
                                     </ComboboxContent>

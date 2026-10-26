@@ -126,12 +126,8 @@ export default function Exercices({token, role}:Props){
                                 />
                                 <div className="w-full flex justify-between">
                                     <p className="  font-bold text-lg p-2 line-clamp-1 truncate w-[38vw] md:w-[30vw]">{item.description}</p>
-                                    <div className="w-6 h-6 rounded-xs group-hover:transform group-hover:-rotate-25 duration-500">
-                                        <Image
-                                            src={ item.type == "GABONAIS" ? drapeauGabon : drapeauFrance}
-                                            alt=""
-                                            width={80}
-                                        />
+                                    <div className={`${item.type == "CLASSIQUES"?'bg-blue-600': item.type == "EPREUVES"?'bg-red-600':''} w-6 h-6 rounded-xs group-hover:transform group-hover:-rotate-25 duration-500`}>
+                                        
                                     </div>
                                 </div>
 
