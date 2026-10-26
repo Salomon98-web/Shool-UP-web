@@ -80,7 +80,7 @@ export default function Cartes({id}:Props){
                         </div>
                     </div> */}
 
-                    <div className={`font-medium relative overflow-hidden bottom-3 h-37 text-white rounded-t-sm ${item.type == "CASSIQUES"?'bg-blue-800  bg-linear-to-r from-blue-950 via-blue-800 to-blue-500':'bg-green-800 bg-linear-to-r from-green-950 via-green-800 to-green-500'}`}>
+                    <div className={`font-medium relative overflow-hidden bottom-3 h-37 text-white rounded-t-sm ${item.type == "CLASSIQUES"?'bg-blue-800  bg-linear-to-r from-blue-950 via-blue-800 to-blue-500':'bg-green-800 bg-linear-to-r from-green-950 via-green-800 to-green-500'}`}>
                         <Gift 
                             className={`  
                             absolute bottom-0 right-1 -rotate-10 
