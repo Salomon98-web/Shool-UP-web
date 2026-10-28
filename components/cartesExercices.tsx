@@ -115,7 +115,7 @@ export default function cartesExercices({classeId, matiereId, leconId}:Props){
                 </div>
 
                 <div className="h-2 ">
-                    <p className="font-mon text-[10px] md:text-md text-center  font-bold uppercase">
+                    <p className="font-mon text-[10px] md:text-md text-center font-bold uppercase">
                         {item.type === 'EPREUVES' ? 'évaluation générale':null}
                     </p>
                 </div>
