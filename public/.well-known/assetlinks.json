@@ -1,0 +1,8 @@
+[{
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "net.schoolup.twa",
+        "sha256_cert_fingerprints": ["65:BB:FA:4D:7F:60:B3:CF:78:37:DF:74:80:39:70:1C:C2:F0:CE:6A:E5:2A:E7:41:9F:B8:CD:CD:BE:CD:FA:03"]
+      }
+    }]

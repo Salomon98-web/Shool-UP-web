@@ -146,7 +146,7 @@ export default function Home() {
       <div className="my-2"></div>
 
       <div className=" w-full h-80 relative my-12 hidden xl:block">
-        <div className=" w-full h-full flex flex-col lg:flex-row justify-center items-center gap-5 p-4">
+        <div className=" w-full h-full flex flex-col lg:flex-row justify-center items-center gap-5 p-4 relative right-16">
           
           <div className="flex flex-col justify-center items-center gap-5 p-4 relative top-9 ">
             <div className=" h-auto w-auto rounded-full flex justify-center items-center right-3 md:right-5 relative bottom-8 p-3">
@@ -164,19 +164,19 @@ export default function Home() {
             </div>
           </div>
 
-          <div className=" flex flex-col gap-2 relative bottom-8">
+          <div className=" flex flex-col justify-center items-center gap-2 relative bottom-8">
             <div className="flex flex-col gap-2">
               <Image 
                   src={Image5logo} width={300}  alt=""
-                  className="object-cover w-50 relative top-23.5 left-24" 
+                  className="object-cover w-50 relative top-2.5 left-24" 
               />
-              <p className=" text-center z-50  font-bold text-2xl relative top-19">Disponible sur</p>
+              <p className=" text-center z-50  font-bold text-2xl relative top-0 left-23">Disponible sur</p>
             </div>
             
-            <div className="flex justify-center items-center flex-row gap-2">
+            <div className="flex justify-center items-center flex-row gap-2 relative left-23">
               <Image 
                   src={Playstore} width={300}  alt=""
-                  className="object-cover w-100" 
+                  className="object-cover w-50" 
               />{/* 
               <Image 
                   src={Appstore} width={50}  alt=""
