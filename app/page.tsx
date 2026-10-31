@@ -1,3 +1,5 @@
+'use client'
+
 import Link from "next/link";
 import Image from "next/image";
 import Imagehome from "@/public/accueil.jpg";
@@ -12,8 +14,11 @@ import Navbar from "@/components/Navbar";
 import Category from "@/components/category";
 import Footer from "@/components/footer";
 import QRCode from "@/components/ui/qr-code";
+import useIsApk from "@/functions/useIsApk"
+import CarouselAutoplay from "@/components/CarouselAuto";
 
 export default function Home() {
+  const isApk = useIsApk()
   return (
     <div className="flex flex-col gap-10">
 
@@ -48,81 +53,87 @@ export default function Home() {
       <div className="flex flex-1 flex-col my-10 gap-8">
         <Category />
 
-        <div className=" flex flex-col gap-8 p-4">
+        <div className="w-full hidden lg:block">
+          <div className=" flex flex-col gap-8 p-4">
 
-          <div className=" flex flex-col lg:flex-row gap-6 justify-center md:p-5">
+            <div className=" flex flex-col lg:flex-row gap-6 justify-center md:p-5">
 
-            <div className=" flex flex-col sm:flex-row shadow-lg transition-transform hover:shadow-xl duration-500 group">
-              <div className=" bg-gray-300 w-full md:w-56 xl:w-72 h-50 group-hover:-rotate-6 duration-500 relative">
-                <Image 
-                  src={Imagehome}
-                  alt=""
-                  fill
-                  className=" object-cover"
-                />
+              <div className=" flex flex-col sm:flex-row shadow-lg transition-transform hover:shadow-xl duration-500 group">
+                <div className=" bg-gray-300 w-full md:w-56 xl:w-72 h-50 group-hover:-rotate-6 duration-500 relative">
+                  <Image 
+                    src={Imagehome}
+                    alt=""
+                    fill
+                    className=" object-cover"
+                  />
+                </div>
+                <div className=" p-4 bg-white flex justify-center items-center w-full md:w-64 xl:w-72 rounded-lg">
+                  <p className=" text-md ">
+                    De nombreux exercices conformes aux programmes officiels, pour de meilleurs résultats scolaires et aux examens.
+                  </p>
+                </div>
               </div>
-              <div className=" p-4 bg-white flex justify-center items-center w-full md:w-64 xl:w-72 rounded-lg">
-                <p className=" text-md ">
-                  De nombreux exercices conformes aux programmes officiels, pour de meilleurs résultats scolaires et aux examens.
-                </p>
+
+              <div className="flex flex-col sm:flex-row shadow-lg transition-transform hover:shadow-xl duration-500 group">
+                <div className=" bg-gray-300 w-full md:w-56 xl:w-72 h-50 group-hover:rotate-6 duration-500 relative">
+                  <Image 
+                    src={Images1}
+                    alt=""
+                    fill
+                    className=" object-cover"
+                  />
+                </div>
+                <div className=" p-4 bg-white flex justify-center items-center w-full md:w-64 xl:w-72 rounded-r-xl">
+                  <p className=" text-md ">
+                    Les exercices permettent de mieux préparer ses examens. Réussite assurée !
+                  </p>
+                </div>
               </div>
+
             </div>
 
-            <div className="flex flex-col sm:flex-row shadow-lg transition-transform hover:shadow-xl duration-500 group">
-              <div className=" bg-gray-300 w-full md:w-56 xl:w-72 h-50 group-hover:rotate-6 duration-500 relative">
-                <Image 
-                  src={Images1}
-                  alt=""
-                  fill
-                  className=" object-cover"
-                />
+            <div className=" flex flex-col lg:flex-row gap-6 justify-center md:p-5">
+
+              <div className="flex flex-col sm:flex-row shadow-lg transition-transform hover:shadow-xl duration-500 group">
+                <div className=" bg-gray-300 w-full md:w-56 xl:w-72 h-50 group-hover:-rotate-6 duration-500 relative">
+                  <Image 
+                    src={Images2}
+                    alt=""
+                    fill
+                    className=" object-cover"
+                  />
+                </div>
+                <div className=" p-4 bg-white flex justify-center w-full items-center md:w-64 xl:w-72">
+                  <p className=" text-md ">
+                    Les exercices scolaires font progresser. Votre enfant aura de meilleurs résultats !
+                  </p>
+                </div>
               </div>
-              <div className=" p-4 bg-white flex justify-center items-center w-full md:w-64 xl:w-72 rounded-r-xl">
-                <p className=" text-md ">
-                  Les exercices permettent de mieux préparer ses examens. Réussite assurée !
-                </p>
+
+              <div className="flex flex-col sm:flex-row shadow-lg transition-transform hover:shadow-xl duration-500 group">
+                <div className=" bg-gray-300 w-full md:w-56 xl:w-72 h-50 group-hover:rotate-6 duration-500 relative">
+                  <Image 
+                    src={Images4}
+                    alt=""
+                    fill
+                    className=" object-cover"
+                  />
+                </div>
+                <div className=" p-4 bg-white flex justify-center items-center w-full md:w-64 xl:w-72">
+                  <p className=" text-md ">
+                    Votre banque d'exercices scolaires avec corrigés. Où vous voulez, quand vous voulez, sans vous déplacer !
+                  </p>
+                </div>
               </div>
+
             </div>
 
           </div>
-
-          <div className=" flex flex-col lg:flex-row gap-6 justify-center md:p-5">
-
-            <div className="flex flex-col sm:flex-row shadow-lg transition-transform hover:shadow-xl duration-500 group">
-              <div className=" bg-gray-300 w-full md:w-56 xl:w-72 h-50 group-hover:-rotate-6 duration-500 relative">
-                <Image 
-                  src={Images2}
-                  alt=""
-                  fill
-                  className=" object-cover"
-                />
-              </div>
-              <div className=" p-4 bg-white flex justify-center w-full items-center md:w-64 xl:w-72">
-                <p className=" text-md ">
-                  Les exercices scolaires font progresser. Votre enfant aura de meilleurs résultats !
-                </p>
-              </div>
-            </div>
-
-            <div className="flex flex-col sm:flex-row shadow-lg transition-transform hover:shadow-xl duration-500 group">
-              <div className=" bg-gray-300 w-full md:w-56 xl:w-72 h-50 group-hover:rotate-6 duration-500 relative">
-                <Image 
-                  src={Images4}
-                  alt=""
-                  fill
-                  className=" object-cover"
-                />
-              </div>
-              <div className=" p-4 bg-white flex justify-center items-center w-full md:w-64 xl:w-72">
-                <p className=" text-md ">
-                  Votre banque d'exercices scolaires avec corrigés. Où vous voulez, quand vous voulez, sans vous déplacer !
-                </p>
-              </div>
-            </div>
-
-          </div>
-
         </div>
+        <div className="w-full block lg:hidden p-4">
+          <CarouselAutoplay />
+        </div>
+        
         {/* Essayer gratuitement */}
         <div className=" w-full h-80 bg-gray-50 relative">
           <Image 
@@ -145,8 +156,8 @@ export default function Home() {
 
       <div className="my-2"></div>
 
-      <div className=" w-full h-80 relative my-12 hidden xl:block">
-        <div className=" w-full h-full flex flex-col lg:flex-row justify-center items-center gap-5 p-4 relative right-16">
+      <div className={`${isApk === true ? 'hidden':'block'} w-full h-80 relative my-7 `}>
+        <div className=" w-full h-full flex flex-col lg:flex-row justify-center items-center gap-5 p-4 relative">
           
           <div className="flex flex-col justify-center items-center gap-5 p-4 relative top-9 ">
             <div className=" h-auto w-auto rounded-full flex justify-center items-center right-3 md:right-5 relative bottom-8 p-3">
@@ -168,12 +179,12 @@ export default function Home() {
             <div className="flex flex-col gap-2">
               <Image 
                   src={Image5logo} width={300}  alt=""
-                  className="object-cover w-50 relative top-2.5 left-24" 
+                  className="object-cover w-50 relative top-2.5" 
               />
-              <p className=" text-center z-50  font-bold text-2xl relative top-0 left-23">Disponible sur</p>
+              <p className=" text-center z-50  font-bold text-2xl relative ">Disponible sur</p>
             </div>
             
-            <div className="flex justify-center items-center flex-row gap-2 relative left-23">
+            <div className="flex justify-center items-center flex-row gap-2 relative ">
               <Image 
                   src={Playstore} width={300}  alt=""
                   className="object-cover w-50" 
@@ -186,7 +197,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-
+      
       {/* footer */}
       <Footer />
 

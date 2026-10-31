@@ -48,7 +48,8 @@ export default function modalAffichePDF({open, onOpenChange, fileName}:Props){
                     <div className="flex justify-center min-w-max mx-auto relative h-full p-4">
                        
                          <iframe
-                            src={`/view-corriges/${fileName}#toolbar=0&navpanes=0&scrollbar=0&zoom=90`}
+                            /* src={`/view-corriges/${fileName}#toolbar=0&navpanes=0&scrollbar=0&zoom=90`} */
+                            src={`https://docs.google.com/gview?embedded=true&url=${encodeURIComponent(`https://schoolup.net/view-corriges/${fileName}`)}#toolbar=0&navpanes=0&scrollbar=0&zoom=`}
                             className="w-full h-full "
                         />
                         <div onContextMenu={(e)=>{e.preventDefault()}} className="absolute inset-0 z-10 bg-transparent bottom-7.5 right-7"></div>

@@ -135,7 +135,7 @@ export default function page({params}:Props){
                     <div className="flex flex-col justify-center w-full">
                         {loading ? (''):(
                             <p className="flex flex-col uppercase text-2xl text-blue-950 ">
-                                <span className=" font-bold ">{dataClasse?.name_class}</span>
+                                 <span className="text-2xl uppercase text-blue-950 font-extrabold">leçons</span> 
                                 <span>{dataMatiere?.nom_matiere}</span>
                             </p> 
                         )}
