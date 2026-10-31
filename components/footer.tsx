@@ -70,13 +70,15 @@ export default function Footer(){
                     <p className=" text-sm md:text-xl font-bold">Nos partenaires</p>
                 </div>
                 <div className="flex flex-col gap-1.5">
-                    <div className=" flex flex-col gap-4 relative top-1.5">
-                        <Image 
-                            src={Image5logo}
-                            alt=""
-                            width={100}
-                        />
-                    </div>
+                    <a href="https://schoolup.net" target="_blank" rel="noopener">
+                        <div className=" flex flex-col gap-4 relative top-1.5">
+                            <Image 
+                                src={Image5logo}
+                                alt=""
+                                width={100}
+                            />
+                        </div>
+                    </a>
                     <p className=" text-sm md:text-xl font-bold">site web officiel</p>
                 </div>
             </div>
