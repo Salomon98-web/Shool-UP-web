@@ -156,48 +156,49 @@ export default function Home() {
 
       <div className="my-2"></div>
 
-      <div className={`${isApk === true ? 'hidden':'block'} w-full h-80 relative my-7 `}>
-        <div className=" w-full h-full flex flex-col lg:flex-row justify-center items-center gap-5 p-4 relative">
-          
-          <div className="flex flex-col justify-center items-center gap-5 p-4 relative top-9 ">
-            <div className=" h-auto w-auto rounded-full flex justify-center items-center md:right-5 relative bottom-8 p-3">
-              <div className="flex flex-col justify-center items-center p-2 gap-2">
-                <div className="relative top-4 flex flex-col gap-1.5 px-2 md:px-0">
-                  <QRCode 
-                    value={`https://schoolup.net/SchoolUP.apk`} 
-                    size={200}
-                  />
+      {isApk === false ?(
+        <div className={` w-full h-80 relative my-7 `}>
+          <div className=" w-full h-full flex flex-col lg:flex-row justify-center items-center gap-5 p-4 relative">
+            
+            <div className="flex flex-col justify-center items-center gap-5 p-4 relative top-9 ">
+              <div className=" h-auto w-auto rounded-full flex justify-center items-center md:right-5 relative bottom-8 p-3">
+                <div className="flex flex-col justify-center items-center p-2 gap-2">
+                  <div className="relative top-4 flex flex-col gap-1.5 px-2 md:px-0">
+                    <QRCode 
+                      value={`https://schoolup.net/SchoolUP.apk`} 
+                      size={200}
+                    />
+                  </div>
+                  <p className="  text-md relative font-extrabold">SCANNEZ-MOI</p>
+                  <p className="text-sm md:text-lg font-semibold">Pour téléchager l'application</p>
+                  <p className="text-sm md:text-lg font-normal">APK Version 1.0</p>
                 </div>
-                <p className="  text-md relative font-extrabold">SCANNEZ-MOI</p>
-                <p className="text-sm md:text-lg font-semibold">Pour téléchager l'application</p>
-                <p className="text-sm md:text-lg font-normal">APK Version 1.0</p>
+              </div>
+            </div>
+
+            <div className=" flex flex-col justify-center items-center gap-2 relative bottom-8">
+              <div className="flex flex-col gap-2">
+                <Image 
+                    src={Image5logo} width={300}  alt=""
+                    className="object-cover w-50 relative top-2.5" 
+                />
+                <p className=" text-center z-50  font-bold text-2xl relative ">Disponible sur</p>
+              </div>
+              
+              <div className="flex justify-center items-center flex-row gap-2 relative ">
+                <Image 
+                    src={Playstore} width={300}  alt=""
+                    className="object-cover w-50" 
+                />{/* 
+                <Image 
+                    src={Appstore} width={50}  alt=""
+                    className="object-cover relative top-1.5 w-38 md:w-50" 
+                /> */}
               </div>
             </div>
           </div>
-
-          <div className=" flex flex-col justify-center items-center gap-2 relative bottom-8">
-            <div className="flex flex-col gap-2">
-              <Image 
-                  src={Image5logo} width={300}  alt=""
-                  className="object-cover w-50 relative top-2.5" 
-              />
-              <p className=" text-center z-50  font-bold text-2xl relative ">Disponible sur</p>
-            </div>
-            
-            <div className="flex justify-center items-center flex-row gap-2 relative ">
-              <Image 
-                  src={Playstore} width={300}  alt=""
-                  className="object-cover w-50" 
-              />{/* 
-              <Image 
-                  src={Appstore} width={50}  alt=""
-                  className="object-cover relative top-1.5 w-38 md:w-50" 
-              /> */}
-            </div>
-          </div>
         </div>
-      </div>
-      
+      ):null}
       {/* footer */}
       <Footer />
 

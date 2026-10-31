@@ -50,7 +50,7 @@ export default function modalApercuPDF({open, onOpenChange, fileName}:Props){
                 </DialogHeader>
                 <hr />
                 <div className="absolute inset-0 z-10 bg-transparent ">
-                    <div onContextMenu={(e)=>{e.preventDefault()}} className="h-40 md:h-87 lg:h-90">
+                    <div onContextMenu={(e)=>{e.preventDefault()}} className="h-35 md:h-83 lg:h-86">
                         
                         <iframe
                             src={`https://docs.google.com/gview?embedded=true&url=${encodeURIComponent(`https://schoolup.net/pdf-preview/${fileName}`)}#toolbar=0&navpanes=0&scrollbar=0&zoom=`}

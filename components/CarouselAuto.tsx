@@ -1,5 +1,6 @@
 'use client'
 
+import { useEffect } from "react"
 import React from "react"
 import Autoplay from 'embla-carousel-autoplay'
 import { 
@@ -22,6 +23,10 @@ export default function CarouselAutoplay(){
             stopOnInteraction:true
         })
     )
+
+    useEffect(()=>{
+        
+    },[plugin])
     return(
         <Carousel
             plugins={[plugin.current]}
@@ -38,10 +43,10 @@ export default function CarouselAutoplay(){
                             className=" object-cover rounded-sm"
                         />
                         
-                        <div className=" bg-black opacity-35 absolute inset-0 rounded-sm"></div>
+                        <div className=" bg-black opacity-10 absolute inset-0 rounded-sm"></div>
                         
                     </div>
-                    <p className="text-start text-sm group-h text-wrap p-1 z-50 ">
+                    <p className="text-start text-lg text-wrap p-1 z-50 ">
                         De nombreux exercices conformes aux programmes officiels, pour de meilleurs résultats scolaires et aux examens.
                     </p>
                 </CarouselItem>
@@ -54,10 +59,10 @@ export default function CarouselAutoplay(){
                             className=" object-cover rounded-sm"
                         />
                         
-                        <div className=" bg-black opacity-35 absolute inset-0 rounded-sm"></div>
+                        <div className=" bg-black opacity-10 absolute inset-0 rounded-sm"></div>
                         
                     </div>
-                    <p className="text-start text-sm md:text-lg group-h text-wrap p-2 z-50">
+                    <p className="text-start text-lg group-h text-wrap p-2 z-50">
                         Les exercices permettent de mieux préparer ses examens. Réussite assurée !
                     </p>
                 </CarouselItem>
@@ -70,10 +75,10 @@ export default function CarouselAutoplay(){
                             className=" object-cover rounded-sm"
                         />
                         
-                        <div className=" bg-black opacity-35 absolute inset-0 rounded-sm"></div>
+                        <div className=" bg-black opacity-10 absolute inset-0 rounded-sm"></div>
                         
                     </div>
-                    <p className="text-start text-sm md:text-lg text-wrap p-2 z-50">
+                    <p className="text-start text-lg text-wrap p-2 z-50">
                         Les exercices scolaires font progresser. Votre enfant aura de meilleurs résultats !
                     </p>
                 </CarouselItem>
@@ -86,10 +91,10 @@ export default function CarouselAutoplay(){
                             className=" object-cover rounded-sm"
                         />
                         
-                        <div className=" bg-black opacity-35 absolute inset-0 rounded-sm"></div>
+                        <div className=" bg-black opacity-10 absolute inset-0 rounded-sm"></div>
                         
                     </div>
-                    <p className="text-start text-sm md:text-lg text-wrap p-2 z-50">
+                    <p className="text-start text-lg text-wrap p-2 z-50">
                         Votre banque d'exercices scolaires avec corrigés. Où vous voulez, quand vous voulez, sans vous déplacer !
                     </p>
                 </CarouselItem>

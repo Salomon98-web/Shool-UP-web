@@ -11,7 +11,10 @@ export default function Footer(){
     const isApk = useIsApk()
     return(
         <>
-        <div className="my-12"></div>
+        {isApk === false ?(
+            <div className={` my-12`}></div>
+        ):null}
+        
         <footer className={` w-full flex flex-col `}>
             <div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 md:justify-items-center gap-9 w-full my-14 py-10 px-4 lg:px-28">
                 <div className="flex-col gap-4 ">

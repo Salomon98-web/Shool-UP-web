@@ -66,7 +66,7 @@ export default function page(){
                         <div className=" flex flex-col justify-center items-center relative top-14 gap-2">
                             <p className="text-white  text-2xl"><span className=" font-bold uppercase md:text-4xl">Exercices</span> </p>
                             <div className="flex flex-col justify-center items-center w-full">
-                                <p className=" text-lg text-white ">Cliquez sur votre catégorie</p>               
+                                <p className=" text-lg text-white ">Cliquez sur votre niveau</p>               
                             </div>
                         </div>
                     </div>
@@ -81,7 +81,7 @@ export default function page(){
                         <div className=" flex flex-col items-center gap-4 my-4 w-full px-4 lg:px-28">
                             {data.length < 1 ? (
                                 <div className="my-14">
-                                    <p className="text-center text-chart-1 font-bold ">Aucune catégories</p>
+                                    <p className="text-center text-chart-1 font-bold ">Aucun cycle disponible</p>
                                 </div>
                             ):(
                                 <div className="flex flex-wrap items-center gap-4 my-14">
