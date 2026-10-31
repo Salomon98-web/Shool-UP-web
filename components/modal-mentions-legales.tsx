@@ -32,8 +32,8 @@ export default function MentionsLegales(){
                     
                     <p className=" my-4 text-lg"><strong className="text-blue-950">RCCM N° : GA-LBV-01-2024-B12-01237 / NIF : 2024 0102 2334 U</strong></p>
                     
-                    <p className=" my-4 text-lg">School UP Gabon a été développé par <strong className="text-blue-950"> esy web developer </strong>
-                        Tél : +237 658 111 969 / Email : <strong className="text-blue-950"> salomonyannick0@gmail.com </strong>
+                    <p className=" my-4 text-lg ">School UP Gabon a été développé par <strong className="text-blue-950"> esy web developer </strong>
+                        Tél : +237 658 111 969 / Email : <strong className="text-blue-950 "> salomonyannick0@gmail.com </strong>
                     </p>
                     
                     <p className=" my-4 text-lg">Tout le contenu de <strong className="text-blue-950">School UP</strong>, exercices, corrigés et autres données informatiques, sont la propriété exclusive de l'éditeur. </p>

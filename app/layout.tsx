@@ -14,6 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://schoolup.net"),
   title: "School UP",
   icons:{
     icon:"/icon1.png"
@@ -26,7 +27,7 @@ export const metadata: Metadata = {
     url:"https://schoolup.net",
     images:[
       {
-        url:"https://schoolup.net/3.jpg",
+        url:"/3.jpg",
         width:1200,
         height:630,
         alt:"school UP"

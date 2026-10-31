@@ -20,7 +20,10 @@ import Images4 from "@/public/4.jpg";
 export default function CarouselAutoplay(){
     const plugin = React.useRef(
         Autoplay({delay:2890,
-            stopOnInteraction:true
+            stopOnInteraction:false,
+            stopOnMouseEnter:false,
+            stopOnFocusIn:false,
+            stopOnLastSnap:false,
         })
     )
 
@@ -31,7 +34,7 @@ export default function CarouselAutoplay(){
         <Carousel
             plugins={[plugin.current]}
             opts={{loop:true}}
-            className="w-full"
+            className="w-full flex flex-col gap-4.5"
         >
             <CarouselContent>
                 <CarouselItem className="w-full h-100 group flex flex-col">
@@ -99,6 +102,11 @@ export default function CarouselAutoplay(){
                     </p>
                 </CarouselItem>
             </CarouselContent>
+            <div className="flex flex-row justify-center gap-2.5">
+                <CarouselPrevious className={`static`}/>
+                <CarouselNext className={`static`}/>
+            </div>
+            
         </Carousel>
     )
 }
