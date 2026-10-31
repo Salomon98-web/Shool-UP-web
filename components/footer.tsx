@@ -12,7 +12,7 @@ export default function Footer(){
     return(
         <>
         <div className="my-12"></div>
-        <footer className={`${isApk === true ? 'hidden': 'block'} w-full flex flex-col `}>
+        <footer className={` w-full flex flex-col `}>
             <div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 md:justify-items-center gap-9 w-full my-14 py-10 px-4 lg:px-28">
                 <div className="flex-col gap-4 ">
                     <p className="  font-bold text-2xl">Contactez-nous</p>
@@ -57,7 +57,7 @@ export default function Footer(){
                 <p className="text-sm"></p>
             </div>
         </footer>
-        <div className={`${isApk === false ? 'hidden': 'block'} flex-col gap-4 px-4`}>
+        {/* <div className={`${isApk === false ? 'hidden': 'block'} flex-col gap-4 px-4`}>
             <div className="flex flex-row gap-5.5">
                 <div className="flex flex-col gap-1.5">
                     <div className=" flex flex-col gap-4 relative top-1.5">
@@ -83,7 +83,7 @@ export default function Footer(){
                 </div>
             </div>
             <div className="my-7"></div>
-        </div>
+        </div> */}
         </>
     );
 }

@@ -160,7 +160,7 @@ export default function Home() {
         <div className=" w-full h-full flex flex-col lg:flex-row justify-center items-center gap-5 p-4 relative">
           
           <div className="flex flex-col justify-center items-center gap-5 p-4 relative top-9 ">
-            <div className=" h-auto w-auto rounded-full flex justify-center items-center right-3 md:right-5 relative bottom-8 p-3">
+            <div className=" h-auto w-auto rounded-full flex justify-center items-center md:right-5 relative bottom-8 p-3">
               <div className="flex flex-col justify-center items-center p-2 gap-2">
                 <div className="relative top-4 flex flex-col gap-1.5 px-2 md:px-0">
                   <QRCode 
