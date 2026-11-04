@@ -10,7 +10,7 @@ import {
     SidebarMenuItem,
     SidebarProvider,
     SidebarInset, 
-    SidebarMenuButton
+    SidebarMenuButton,
 } from "@/components/ui/sidebar"
 import { usePathname } from "next/navigation";
 import logo from "@/public/SCHOOL UP_LOGO COULEURS.png";
@@ -80,6 +80,7 @@ export default function sidebar({role}:Props){
                             width={200}
                         />
                     </div>
+                    
                 </SidebarHeader>
                 <SidebarContent className="relative top-14">
                     <SidebarMenu>
@@ -127,28 +128,33 @@ export default function sidebar({role}:Props){
             </Sidebar>
 
             <SidebarInset className={`${sideTigger === true ? 'w-12': 'w-0'}  z-50 fixed md:relative text-blue-900`}>
-                <SidebarTrigger onClick={()=>{
-                    sideTigger == true ? setSideTigger(false) : setSideTigger(true)
-                }} />
+                <div className="flex flex-row gap-2.5 items-center">
+                    <SidebarTrigger 
+                        onClick={()=>{
+                            sideTigger == true ? setSideTigger(false) : setSideTigger(true)
+                        }} 
+                    />
+                    <p className="text-chart-2">MENU</p>
+                </div>
                 <div className={`hidden md:block relative top-38`}>
-                {sideTigger === true ? (
-                    <>
-                    {links.map((link)=>{
-                        const isActive = pathName === link.href
-                        return(
-                            <SidebarMenuItem key={link.href} className="p-2">
-                                <a href={link.href}>
-                                    <SidebarMenuButton  
-                                        className={`p-4  text-lg ${isActive ? "bg-blue-950 bg-linear-to-r from-blue-950 via-blue-800 to-blue-700 text-white":""} group hover:bg-blue-800 hover:text-white duration-500 flex justify-center items-center`} 
-                                    >
-                                    {link.icon && <link.icon className=" " />}
-                                    </SidebarMenuButton>
-                                </a>
-                            </SidebarMenuItem>
-                        );
-                    })}
-                    </>
-                ):(null)}
+                    {sideTigger === true ? (
+                        <>
+                        {links.map((link)=>{
+                            const isActive = pathName === link.href
+                            return(
+                                <SidebarMenuItem key={link.href} className="p-2">
+                                    <a href={link.href}>
+                                        <SidebarMenuButton  
+                                            className={`p-4  text-lg ${isActive ? "bg-blue-950 bg-linear-to-r from-blue-950 via-blue-800 to-blue-700 text-white":""} group hover:bg-blue-800 hover:text-white duration-500 flex justify-center items-center`} 
+                                        >
+                                        {link.icon && <link.icon className=" " />}
+                                        </SidebarMenuButton>
+                                    </a>
+                                </SidebarMenuItem>
+                            );
+                        })}
+                        </>
+                    ):(null)}
                 </div>
             </SidebarInset>
         </SidebarProvider>

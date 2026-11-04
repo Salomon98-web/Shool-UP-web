@@ -47,7 +47,7 @@ export default function dashboard({token,role}:Props) {
             <p className="text-chart-3">Exercices disponibles</p>
           </div>
           {/* cartes statistiques*/}
-          <CartesStatistiques token={token}/>
+          <CartesStatistiques token={token} role={role}/>
 
           {role == "admin" ?(
             <>

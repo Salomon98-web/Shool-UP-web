@@ -37,7 +37,7 @@ export default function InfosAfterSignup({open, onOpenChange}:Props){
                             <li>Cliquez sur <strong> continuer </strong>pour vous connecter à votre compte School UP</li>
                             <li>Dans votre compte School UP choisissez votre abonnement</li>
                             <li>Une fois votre abonnement choisi, définissez votre configuration et cliquez sur <strong>valider</strong></li>
-                            <li>Enfin cliquew sur <strong>payer</strong> pour activer votre abonnement</li>
+                            <li>Enfin cliquez sur <strong>payer</strong> pour activer votre abonnement</li>
                         </ol>
                     </div>
                 </div>

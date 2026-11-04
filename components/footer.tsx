@@ -5,7 +5,6 @@ import MentionsLegales from "@/components/modal-mentions-legales";
 import Paternaires from "@/public/partenaire.jpg"
 import Image from "next/image";
 import useIsApk from "@/functions/useIsApk"
-import Image5logo from "@/public/IMG_3001.jpg"
 
 export default function Footer(){
     const isApk = useIsApk()

@@ -19,6 +19,7 @@ import CarouselAutoplay from "@/components/CarouselAuto";
 
 export default function Home() {
   const isApk = useIsApk()
+  
   return (
     <div className="flex flex-col gap-10">
 
@@ -201,7 +202,6 @@ export default function Home() {
       ):null}
       {/* footer */}
       <Footer />
-
     </div>
   );
 }

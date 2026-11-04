@@ -9,10 +9,8 @@ import { Pagination } from "../ui/pagination";
 import MoadalAddExercice from "../(elements-exercices-gratuis)/modal-add-exercices-gratuis";
 import MoadalUpdateExercice from "../(elements-exercices-gratuis)/modal-update-exercice-gratuit";
 import ModalDeleteExercice from "../(elements-exercices-gratuis)/modal-delete-exercice-gratuit";
-import drapeauGabon from "@/public/gabon.png";
-import drapeauFrance from "@/public/france.png";
-import Image from "next/image";
 import { Eye, Gift } from "lucide-react";
+import MoadalNotifier from "../(elements-notifications)/modal-notifier";
 
 interface Props{
     token:string | undefined
@@ -40,6 +38,8 @@ export default function ExercicesGratuits({token, role}:Props){
     const [idClasse, setIdClasse] = useState<number>(0)
     const [idMatiere, setIdMatiere] = useState<number>(0)
     const [idLecon, setIdLecon] = useState<number>(0)
+    {/**modal notifier */}
+    const [openModalnotif, setOpenModalNotif] = useState(false)
 
     useEffect(()=>{
         const exercices = async ()=>{
@@ -90,14 +90,22 @@ export default function ExercicesGratuits({token, role}:Props){
                 </div>
                 <CartesExercices token={token} refreshKey={refreshKey} />
 
-                <div className="relative top-15 w-full flex px-4 lg:px-14">
+                <div className="relative top-15 w-full flex flex-row gap-2.5 px-4 lg:px-14">
                     <button 
-                            onClick={()=>{
-                                setOpenModalAddExercice(true)
-                            }}
-                            className=" uppercase  text-md text-white bg-blue-800 max-w-96 p-2 rounded-sm"
-                        >
+                        onClick={()=>{
+                            setOpenModalAddExercice(true)
+                        }}
+                        className=" uppercase  text-md text-white bg-blue-800 max-w-96 p-2 rounded-sm"
+                    >
                         AJouter un exercice
+                    </button>
+                    <button 
+                        onClick={()=>{
+                            setOpenModalNotif(true)
+                        }}
+                        className=" uppercase  text-md text-white bg-blue-400 max-w-96 p-2 rounded-sm"
+                    >
+                        Notifier
                     </button>
                 </div>
 
@@ -203,7 +211,19 @@ export default function ExercicesGratuits({token, role}:Props){
             </div>
         </div>
         
-        <MoadalAddExercice open={openModalAddExercice} onOpenChange={setOpenModalAddExercice} token={token} onSuccess={()=>setRefresh(k=>k+1)} />
+        <MoadalAddExercice 
+            open={openModalAddExercice} 
+            onOpenChange={setOpenModalAddExercice} 
+            token={token} 
+            onSuccess={()=>setRefresh(k=>k+1)} 
+        />
+        <MoadalNotifier 
+            open={openModalnotif} 
+            onOpenChange={setOpenModalNotif} 
+            token={token} 
+            onSuccess={()=>setRefresh(k=>k+1)} 
+            message="De nouveaux exercices gratuits sont disponibles pour la classe de"
+        />
         <ModalDeleteExercice 
             token={token} 
             id={exerciceId} 

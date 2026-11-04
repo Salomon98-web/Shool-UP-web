@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ToasterProvider } from "@/components/ui/toast-custom";
+import NotificationUser from "@/components/(elements-notifications)/notification-user";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,7 +28,7 @@ export const metadata: Metadata = {
     url:"https://schoolup.net",
     images:[
       {
-        url:"/3.jpg",
+        url:"https://schoolup.net/3.jpg",
         width:1200,
         height:630,
         alt:"school UP"
@@ -44,6 +45,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
+        <NotificationUser />
         <ToasterProvider>
           {children}
         </ToasterProvider>
