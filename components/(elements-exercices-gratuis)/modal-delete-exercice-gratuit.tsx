@@ -77,7 +77,7 @@ export default function ModalDeleteExerciceGraatuit({token, id, titre, open, onO
                         Avertissement 
                     </DialogTitle>
                 </DialogHeader>
-                <div className="p-2 flex flex-col gap-14 text-lg  text-lg">
+                <div className="p-2 flex flex-col gap-14 text-lg ">
                     <p className="">
                         vous êtes sur le point de supprimer le/la <strong>{titre}</strong>, êtes-vous sur de vouloir continuer ?
                         <span className="text-chart-2"> cela entrainera la suppression de toutes les données de cette exercices (exercices et corrigés)</span>

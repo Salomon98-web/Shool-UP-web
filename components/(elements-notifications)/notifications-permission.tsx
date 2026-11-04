@@ -61,7 +61,7 @@ export default function NotificationsPermission({open, onOpenchange}:Props){
 
         const registration = await navigator.serviceWorker.getRegistration() || await navigator.serviceWorker.register('/sw.js')
         console.log(registration)
-        const vapidkey = process.env.NEXT_PUBLIC_KEY
+        const vapidkey = 'BA-p7T6fpN_cSGSlYNzVny0InaSSzwk_biJzQE__x9DIOUw0CS42XHjJUkZaCWECaNknbsN1GUoDyMtCOvulqdk'
 
         const subscription = await registration.pushManager.subscribe({
             userVisibleOnly:true,
